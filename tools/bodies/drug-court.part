@@ -1,0 +1,198 @@
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">How drug court works</p>
+      <h1>Supervised treatment instead of a prison sentence.</h1>
+      <p>What the program asks of people, and why it works better than incarceration.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="narrow">
+        <h2>The basic idea</h2>
+        <p>
+          A person facing certain non-violent charges, whose offense is driven by a substance
+          use disorder, may be referred to drug court instead of moving through traditional
+          case processing. Rather than a cell, they get a treatment plan and a judge who
+          watches their progress closely.
+        </p>
+        <p>
+          The commitment is real: <strong>a minimum of one year</strong>, and most people find
+          it harder than the sentence they would otherwise have served. That is the point.
+          Drug courts keep people in treatment long enough for treatment to actually work.
+        </p>
+      </div>
+
+      <ol class="steps mt-6">
+        <li>
+          <h3>Intensive treatment and support</h3>
+          <p class="mb-0">Participants receive the treatment and services they need to reach and
+          sustain recovery — clinical care, counselling, and the practical supports around it.</p>
+        </li>
+        <li>
+          <h3>Accountability to the judge</h3>
+          <p class="mb-0">Participants are held accountable by the drug court judge for meeting
+          their obligations to the court, to the community, to their families, and to themselves.</p>
+        </li>
+        <li>
+          <h3>Regular, random drug testing</h3>
+          <p class="mb-0">Testing is frequent and unannounced. It is what makes the
+          accountability meaningful rather than theoretical.</p>
+        </li>
+        <li>
+          <h3>Frequent court appearances</h3>
+          <p class="mb-0">Participants appear in court often so the judge can review progress
+          directly, in person, rather than through paperwork.</p>
+        </li>
+        <li>
+          <h3>Incentives and sanctions</h3>
+          <p class="mb-0">Doing well is rewarded. Falling short brings a graduated sanction. The
+          Foundation funds many of the incentives — the small, concrete recognitions that make
+          progress visible.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">The evidence</p>
+        <h2>Why courts and county commissions keep funding this.</h2>
+      </div>
+      <ul class="list-check">
+        <li>Drug courts reduce substance use.</li>
+        <li>Drug courts reduce crime.</li>
+        <li>Drug courts save public money.</li>
+        <li>Drug courts restore lives.</li>
+        <li>Drug courts keep families together and reunite children with parents.</li>
+      </ul>
+      <p class="narrow">
+        Drug courts currently reach only a fraction of the people in the justice system living
+        with a substance use disorder. Breaking the cycle of substance use and crime means
+        putting a drug court within reach of everyone who needs one — including here.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">The taxpayer arithmetic</p>
+        <h2>$7,840 a year, or $34,898 a year.</h2>
+      </div>
+
+      <div class="cost-compare">
+        <div class="cost-card cost-card--prison">
+          <p class="cost-card__label">Incarceration — Florida</p>
+          <p class="cost-card__figure">$34,898</p>
+          <span class="cost-card__unit">per person, per year</span>
+          <div class="cost-bar" role="img" aria-label="Relative cost bar, shown at full width for comparison.">
+            <div class="cost-bar__fill" style="width:100%"></div>
+          </div>
+          <p class="cost-card__desc">$95.61 per person per day — Florida Department of
+          Corrections full operating cost, FY 2024&ndash;25 actual.</p>
+        </div>
+
+        <div class="cost-card cost-card--court">
+          <p class="cost-card__label">Drug court — Florida</p>
+          <p class="cost-card__figure">$7,840</p>
+          <span class="cost-card__unit">per participant, per year</span>
+          <div class="cost-bar" role="img" aria-label="Relative cost bar, shown at about one fifth the width of the incarceration bar.">
+            <div class="cost-bar__fill" style="width:22.5%"></div>
+          </div>
+          <p class="cost-card__desc">Statewide average annual cost per drug court participant,
+          per the Florida Legislature's program evaluation office.</p>
+        </div>
+      </div>
+
+      <div class="source-note">
+        <p><strong>Sources, with the caveat stated plainly.</strong></p>
+        <p>
+          Incarceration: Florida Office of Economic and Demographic Research, capital and
+          operating costs adopted by the Criminal Justice Estimating Conference, February 2026
+          (<a href="https://edr.state.fl.us/content/conferences/criminaljusticeimpact/2026DOCPerDiemandBedCosts.pdf" rel="noopener">PDF</a>).
+          The $34,898 is the FY 2024&ndash;25 actual and excludes debt service and indirect
+          administrative costs, so it is if anything an understatement.
+        </p>
+        <p class="mb-0">
+          Drug court: <a href="https://oppaga.fl.gov/Documents/Reports/14-02.pdf" rel="noopener">OPPAGA Report 14-02</a> (2014),
+          the most recent Florida-specific per-participant figure available. It is in 2014
+          dollars; inflation-adjusted it would be roughly $10,000&ndash;$11,000 today. Even on
+          that basis, drug court costs well under a third of a prison bed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Who is eligible for drug court in Flagler County?</summary>
+          <div class="faq__body">
+            <div class="placeholder">
+              <p class="mb-0"><strong>[CLIENT / COURT TO CONFIRM]</strong> Eligibility is set by
+              the Seventh Judicial Circuit, not by the Foundation. We need the current criteria
+              — charge types, prior record limits, residency, and the referral route — before
+              publishing anything here, because a wrong answer could keep someone from applying.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>How does someone get referred?</summary>
+          <div class="faq__body">
+            <div class="placeholder">
+              <p class="mb-0"><strong>[CLIENT / COURT TO CONFIRM]</strong> Who initiates a
+              referral — defense counsel, the State Attorney, the judge, or self-referral — and
+              the contact for the drug court coordinator.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>How long does the program take?</summary>
+          <div class="faq__body">
+            <p class="mb-0">A minimum of one year. The actual length depends on the person's
+            progress through the program's phases.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What does the Foundation pay for?</summary>
+          <div class="faq__body">
+            <p class="mb-0">
+              We fund the things the court budget does not cover: incentives that recognize
+              progress, transportation to treatment and court, testing costs, graduation, free
+              Narcan, and community training. See <a href="ways-to-give.html">Ways to Give</a>.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Is the Foundation part of the court?</summary>
+          <div class="faq__body">
+            <p class="mb-0">
+              No. We are an independent 501(c)(3) nonprofit (EIN 27-1349987) that supports the
+              program. Having a nonprofit backing a public agency is unusual — it is what lets
+              the program act quickly without waiting on a budget cycle.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="narrow text-center" style="margin-inline:auto">
+        <h2>Help fund the parts the court can't.</h2>
+        <p>A ride, a test, a kit, a graduation. Small things, at the exact moment they matter.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+          <a class="btn btn--outline" href="ways-to-give.html#monthly">Give monthly</a>
+        </div>
+      </div>
+    </div>
+  </section>

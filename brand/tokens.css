@@ -1,0 +1,46 @@
+/* ==========================================================================
+   FCDC HOPE Foundation — brand tokens
+   Drop this into any future project (flyer, deck, app, microsite) to inherit
+   the Foundation's palette and type without re-deriving it.
+
+   Every colour here was sampled from the Foundation's own HOPE logo, then
+   contrast-checked. Do not eyeball new purples — use these.
+   ========================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------- brand */
+  --hope-purple:      #7359DE;  /* THE brand colour. Logo primary.          */
+  --hope-purple-700:  #5B3FC4;  /* 7.1:1 on white — links, small text       */
+  --hope-purple-800:  #4A3499;  /* 9.4:1 on white — headings                */
+  --hope-purple-900:  #2E2163;  /* deep surfaces, footer                    */
+  --hope-purple-100:  #F7F5FD;  /* pale wash for section backgrounds        */
+  --hope-purple-200:  #E2DCF4;  /* borders                                  */
+  --hope-purple-300:  #C4B8E8;  /* strong borders                           */
+
+  --hope-crimson:     #8C1533;  /* logo "EXCEL" — 9.3:1 on white            */
+  --hope-gold:        #E89810;  /* logo figure — DONATE ONLY                */
+  --hope-gold-600:    #C67D06;  /* gold hover                               */
+
+  --hope-ink:         #1B1630;  /* body text, 17.4:1 on white               */
+  --hope-ink-muted:   #4A4658;  /* secondary text, 8.9:1 on white           */
+  --hope-paper:       #FBF8F3;  /* warm neutral background                  */
+
+  /* ------------------------------------------------------------ semantic */
+  --color-primary:    var(--hope-purple-700);
+  --color-accent:     var(--hope-gold);
+  --color-text:       var(--hope-ink);
+  --color-bg:         #FFFFFF;
+
+  /* ------------------------------------------------------------- type */
+  --font-head: 'Lexend', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Source Sans 3', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Body is 17px, not 16px. This audience skews older; the extra pixel is
+     deliberate and should carry into anything else built for them. */
+  --fs-body: 1.0625rem;
+
+  /* ------------------------------------------------------------ shape */
+  --radius:      12px;
+  --radius-lg:   18px;
+  --radius-pill: 999px;
+}

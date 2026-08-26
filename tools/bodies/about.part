@@ -1,0 +1,195 @@
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">About the Foundation</p>
+      <h1>Neighbors who decided the drug court program was worth paying for.</h1>
+      <p>A Flagler County 501(c)(3), founded in 2009 and run by volunteers.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <h2>Who we are</h2>
+          <p>
+            The Flagler County Drug Court Foundation is a nonprofit created by residents of
+            Flagler County who believe in the drug court program. A nonprofit built to support a
+            public agency is an unusual arrangement — and a deliberate one. The court has a
+            budget for judges, case managers and supervision. It does not have a budget for the
+            small, immediate, unglamorous things that decide whether a person can keep showing
+            up.
+          </p>
+          <p>
+            That is our job. We were formed to solicit community support in confronting
+            substance use in Flagler County, and we believe that people who complete this
+            program go on to strengthen this community for decades.
+          </p>
+          <p>
+            We operate under the name <strong>HOPE — Helping Our Participants Excel</strong>.
+          </p>
+        </div>
+        <div class="hero__media">
+          <picture>
+            <source srcset="assets/img/community-group.webp" type="image/webp">
+            <img src="assets/img/community-group.jpg"
+                 alt="A large group of Foundation supporters and volunteers gathered together at a Flagler County park."
+                 loading="lazy" width="1600" height="627">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What drives us</p>
+        <h2>Mission, vision, education, hope.</h2>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3>Mission</h3>
+          <p class="mb-0">
+            To support and promote the Flagler County drug court program — helping people
+            recover from a substance use disorder and lead productive, healthy lives through
+            community engagement, advocacy, and educational initiatives.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Vision</h3>
+          <p class="mb-0">
+            A compassionate and supportive community where people in the drug court program
+            get the resources and opportunities they need to sustain recovery, break the cycle
+            of substance use, and thrive as valued members of society.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.7 2.2 3 5 3s5-1.3 5-3v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+          <p class="mb-0">
+            Two things save lives: knowing how to use Narcan, and dropping the stigma that keeps
+            people from asking for help. We train the community in overdose response, and we
+            work openly against the idea that a substance use disorder is a moral failure rather
+            than a treatable health condition.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg>
+          </div>
+          <h3>Hope</h3>
+          <p class="mb-0">
+            The Foundation brings mission, vision and education together to bring hope to
+            families, to members, and to people working to lead healthy and productive lives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">How we talk about this</p>
+        <h2>Words are part of the work.</h2>
+        <p class="lede">
+          Destigmatization is in our mission statement, so it has to be in our vocabulary too.
+        </p>
+      </div>
+
+      <div class="narrow">
+        <p>
+          We say <strong>a person with a substance use disorder</strong> — not an addict, not
+          an abuser, not a junkie. We say someone <strong>returned to use</strong>, not that
+          they relapsed and certainly not that they are dirty or clean. A drug test is
+          <strong>positive</strong> or <strong>negative</strong>, the way any other medical
+          test is.
+        </p>
+        <p>
+          This is not politeness for its own sake. Stigmatizing language measurably reduces the
+          chance that someone asks for treatment, and it changes how clinicians and courts treat
+          the person in front of them. An organization that exists partly to reduce stigma
+          cannot undercut its own mission in its own newsletter.
+        </p>
+        <p>
+          We also do not publish before-and-after stories, mugshots, or rock-bottom narratives.
+          Recovery is not a spectacle, and the people in this program are not marketing material.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">In their own words</p>
+        <h2>Voices from the program</h2>
+      </div>
+
+      <div class="placeholder narrow">
+        <p><strong>[REQUIRES SIGNED CONSENT — 42 CFR Part 2]</strong></p>
+        <p>
+          This space is reserved for a graduate or participant to speak for themselves. It is
+          intentionally empty. No story has been written here, not even as a sample, because a
+          fictional testimonial from a recovery program would be both dishonest and a stigma
+          risk in itself.
+        </p>
+        <p>
+          Before anything appears here, the Foundation needs a <strong>written, signed, specific
+          release</strong> from the person telling the story. Records tied to substance use
+          treatment are protected under 42 CFR Part 2, which is stricter than HIPAA: consent must
+          name what is disclosed, to whom, and for how long, and it can be revoked. A general
+          photo release is not sufficient.
+        </p>
+        <p class="mb-0">
+          Practical guidance: let the person write or approve their own words, do not use a last
+          name or an identifying photo unless they explicitly ask for it, and confirm the release
+          is on file before publishing. Please involve the drug court coordinator.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">The Road to Recovery</p>
+        <h2>Our podcast</h2>
+        <p class="lede">
+          Honest conversations with people who have lived it — graduates of the program, family
+          members, counselors, law enforcement, and community partners.
+        </p>
+      </div>
+      <div class="placeholder narrow">
+        <p class="mb-0"><strong>[PODCAST LINKS — CLIENT TO SUPPLY]</strong> Send the Spotify /
+        Apple Podcasts / YouTube URLs for “The Road to Recovery” and we will link them here and
+        in the footer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="callout narrow text-center">
+        <h2>Support this work</h2>
+        <p>Every dollar we raise stays in Flagler County.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+          <a class="btn btn--outline" href="contact.html">Volunteer with us</a>
+        </div>
+      </div>
+    </div>
+  </section>

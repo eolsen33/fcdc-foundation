@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Lexend'; src:url('../assets/fonts/Lexend-var.woff2') format('woff2'); font-weight:400 700; }
+  @font-face { font-family:'Source Sans 3'; src:url('../assets/fonts/SourceSans3-var.woff2') format('woff2'); font-weight:400 600; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width:1200px; height:630px; overflow:hidden;
+    background:#2E2163;
+    background-image:
+      radial-gradient(900px 500px at 88% 10%, rgba(115,89,222,.55), transparent 60%),
+      radial-gradient(700px 460px at 6% 96%, rgba(232,152,16,.20), transparent 62%);
+    color:#fff;
+    font-family:'Source Sans 3', sans-serif;
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:64px 72px;
+  }
+  .top { display:flex; align-items:center; gap:26px; }
+  .logo { height:96px; background:#fff; border-radius:14px; padding:12px 18px; }
+  .kicker {
+    font-family:'Lexend', sans-serif; font-weight:600; font-size:22px;
+    letter-spacing:.14em; text-transform:uppercase; color:#C3B2FF;
+  }
+  h1 {
+    font-family:'Lexend', sans-serif; font-weight:700;
+    font-size:62px; line-height:1.1; letter-spacing:-.022em;
+    max-width:19ch;
+  }
+  h1 em { font-style:normal; color:#F5B942; }
+  .foot {
+    display:flex; align-items:center; justify-content:space-between;
+    border-top:2px solid rgba(255,255,255,.22); padding-top:26px;
+    font-size:24px; color:#D9D2F2;
+  }
+  .foot strong { font-family:'Lexend',sans-serif; color:#fff; font-weight:600; }
+  .pill {
+    font-family:'Lexend',sans-serif; font-weight:600; font-size:21px;
+    background:#E89810; color:#1B1630;
+    padding:12px 26px; border-radius:999px;
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+    <img class="logo" src="../assets/img/hope-logo.png" alt="">
+    <span class="kicker">Flagler County · Est. 2009</span>
+  </div>
+
+  <h1>Treatment costs a fraction of <em>a prison cell</em>.</h1>
+
+  <div class="foot">
+    <span><strong>Flagler County Drug Court Foundation</strong> · fcdcfoundation.org</span>
+    <span class="pill">Donate</span>
+  </div>
+</body>
+</html>

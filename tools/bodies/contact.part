@@ -1,0 +1,159 @@
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contact &amp; volunteer</p>
+      <h1>Get in touch.</h1>
+      <p>Questions, Narcan requests, volunteering, sponsorship — all of it comes here.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <h2>Send us a message</h2>
+          <p>We are a volunteer organization, so give us a couple of days to reply.</p>
+
+          <!--
+            FORM DELIVERY — Formsubmit.co
+            Free, no server code, spam-filtered, and it keeps this a fully static site.
+
+            [CLIENT ACTION] Replace YOUR-EMAIL@EXAMPLE.COM in the action URL below with the
+            Foundation's real inbox, then submit the form once yourself. Formsubmit sends a
+            one-time confirmation link to that address; the form does not deliver until it is
+            clicked. After confirming, swap the address for the hashed endpoint Formsubmit
+            gives you so the address is not exposed in the page source.
+          -->
+          <form class="form" id="contact-form"
+                action="https://formsubmit.co/YOUR-EMAIL@EXAMPLE.COM"
+                method="POST">
+
+            <input type="hidden" name="_subject" value="New message from fcdcfoundation.org">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://www.fcdcfoundation.org/contact.html?sent=1">
+            <!-- Formsubmit's own honeypot -->
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field">
+              <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+              <p class="field__error" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Your email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
+              <p class="field__help">So we can reply. We do not add anyone to a mailing list.</p>
+              <p class="field__error" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone <span style="font-weight:400;color:var(--color-text-muted)">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+            </div>
+
+            <div class="field">
+              <label for="subject">What is this about?</label>
+              <select id="subject" name="subject">
+                <option value="general">General question</option>
+                <option value="narcan">Narcan training or a free kit</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="sponsor">Business sponsorship</option>
+                <option value="ride">Ride for Recovery</option>
+                <option value="donation">A donation or tax receipt</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Your message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required></textarea>
+              <p class="field__error" role="alert"></p>
+            </div>
+
+            <button class="btn btn--primary btn--lg" type="submit">Send message</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="callout callout--gold mt-6">
+            <p class="mb-0">
+              <strong>This form is not for emergencies</strong>, and it is not a confidential
+              clinical channel. If you or someone else needs help right now, call
+              <a href="tel:988">988</a> or <a href="tel:911">911</a>.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Foundation details</h3>
+            <ul class="detail-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>
+                  <span class="detail-list__label">Mailing address</span>
+                  The Flagler County Drug Court Foundation<br>
+                  55 Black Alder Dr<br>
+                  Palm Coast, FL 32137
+                </span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.8.6a2 2 0 011.7 2z"/></svg>
+                <span>
+                  <span class="detail-list__label">Phone</span>
+                  <strong>[CLIENT TO SUPPLY]</strong>
+                </span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                <span>
+                  <span class="detail-list__label">Email</span>
+                  <strong>[CLIENT TO CONFIRM]</strong>
+                </span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg>
+                <span>
+                  <span class="detail-list__label">Organization</span>
+                  501(c)(3) nonprofit<br>
+                  EIN 27-1349987<br>
+                  Established 2009
+                </span>
+              </li>
+            </ul>
+
+            <div class="placeholder">
+              <p class="mb-0"><strong>[CLIENT TO SUPPLY]</strong> Public phone number, the
+              inbox you want messages delivered to, and your Facebook page URL. Facebook is
+              where most of your traffic comes from, so we want that link in the footer.</p>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <h3>Volunteer with us</h3>
+            <p>
+              Our team is entirely local volunteers. We need help staffing events, handing out
+              Narcan, and running the annual Ride for Recovery — and we need people willing to
+              speak plainly about recovery in their own circles.
+            </p>
+            <p class="mb-0">
+              Use the form and choose <em>Volunteering</em>, and tell us what you are good at.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="narrow text-center" style="margin-inline:auto">
+        <h2>Or just support the work.</h2>
+        <p>Giving takes a minute and funds a ride, a test, or a kit this month.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+          <a class="btn btn--outline" href="ways-to-give.html#monthly">Give monthly</a>
+        </div>
+      </div>
+    </div>
+  </section>

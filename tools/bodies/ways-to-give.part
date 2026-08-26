@@ -1,0 +1,259 @@
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Ways to give</p>
+      <h1>Every dollar stays in Flagler County.</h1>
+      <p>We are a 501(c)(3), EIN 27-1349987. Your contribution is tax deductible.</p>
+    </div>
+  </section>
+
+  <!-- Donation form -->
+  <section class="section" id="donate">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Give online</p>
+          <h2>Make a gift now.</h2>
+          <p>
+            Choose a one-time gift or a monthly one. Monthly is more useful to us than the same
+            money given once — it is what lets us say yes to a request in the middle of the year.
+          </p>
+
+          <div class="callout callout--gold">
+            <h3>Why our donation form has no platform fee</h3>
+            <p class="mb-0">
+              We use <strong>Zeffy</strong>, which charges nonprofits nothing — no platform fee
+              and no card processing fee. Zeffy funds itself with an optional tip that donors can
+              adjust or decline at checkout. If you would rather all of your gift reach the
+              Foundation, set the tip to zero; nothing is deducted from your donation either way.
+            </p>
+          </div>
+
+          <div data-donate-setup>
+            <div class="placeholder mt-5">
+              <p><strong>[SETUP — FOUNDATION ACTION REQUIRED]</strong> The donation form is not
+              connected yet. To switch it on:</p>
+              <ol>
+                <li>Create the account at <a href="https://www.zeffy.com" rel="noopener">zeffy.com</a> using EIN 27-1349987.</li>
+                <li>Build one donation form and enable the monthly option.</li>
+                <li>Copy the form's share URL and paste the slug into <code>js/donate-config.js</code>.</li>
+              </ol>
+              <p class="mb-0">The form embeds itself here automatically once that slug is set.
+              Until then, the PayPal button and the mail-in option below both work.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="donate-embed" id="donate-embed">
+            <div style="padding:2rem">
+              <h3>Give today</h3>
+              <p>Our no-fee donation form appears here once it is connected.</p>
+              <p><strong>In the meantime, both of these work right now:</strong></p>
+              <p>
+                <a class="btn btn--donate btn--block btn--lg" href="https://www.paypal.com/donate?hosted_button_id=Z4S96Q5ZEGJE4" rel="noopener">Donate with PayPal</a>
+              </p>
+              <p class="field__help">Or mail a check — details below. PayPal deducts a
+              processing fee; mailing a check and the Zeffy form do not.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monthly -->
+  <section class="section section--tint" id="monthly">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Club 100</p>
+        <h2>$10 a month. A hundred neighbors. A year of steady support.</h2>
+        <p class="lede">
+          Club 100 is our monthly giving circle — $120 a year, or $10 a month. It is the most
+          useful money the Foundation receives, because it arrives whether or not there is a
+          grant, an event, or a good news cycle.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="tier">
+          <p class="tier__amount">$10<span style="font-size:1rem;font-weight:400">/mo</span></p>
+          <p class="tier__buys">Club 100 member</p>
+          <p>$120 over a year. Your name joins the Club 100 list, and you are thanked at the
+          annual Ride for Recovery.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="10" data-monthly="true">Join Club 100</a>
+        </div>
+
+        <div class="tier tier--featured">
+          <span class="tier__flag">Most useful</span>
+          <p class="tier__amount">$25<span style="font-size:1rem;font-weight:400">/mo</span></p>
+          <p class="tier__buys">Sustaining supporter</p>
+          <p>Enough to keep one participant supplied with the practical supports that keep them
+          in the program — consistently, all year.</p>
+          <a class="btn btn--primary" href="#donate" data-donate data-amount="25" data-monthly="true">Give $25 a month</a>
+        </div>
+
+        <div class="tier">
+          <p class="tier__amount">$50<span style="font-size:1rem;font-weight:400">/mo</span></p>
+          <p class="tier__buys">Founding circle</p>
+          <p>Underwrites a meaningful share of a year's Narcan supply and graduation costs.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="50" data-monthly="true">Give $50 a month</a>
+        </div>
+      </div>
+
+      <div class="placeholder mt-6 narrow">
+        <p class="mb-0"><strong>[CLIENT TO CONFIRM]</strong> The $10 Club 100 tier is real and
+        carried over from your existing materials. The $25 and $50 descriptions are structural
+        placeholders — tell us what those amounts actually cover and we will make the wording
+        literal instead of approximate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- One-time / designated -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">One-time gifts</p>
+        <h2>Give toward something specific.</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">Narcan kits</p>
+          <p>Free two-dose naloxone kits for families, community events, and people leaving
+          treatment.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+        </div>
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">A ride to treatment</p>
+          <p>Transportation to treatment and court appearances — one of the most common reasons
+          someone cannot continue.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+        </div>
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">Testing &amp; graduation</p>
+          <p>Drug testing that makes accountability real, and graduation costs that make
+          finishing feel like an achievement.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+        </div>
+      </div>
+
+      <div class="placeholder mt-6 narrow">
+        <p class="mb-0"><strong>[CLIENT MUST SUPPLY REAL COSTS]</strong> These amounts are blank
+        on purpose — we will not guess at what your programme actually spends. Send the real
+        per-item costs and we will fill all three in (they are set once, in
+        <code>ways-to-give.html</code> and <code>index.html</code>).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business sponsorship -->
+  <section class="section section--warm" id="business">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Local businesses</p>
+          <h2>Sponsor the Foundation.</h2>
+          <p>
+            Business sponsors are listed on this site, recognised at the annual Ride for
+            Recovery, and thanked in our community materials. For a local business, this is
+            visible support for a program that reduces crime and returns employable neighbors
+            to the workforce.
+          </p>
+          <p>
+            We are glad to put together a sponsorship letter for your accountant, and we can
+            provide our determination letter and W-9 on request.
+          </p>
+          <div class="btn-row mt-5">
+            <a class="btn btn--primary" href="contact.html?subject=sponsor">Talk to us about sponsoring</a>
+          </div>
+
+          <div class="placeholder mt-6">
+            <p class="mb-0"><strong>[CLIENT TO SUPPLY]</strong> If you have set sponsorship
+            levels (e.g. Bronze/Silver/Gold, or Ride for Recovery event tiers) with prices and
+            benefits, send them and we will publish a proper sponsorship table here.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Current supporters</h3>
+            <p>Businesses and neighbors already giving.</p>
+            <div class="logo-wall" style="grid-template-columns:repeat(2,1fr)">
+              <img src="assets/img/sponsor-MinuteManPress.webp" alt="Minuteman Press" loading="lazy" width="400" height="122">
+              <img src="assets/img/sponsor-TravelLeaders.webp" alt="Travel Leaders" loading="lazy" width="400" height="145">
+              <img src="assets/img/sponsor-EaglePest-2.webp" alt="Eagle Pest Solutions" loading="lazy" width="400" height="107">
+              <img src="assets/img/sponsor-JobOne.webp" alt="Alan Lowe LLC" loading="lazy" width="400" height="167">
+              <img src="assets/img/sponsor-GoodVibes.webp" alt="Good Vibe Energy &amp; Nutrition" loading="lazy" width="400" height="217">
+              <img src="assets/img/sponsor-Coastal-church2.webp" alt="Coastal Family Church" loading="lazy" width="400" height="219">
+              <img src="assets/img/sponsor-CutUpSew.webp" alt="Cut Up &amp; Sew" loading="lazy" width="400" height="265">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other ways -->
+  <section class="section" id="mail">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Other ways to give</p>
+        <h2>By mail, by event, by hand.</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          </div>
+          <h3>Give by mail</h3>
+          <p>
+            Checks payable to <strong>The Flagler County Drug Court Foundation</strong>.
+            No processing fees are deducted from a mailed gift.
+          </p>
+          <p class="mb-0">
+            <strong>55 Black Alder Dr<br>Palm Coast, FL 32137</strong>
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg>
+          </div>
+          <h3>Ride for Recovery</h3>
+          <p>
+            Our annual fundraiser — a ride open to all vehicles, with a pig roast, raffle,
+            auction, and vendor fair. Riders, vendors and sponsors all welcome.
+          </p>
+          <a class="btn btn--outline" href="contact.html?subject=ride">Ask about the next ride</a>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg>
+          </div>
+          <h3>Give time</h3>
+          <p>
+            Volunteers staff events, hand out Narcan, and help at the annual ride. If you have
+            a skill and a few hours, we will find a use for both.
+          </p>
+          <a class="btn btn--outline" href="contact.html?subject=volunteer">Volunteer</a>
+        </div>
+      </div>
+
+      <div class="callout mt-6 narrow">
+        <h3>Tax receipts and paperwork</h3>
+        <p class="mb-0">
+          The Flagler County Drug Court Foundation is a recognised 501(c)(3) organisation and
+          all financial contributions are tax deductible to the extent allowed by law. Our EIN
+          is <strong>27-1349987</strong>. Need a receipt, our determination letter, or a W-9?
+          <a href="contact.html">Ask us</a>.
+        </p>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,302 @@
+
+
+  <!-- 1 ─────────────────────────────────────────────── HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="hero__badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg>
+            A Flagler County 501(c)(3) since 2009
+          </p>
+
+          <h1>Treatment costs a fraction of a prison cell — and it gives our neighbors their lives back.</h1>
+
+          <p class="hero__lede">
+            Every year, Flagler County residents living with a substance use disorder come
+            through our courts. Drug court offers them supervised treatment instead of
+            incarceration. We are the local foundation that pays for the things the court
+            budget doesn't cover — and the ones that decide whether someone finishes.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+            <a class="btn btn--outline btn--lg" href="drug-court.html">How drug court works</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <picture>
+            <source srcset="assets/img/hands-community.webp" type="image/webp">
+            <img src="assets/img/hands-community.jpg"
+                 alt="One person reaching down to help another up a rock face at sunset."
+                 width="1600" height="1200" fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ─────────────────────────────────── THE ECONOMIC CASE -->
+  <section class="section section--warm" aria-labelledby="cost-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Where your tax dollars go</p>
+        <h2 id="cost-heading">One year in a Florida prison cell costs about four and a half times what one year of drug court costs.</h2>
+        <p class="lede">
+          This is the part that persuades people who have never met anyone in recovery.
+          Drug court is not the soft option — it is the cheap one.
+        </p>
+      </div>
+
+      <div class="cost-compare">
+        <div class="cost-card cost-card--prison">
+          <p class="cost-card__label">Incarceration — Florida</p>
+          <p class="cost-card__figure">$34,898</p>
+          <span class="cost-card__unit">per person, per year</span>
+          <div class="cost-bar" role="img" aria-label="Relative cost bar, shown at full width for comparison.">
+            <div class="cost-bar__fill" style="width:100%"></div>
+          </div>
+          <p class="cost-card__desc">
+            Florida Department of Corrections full operating cost — $95.61 per person per
+            day. Actual figure for fiscal year 2024&ndash;25.
+          </p>
+        </div>
+
+        <div class="cost-card cost-card--court">
+          <p class="cost-card__label">Drug court — Florida</p>
+          <p class="cost-card__figure">$7,840</p>
+          <span class="cost-card__unit">per participant, per year</span>
+          <div class="cost-bar" role="img" aria-label="Relative cost bar, shown at about one fifth the width of the incarceration bar.">
+            <div class="cost-bar__fill" style="width:22.5%"></div>
+          </div>
+          <p class="cost-card__desc">
+            Statewide average annual cost per drug court participant, from the Florida
+            Legislature's own program evaluation office.
+          </p>
+        </div>
+      </div>
+
+      <div class="source-note">
+        <p><strong>Where these numbers come from — and the honest caveat.</strong></p>
+        <p>
+          The incarceration figure is the Florida Department of Corrections' full operating
+          cost per inmate for FY&nbsp;2024&ndash;25, as adopted by the state's Criminal Justice
+          Estimating Conference in February&nbsp;2026
+          (<a href="https://edr.state.fl.us/content/conferences/criminaljusticeimpact/2026DOCPerDiemandBedCosts.pdf" rel="noopener">Office of Economic and Demographic Research</a>).
+        </p>
+        <p>
+          The drug court figure is the statewide average annual cost per participant reported by
+          <a href="https://oppaga.fl.gov/Documents/Reports/14-02.pdf" rel="noopener">OPPAGA Report 14-02</a>,
+          published in 2014 — the most recent Florida-specific per-participant analysis we can
+          point to. Those are 2014 dollars. Adjusted for inflation it would land somewhere near
+          $10,000&ndash;$11,000 today, which still leaves drug court costing well under a third of
+          a prison bed. We would rather show you the caveat than quietly compare two different
+          years.
+        </p>
+      </div>
+
+      <div class="placeholder mt-6">
+        <p><strong>[CLIENT — OPTIONAL UPGRADE]</strong> If the Seventh Judicial Circuit or the
+        Office of the State Courts Administrator can give us a current <em>Flagler County</em>
+        cost-per-participant figure, we should swap it in. A local number beats a statewide
+        number from 2014 for every audience that matters here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 ────────────────────────────────────────── GIVING TIERS -->
+  <section class="section" aria-labelledby="tiers-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Give something specific</p>
+        <h2 id="tiers-heading">Your gift buys a thing, not an abstraction.</h2>
+        <p class="lede">
+          The court supplies the judge, the case manager and the supervision. We supply the
+          rest — and the rest is usually what decides whether someone can keep showing up.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">Narcan kits</p>
+          <p>
+            Two-dose naloxone kits handed out free at community events, to families, and to
+            people leaving treatment. We have given these away in Flagler County since 2019.
+          </p>
+          <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="">Give this</a>
+        </div>
+
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">A ride to treatment</p>
+          <p>
+            Missing appointments is one of the most common reasons a person is discharged from
+            the program. Transportation is often the entire difference.
+          </p>
+          <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="">Give this</a>
+        </div>
+
+        <div class="tier">
+          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__buys">Drug testing &amp; graduation</p>
+          <p>
+            Regular testing is what makes the court's accountability real. Graduation is what
+            makes finishing feel like something. Both cost money.
+          </p>
+          <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="">Give this</a>
+        </div>
+      </div>
+
+      <div class="placeholder mt-6">
+        <p><strong>[CLIENT MUST SUPPLY REAL COSTS]</strong> We have deliberately left these three
+        dollar amounts blank rather than invent them. Please send us what these actually cost the
+        Foundation:</p>
+        <ul>
+          <li>Cost of one two-dose Narcan/naloxone kit as you acquire it</li>
+          <li>Typical cost of getting one participant to and from treatment for a month</li>
+          <li>Cost of one drug test, and the per-person cost of a graduation</li>
+        </ul>
+        <p class="mb-0">Once you send these, each tier gets a real number and its button links
+        straight to the donation form at that amount. Set them in
+        <code>index.html</code> (<code>data-amount</code>) — nothing else needs to change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ───────────────────────────────────────────── OUTCOMES -->
+  <section class="section section--dark" aria-labelledby="outcomes-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What the program produces</p>
+        <h2 id="outcomes-heading">Flagler County drug court, by the numbers.</h2>
+        <p class="lede">
+          We publish our own results rather than borrowing national averages.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <p class="stat__figure">[&nbsp;&mdash;&nbsp;]</p>
+          <p class="stat__label">People who have graduated from Flagler County drug court since 2009</p>
+        </div>
+        <div class="stat">
+          <p class="stat__figure">[&nbsp;&mdash;&nbsp;]%</p>
+          <p class="stat__label">Completion rate for people who enter the program</p>
+        </div>
+        <div class="stat">
+          <p class="stat__figure">[&nbsp;&mdash;&nbsp;]%</p>
+          <p class="stat__label">Re-arrest rate for graduates, compared with [&nbsp;&mdash;&nbsp;]% for similar cases that did not go through drug court</p>
+        </div>
+      </div>
+
+      <div class="placeholder mt-6">
+        <p class="mb-0"><strong>[PLACEHOLDER — DO NOT PUBLISH UNTIL VERIFIED]</strong> These three
+        figures are blank on purpose. Nobody invented them. Source them from the Seventh Judicial
+        Circuit drug court coordinator or the Office of the State Courts Administrator, and note
+        the date range they cover so we can label the numbers accurately on the page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 ─────────────────────────────────────── MONTHLY GIVING -->
+  <section class="section section--tint" aria-labelledby="monthly-heading">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Club 100 — our monthly circle</p>
+          <h2 id="monthly-heading">$10 a month sustains one person's support for a year.</h2>
+          <p>
+            A single gift helps once. A monthly gift is what lets us tell a case manager
+            <em>yes</em> in the middle of February, when someone needs a ride, a test, or a
+            kit and there is no grant cycle coming.
+          </p>
+          <p>
+            Club 100 is exactly what it sounds like: a hundred neighbors giving $120 a year —
+            $10 a month — so that the Foundation always has something in hand. It is the most
+            useful money we receive.
+          </p>
+          <div class="btn-row mt-5">
+            <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate data-amount="10" data-monthly="true">Give $10 a month</a>
+            <a class="btn btn--outline" href="ways-to-give.html">Other amounts</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Club 100 members</h3>
+            <p>Local businesses and neighbors already giving at this level.</p>
+            <div class="logo-wall" style="grid-template-columns:repeat(3,1fr)">
+              <img src="assets/img/sponsor-MinuteManPress.webp" alt="Minuteman Press" loading="lazy" width="400" height="122">
+              <img src="assets/img/sponsor-TravelLeaders.webp" alt="Travel Leaders" loading="lazy" width="400" height="145">
+              <img src="assets/img/sponsor-EaglePest-2.webp" alt="Eagle Pest Solutions" loading="lazy" width="400" height="107">
+              <img src="assets/img/sponsor-JobOne.webp" alt="Alan Lowe LLC" loading="lazy" width="400" height="167">
+              <img src="assets/img/sponsor-GoodVibes.webp" alt="Good Vibe Energy &amp; Nutrition" loading="lazy" width="400" height="217">
+              <img src="assets/img/sponsor-Coastal-church2.webp" alt="Coastal Family Church" loading="lazy" width="400" height="219">
+            </div>
+            <p class="field__help mt-5">
+              Business sponsors are listed here and thanked at the annual Ride for Recovery.
+              <a href="ways-to-give.html#business">Sponsor as a business →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 ────────────────────────────────────── NARCAN TRAINING -->
+  <section class="section" aria-labelledby="narcan-heading">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__media">
+          <picture>
+            <source srcset="assets/img/narcan-outreach.webp" type="image/webp">
+            <img src="assets/img/narcan-outreach.jpg"
+                 alt="The Foundation's outreach table at a Flagler County community event, with free Narcan and information handouts laid out under a canopy."
+                 loading="lazy" width="1200" height="1200">
+          </picture>
+        </div>
+
+        <div>
+          <p class="eyebrow">Free, public, no questions asked</p>
+          <h2 id="narcan-heading">Learn to reverse an overdose in about twenty minutes.</h2>
+          <p>
+            In 2019 we became the first local nonprofit to secure a Florida Department of
+            Children and Families grant to hand out Narcan at no cost. Since then we have
+            trained county departments and school district staff, and we still give kits away
+            at community events.
+          </p>
+
+          <div class="callout callout--gold">
+            <h3>Next Narcan training</h3>
+            <p class="mb-0">
+              <strong>[NEXT CLASS DATE — CLIENT TO SUPPLY]</strong><br>
+              Date, time, and location to be confirmed by the Foundation.
+            </p>
+          </div>
+
+          <div class="btn-row mt-5">
+            <a class="btn btn--primary" href="narcan.html">Narcan training &amp; free kits</a>
+            <a class="btn btn--outline" href="contact.html?subject=narcan">Ask about a class</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section section--tint" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Flagler County</p>
+        <h2 id="community-heading">This is a local organization, run by neighbors.</h2>
+      </div>
+      <div class="gallery">
+        <img src="assets/img/gal-hope3.webp" alt="Foundation volunteers at a Flagler County community event." loading="lazy" width="900" height="900">
+        <img src="assets/img/gal-event1a-300x225.webp" alt="Community members gathered at a Foundation event." loading="lazy" width="900" height="900">
+        <img src="assets/img/gal-hope7-300x225.webp" alt="Foundation supporters together outdoors in Flagler County." loading="lazy" width="900" height="900">
+        <img src="assets/img/gal-event1b-300x225.webp" alt="Volunteers staffing a Foundation information table." loading="lazy" width="900" height="900">
+      </div>
+    </div>
+  </section>
