@@ -380,6 +380,10 @@ body.has-mobile-donate { padding-bottom: 88px; }
   padding-block: var(--sp-8);
 }
 @media (min-width: 768px) { .hero--photo { padding-block: var(--sp-8); } }
+/* The photo can never exceed this, however tall or wide the window gets. */
+@media (min-width: 900px) {
+  .hero--photo { max-block-size: 680px; }
+}
 
 .hero__bg { position: absolute; inset: 0; z-index: -2; }
 /* On wide screens the photo starts inboard so the reaching hands clear the copy;
@@ -436,7 +440,7 @@ body.has-mobile-donate { padding-bottom: 88px; }
 
 .hero--photo h1 {
   color: var(--color-text-invert);
-  font-size: clamp(2rem, 5.6vw, 3.5rem);
+  font-size: clamp(1.9rem, 4.4vw, 3rem);
   text-shadow: 0 2px 18px rgba(12,8,32,.55);
 }
 .hero--photo .hero__lede {

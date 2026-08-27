@@ -1,0 +1,9 @@
+# Hostinger defaults every file to Cache-Control: public, max-age=604800 (7 days),
+# so deploys never reach a browser that visited in the past week. Markup, styles
+# and scripts must revalidate on each load; images and fonts stay long-cached and
+# are versioned by filename when they change.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
