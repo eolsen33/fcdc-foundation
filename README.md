@@ -72,7 +72,7 @@ Keep the `@html` no-cache rule: it prevents the stale-HTML problem seen on Hosti
 
 The old site was served at both `www.fcdcfoundation.org` and `fcdcfoundation.org`,
 which split its search ranking. Pick **one** canonical host and 301 the other to it.
-The `<link rel="canonical">` tags currently point at `https://www.fcdcfoundation.org/`
+The `<link rel="canonical">` tags currently point at `https://fcdc.ericolsen.studio/`
 — if the apex is chosen instead, update the canonical and `og:url` tags in
 `tools/bodies/_meta.py` and re-run the generator, plus `sitemap.xml` and `robots.txt`.
 

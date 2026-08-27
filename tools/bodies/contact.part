@@ -31,7 +31,7 @@
             <input type="hidden" name="_subject" value="New message from fcdcfoundation.org">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="https://www.fcdcfoundation.org/contact.html?sent=1">
+            <input type="hidden" name="_next" value="https://fcdc.ericolsen.studio/contact.html?sent=1">
             <!-- Formsubmit's own honeypot -->
             <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 

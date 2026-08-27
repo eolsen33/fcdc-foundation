@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.fcdcfoundation.org/sitemap.xml
+Sitemap: https://fcdc.ericolsen.studio/sitemap.xml

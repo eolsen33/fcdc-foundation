@@ -1,37 +1,34 @@
 
 
   <!-- 1 ─────────────────────────────────────────────── HERO -->
-  <section class="hero">
+  <section class="hero hero--photo">
+    <div class="hero__bg" aria-hidden="true">
+      <picture>
+        <source srcset="assets/img/hands-community.webp" type="image/webp">
+        <img src="assets/img/hands-community.jpg" alt=""
+             width="1600" height="1078" fetchpriority="high">
+      </picture>
+    </div>
+
     <div class="container">
-      <div class="hero__grid">
-        <div>
-          <p class="hero__badge">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg>
-            A Flagler County 501(c)(3) since 2009
-          </p>
+      <div class="hero__panel">
+        <p class="hero__badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg>
+          A Flagler County 501(c)(3) since 2009
+        </p>
 
-          <h1>Treatment costs a fraction of a prison cell — and it gives our neighbors their lives back.</h1>
+        <h1>Treatment costs a fraction of a prison cell — and it gives our neighbors their lives back.</h1>
 
-          <p class="hero__lede">
-            Every year, Flagler County residents living with a substance use disorder come
-            through our courts. Drug court offers them supervised treatment instead of
-            incarceration. We are the local foundation that pays for the things the court
-            budget doesn't cover — and the ones that decide whether someone finishes.
-          </p>
+        <p class="hero__lede">
+          Every year, Flagler County residents living with a substance use disorder come
+          through our courts. Drug court offers them supervised treatment instead of
+          incarceration. We are the local foundation that pays for the things the court
+          budget doesn't cover — and the ones that decide whether someone finishes.
+        </p>
 
-          <div class="btn-row">
-            <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
-            <a class="btn btn--outline btn--lg" href="drug-court.html">How drug court works</a>
-          </div>
-        </div>
-
-        <div class="hero__media">
-          <picture>
-            <source srcset="assets/img/hands-community.webp" type="image/webp">
-            <img src="assets/img/hands-community.jpg"
-                 alt="One person reaching down to help another up a rock face at sunset."
-                 width="1600" height="1200" fetchpriority="high">
-          </picture>
+        <div class="btn-row">
+          <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+          <a class="btn btn--outline btn--lg" href="drug-court.html">How drug court works</a>
         </div>
       </div>
     </div>

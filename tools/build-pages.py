@@ -18,6 +18,17 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
+# The host the site is actually served from. Canonical, og:url and og:image
+# must all point at it or link previews break: a scraper that follows og:image
+# to another domain gets a 404 and renders a card with no image. Change this
+# one line when the site moves to https://www.fcdcfoundation.org.
+SITE = "https://fcdc.ericolsen.studio"
+
+# Bumped whenever css/style.css changes. Hostinger serves assets with a long
+# max-age, so without a fresh URL a deploy reaches returning visitors as new
+# markup against a week-old stylesheet — which renders as an unstyled page.
+ASSET_V = "20260827c"
+
 NAV = [
     ("index.html", "Home"),
     ("about.html", "About"),
@@ -41,8 +52,8 @@ ORG_JSONLD = """{
   "@type": "NGO",
   "name": "Flagler County Drug Court Foundation",
   "alternateName": "FCDC HOPE Foundation",
-  "url": "https://www.fcdcfoundation.org/",
-  "logo": "https://www.fcdcfoundation.org/assets/img/hope-logo.png",
+  "url": "__SITE__/",
+  "logo": "__SITE__/assets/img/hope-logo.png",
   "foundingDate": "2009",
   "taxID": "27-1349987",
   "nonprofitStatus": "Nonprofit501c3",
@@ -58,6 +69,8 @@ ORG_JSONLD = """{
   },
   "knowsAbout": ["Substance use disorder recovery", "Drug court", "Narcan", "Naloxone training", "Overdose prevention"]
 }"""
+
+ORG_JSONLD = ORG_JSONLD.replace("__SITE__", SITE)
 
 
 def head(page, meta):
@@ -80,19 +93,19 @@ def head(page, meta):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{meta['title']}</title>
 <meta name="description" content="{meta['description']}">
-<link rel="canonical" href="https://www.fcdcfoundation.org/{'' if page == 'index.html' else page}">
+<link rel="canonical" href="{SITE}/{'' if page == 'index.html' else page}">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{meta.get('og_title', meta['title'])}">
 <meta property="og:description" content="{meta.get('og_description', meta['description'])}">
-<meta property="og:url" content="https://www.fcdcfoundation.org/{'' if page == 'index.html' else page}">
-<meta property="og:image" content="https://www.fcdcfoundation.org/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Flagler County Drug Court Foundation — treatment costs a fraction of a prison cell">
+<meta property="og:url" content="{SITE}/{'' if page == 'index.html' else page}">
+<meta property="og:image" content="{SITE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Flagler County Drug Court Foundation — treatment costs a fraction of a prison cell">
 <meta property="og:site_name" content="Flagler County Drug Court Foundation">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/hope-logo.png">
 <link rel="preload" href="assets/fonts/Lexend-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v={ASSET_V}">
 {extra}{jsonld_block}</head>
 <body>
 
