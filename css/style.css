@@ -380,19 +380,25 @@ body.has-mobile-donate { padding-bottom: 88px; }
   padding-block: var(--sp-8);
 }
 @media (min-width: 768px) { .hero--photo { padding-block: var(--sp-8); } }
-/* The photo can never exceed this, however tall or wide the window gets. */
+/* The wider the window, the harsher a short block crops the photo — so the
+   block grows with the width to keep the figures whole, and stops at 760px
+   however large the window gets. */
 @media (min-width: 900px) {
-  .hero--photo { max-block-size: 680px; }
+  .hero--photo {
+    min-block-size: min(40vw, 760px);
+    max-block-size: 760px;
+    display: flex;
+    align-items: center;
+  }
+  .hero--photo > .container { inline-size: 100%; }
 }
 
 .hero__bg { position: absolute; inset: 0; z-index: -2; }
-/* On wide screens the photo starts inboard so the reaching hands clear the copy;
-   the left scrim is fully opaque there, so the seam never shows. */
-@media (min-width: 900px) { .hero__bg { left: 16%; } }
+
 .hero__bg img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: 50% 58%;
+  object-position: 50% 42%;
 }
 
 /* Scrim — heavy behind the words, clearing toward the sunburst on the right. */
@@ -408,34 +414,27 @@ body.has-mobile-donate { padding-bottom: 88px; }
   .hero--photo::after {
     background:
       linear-gradient(100deg,
-        rgba(20,14,50,1) 0%,
-        rgba(20,14,50,.96) 20%,
-        rgba(20,14,50,.82) 34%,
-        rgba(20,14,50,.46) 55%,
-        rgba(20,14,50,.10) 78%,
-        rgba(20,14,50,.04) 100%),
+        rgba(20,14,50,.95) 0%,
+        rgba(20,14,50,.90) 26%,
+        rgba(20,14,50,.74) 43%,
+        rgba(20,14,50,.40) 63%,
+        rgba(20,14,50,.10) 85%,
+        rgba(20,14,50,0) 100%),
       linear-gradient(180deg,
-        rgba(20,14,50,.30) 0%,
+        rgba(20,14,50,.28) 0%,
         rgba(20,14,50,0) 30%,
-        rgba(20,14,50,0) 72%,
-        rgba(20,14,50,.30) 100%);
+        rgba(20,14,50,0) 76%,
+        rgba(20,14,50,.16) 100%);
   }
 }
 
 /* The copy sits on a translucent pane that dissolves into the photograph. */
 .hero__panel {
   max-width: 41rem;
-  padding: var(--sp-5);
-  background: radial-gradient(125% 105% at 14% 48%,
-      rgba(255,255,255,.13) 0%,
-      rgba(255,255,255,.08) 42%,
-      rgba(255,255,255,0) 74%);
+  padding-block: var(--sp-4);
 }
 @media (min-width: 900px) {
-  .hero__panel {
-    padding: var(--sp-6) var(--sp-8) var(--sp-6) var(--sp-6);
-    margin-inline-start: calc(var(--sp-6) * -1);
-  }
+  .hero__panel { padding-block: var(--sp-5); }
 }
 
 .hero--photo h1 {
