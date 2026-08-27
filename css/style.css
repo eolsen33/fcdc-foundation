@@ -372,6 +372,92 @@ body.has-mobile-donate { padding-bottom: 88px; }
 }
 .hero__badge svg { width: 16px; height: 16px; color: var(--hope-purple); }
 
+/* --- Full-bleed photo hero (home) -------------------------------------- */
+.hero--photo {
+  isolation: isolate;
+  background: #140E32;
+  color: var(--color-text-invert);
+  padding-block: var(--sp-8);
+}
+@media (min-width: 768px) { .hero--photo { padding-block: var(--sp-8); } }
+
+.hero__bg { position: absolute; inset: 0; z-index: -2; }
+/* On wide screens the photo starts inboard so the reaching hands clear the copy;
+   the left scrim is fully opaque there, so the seam never shows. */
+@media (min-width: 900px) { .hero__bg { left: 16%; } }
+.hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 58%;
+}
+
+/* Scrim — heavy behind the words, clearing toward the sunburst on the right. */
+.hero--photo::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg,
+      rgba(20,14,50,.82) 0%,
+      rgba(20,14,50,.62) 55%,
+      rgba(20,14,50,.86) 100%);
+}
+@media (min-width: 900px) {
+  .hero--photo::after {
+    background:
+      linear-gradient(100deg,
+        rgba(20,14,50,1) 0%,
+        rgba(20,14,50,.96) 20%,
+        rgba(20,14,50,.82) 34%,
+        rgba(20,14,50,.46) 55%,
+        rgba(20,14,50,.10) 78%,
+        rgba(20,14,50,.04) 100%),
+      linear-gradient(180deg,
+        rgba(20,14,50,.30) 0%,
+        rgba(20,14,50,0) 30%,
+        rgba(20,14,50,0) 72%,
+        rgba(20,14,50,.30) 100%);
+  }
+}
+
+/* The copy sits on a translucent pane that dissolves into the photograph. */
+.hero__panel {
+  max-width: 41rem;
+  padding: var(--sp-5);
+  background: radial-gradient(125% 105% at 14% 48%,
+      rgba(255,255,255,.13) 0%,
+      rgba(255,255,255,.08) 42%,
+      rgba(255,255,255,0) 74%);
+}
+@media (min-width: 900px) {
+  .hero__panel {
+    padding: var(--sp-6) var(--sp-8) var(--sp-6) var(--sp-6);
+    margin-inline-start: calc(var(--sp-6) * -1);
+  }
+}
+
+.hero--photo h1 {
+  color: var(--color-text-invert);
+  font-size: clamp(2rem, 5.6vw, 3.5rem);
+  text-shadow: 0 2px 18px rgba(12,8,32,.55);
+}
+.hero--photo .hero__lede {
+  color: var(--color-text-invert-mut);
+  text-shadow: 0 1px 12px rgba(12,8,32,.55);
+}
+.hero--photo .hero__badge {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.34);
+  color: var(--color-text-invert);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.hero--photo .hero__badge svg { color: var(--hope-gold); }
+
+.hero--photo .btn--outline { color: #fff; border-color: rgba(255,255,255,.5); }
+.hero--photo .btn--outline:hover {
+  background: rgba(255,255,255,.12); color: #fff; border-color: #fff;
+}
+
 /* Page hero (interior pages) */
 .page-hero {
   background: var(--color-bg-tint);
