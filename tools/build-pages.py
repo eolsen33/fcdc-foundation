@@ -27,7 +27,7 @@ SITE = "https://fcdc.ericolsen.studio"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20260827c"
+ASSET_V = "20260901a"
 
 NAV = [
     ("index.html", "Home"),
@@ -196,8 +196,8 @@ def foot(page):
         <h3>Contact</h3>
         <ul>
           <li>The Flagler County Drug Court Foundation<br>55 Black Alder Dr<br>Palm Coast, FL 32137</li>
-          <li><strong>[PHONE — CLIENT TO SUPPLY]</strong></li>
-          <li><strong>[EMAIL — CLIENT TO CONFIRM]</strong></li>
+          <li><strong><a href="tel:+14018646997">(401) 864-6997</a></strong></li>
+          <li><strong><a href="mailto:fcdcfoundation01@gmail.com">fcdcfoundation01@gmail.com</a></strong></li>
         </ul>
       </div>
     </div>

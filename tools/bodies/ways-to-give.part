@@ -90,14 +90,14 @@
           <p class="tier__buys">Sustaining supporter</p>
           <p>Enough to keep one participant supplied with the practical supports that keep them
           in the program — consistently, all year.</p>
-          <a class="btn btn--primary" href="#donate" data-donate data-amount="25" data-monthly="true">Give $25 a month</a>
+          <a class="btn btn--primary" href="#donate" data-donate data-amount="25" data-monthly="true">Join the Sustaining Supporters</a>
         </div>
 
         <div class="tier">
           <p class="tier__amount">$50<span style="font-size:1rem;font-weight:400">/mo</span></p>
           <p class="tier__buys">Founding circle</p>
           <p>Underwrites a meaningful share of a year's Narcan supply and graduation costs.</p>
-          <a class="btn btn--outline" href="#donate" data-donate data-amount="50" data-monthly="true">Give $50 a month</a>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="50" data-monthly="true">Join the Founding Circle</a>
         </div>
       </div>
 
@@ -120,33 +120,59 @@
 
       <div class="grid grid--3">
         <div class="tier">
-          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__amount">$45</p>
           <p class="tier__buys">Narcan kits</p>
           <p>Free two-dose naloxone kits for families, community events, and people leaving
           treatment.</p>
-          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="45">Give this</a>
         </div>
         <div class="tier">
-          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
+          <p class="tier__amount">$3,000</p>
           <p class="tier__buys">A ride to treatment</p>
-          <p>Transportation to treatment and court appearances — one of the most common reasons
-          someone cannot continue.</p>
-          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+          <p>Electric scooters, gas money, and help with car repairs — whatever gets someone to
+          treatment and court appearances.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="3000">Give this</a>
         </div>
         <div class="tier">
-          <p class="tier__amount">$<span data-cost-placeholder>&nbsp;&mdash;&nbsp;</span></p>
-          <p class="tier__buys">Testing &amp; graduation</p>
-          <p>Drug testing that makes accountability real, and graduation costs that make
-          finishing feel like an achievement.</p>
-          <a class="btn btn--outline" href="#donate" data-donate data-amount="">Give this</a>
+          <p class="tier__amount">$3,000</p>
+          <p class="tier__buys">A graduation</p>
+          <p>Graduation is what makes finishing feel like an achievement. The Foundation holds
+          three a year, at about $3,000 each.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="3000">Give this</a>
+        </div>
+      </div>
+
+      <div class="section__head mt-7">
+        <h3>Some things you can&rsquo;t put a dollar amount on.</h3>
+        <p>These matter just as much, and they cost whatever they cost. Give what you can and we
+        will put it where it is needed.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="tier">
+          <p class="tier__buys">Rent help &amp; security deposits</p>
+          <p>Security deposits and short-term rent, so somewhere stable to live is not what costs
+          a person their place in the program.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">Specialized treatment</p>
+          <p>Care the standard program does not cover, so the treatment plan fits the person
+          rather than the other way around.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">Skills training</p>
+          <p>Training and certifications that turn finishing the program into work someone can
+          build a life on.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
         </div>
       </div>
 
       <div class="placeholder mt-6 narrow">
-        <p class="mb-0"><strong>[CLIENT MUST SUPPLY REAL COSTS]</strong> These amounts are blank
-        on purpose — we will not guess at what your programme actually spends. Send the real
-        per-item costs and we will fill all three in (they are set once, in
-        <code>ways-to-give.html</code> and <code>index.html</code>).</p>
+        <p class="mb-0"><strong>[CLIENT — ONE COST STILL OPEN]</strong> The three priced tiers
+        are real. The only number still missing is the <strong>cost of one drug test</strong>.
+        Amounts are set in <code>ways-to-give.html</code> and <code>index.html</code>.</p>
       </div>
     </div>
   </section>
@@ -185,7 +211,6 @@
             <p>Businesses and neighbors already giving.</p>
             <div class="logo-wall" style="grid-template-columns:repeat(2,1fr)">
               <img src="assets/img/sponsor-MinuteManPress.webp" alt="Minuteman Press" loading="lazy" width="400" height="122">
-              <img src="assets/img/sponsor-TravelLeaders.webp" alt="Travel Leaders" loading="lazy" width="400" height="145">
               <img src="assets/img/sponsor-EaglePest-2.webp" alt="Eagle Pest Solutions" loading="lazy" width="400" height="107">
               <img src="assets/img/sponsor-JobOne.webp" alt="Alan Lowe LLC" loading="lazy" width="400" height="167">
               <img src="assets/img/sponsor-GoodVibes.webp" alt="Good Vibe Energy &amp; Nutrition" loading="lazy" width="400" height="217">
