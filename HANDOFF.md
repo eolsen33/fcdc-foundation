@@ -13,8 +13,8 @@ Grouped by how much it blocks launch.
 
 | # | What | Where | Why it matters |
 |---|------|-------|----------------|
-| 1 | **Public phone number** | footer + `contact.html` | Currently `[CLIENT TO SUPPLY]` on every page. |
-| 2 | **Email inbox for the contact form** | `contact.html` | Form is wired to Formsubmit but points at a placeholder address. It will not deliver until you set the address and click the activation email. |
+| 1 | ~~**Public phone number**~~ | footer + `contact.html` | ✅ Supplied — (401) 864-6997, live on every page. |
+| 2 | **Formsubmit activation click** | `contact.html` | Address is set to fcdcfoundation01@gmail.com. ⚠️ Submit the form once and click the confirmation email Formsubmit sends — **it will not deliver until you do.** |
 | 3 | **Florida charity registration number (`CH#####`)** | footer | Required alongside the state solicitation disclosure, which is already in place. If registration lapsed, renew before soliciting. |
 | 4 | **Zeffy account + form slug** | `js/donate-config.js` | The no-fee donation form. Until this is set, giving falls back to your existing PayPal button and the mailing address — both live and working. |
 | 5 | **Confirm the mailing address** | footer, `ways-to-give.html` | We carried over *55 Black Alder Dr, Palm Coast, FL 32137* from the old site. Confirm it is still correct. |
@@ -25,7 +25,7 @@ Grouped by how much it blocks launch.
 
 | # | What | Where |
 |---|------|-------|
-| 6 | **Real per-item costs** — one two-dose Narcan kit; a month of transportation for one participant; one drug test; per-person graduation cost | home + `ways-to-give.html` giving tiers |
+| 6 | **Cost of one drug test** — the last open per-item figure. (Rent help, specialized treatment and skills training are presented without amounts, under "Some things you can't put a dollar amount on.") *(Supplied and already live: Narcan kit $45; transportation $3,000; graduation $3,000, held three times a year.)* | home + `ways-to-give.html` giving tiers |
 | 7 | **Program outcomes** — graduates since 2009, completion rate, re-arrest rate for graduates vs. comparable non-participants, and the date range each covers | home, "By the numbers" |
 | 8 | **Next Narcan class** — date, time, venue, whether registration is required. If classes run on a fixed schedule, tell us the pattern and we will publish that so it never goes stale | home + `narcan.html` |
 | 9 | **Facebook page URL** | footer |

@@ -588,7 +588,10 @@ body.has-mobile-donate { padding-bottom: 88px; }
 }
 .tier__buys { font-family: var(--font-head); font-weight: 600; font-size: var(--fs-lg); color: var(--color-text); margin-bottom: var(--sp-3); }
 .tier p { font-size: var(--fs-sm); color: var(--color-text-muted); }
-.tier .btn { margin-top: var(--sp-5); }
+/* Buttons sit on the card floor so every button in a row lines up,
+   however long the description above it runs. */
+.tier > p:last-of-type { margin-bottom: var(--sp-5); }
+.tier .btn { margin-top: auto; }
 
 /* Outcomes / stats */
 .stats { display: grid; gap: var(--sp-5); }
@@ -865,6 +868,7 @@ body.has-mobile-donate { padding-bottom: 88px; }
 .text-center { text-align: center; }
 .mb-0 { margin-bottom: 0; }
 .mt-5 { margin-top: var(--sp-5); }
+.mt-7 { margin-top: var(--sp-7); }
 .mt-6 { margin-top: var(--sp-6); }
 .narrow { max-width: var(--measure); }
 
