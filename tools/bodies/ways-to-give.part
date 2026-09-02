@@ -38,8 +38,14 @@
                 <li>Build one donation form and enable the monthly option.</li>
                 <li>Copy the form's share URL and paste the slug into <code>js/donate-config.js</code>.</li>
               </ol>
-              <p class="mb-0">The form embeds itself here automatically once that slug is set.
-              Until then, the PayPal button and the mail-in option below both work.</p>
+              <p>The form embeds itself here automatically once that slug is set. Until then,
+              the PayPal button and the mail-in option below both work.</p>
+              <p class="mb-0"><strong>Open decision from the 2 Sept meeting:</strong> the
+              Foundation offered its PayPal login so the monthly tiers can be wired up as
+              one-click subscriptions. PayPal can do that with no backend, but it charges card
+              fees that Zeffy does not — so this is Zeffy <em>or</em> PayPal subscriptions, not
+              both. Every tier button on the site routes through
+              <code>js/donate-config.js</code>, so whichever way it goes is a one-file change.</p>
             </div>
           </div>
         </div>
@@ -88,24 +94,26 @@
           <span class="tier__flag">Most useful</span>
           <p class="tier__amount">$25<span style="font-size:1rem;font-weight:400">/mo</span></p>
           <p class="tier__buys">Sustaining supporter</p>
-          <p>Enough to keep one participant supplied with the practical supports that keep them
-          in the program — consistently, all year.</p>
+          <p>$300 over a year — a driver’s license reinstated, or six Narcan kits, or a set of
+          car parts with a volunteer mechanic to fit them.</p>
           <a class="btn btn--primary" href="#donate" data-donate data-amount="25" data-monthly="true">Join the Sustaining Supporters</a>
         </div>
 
         <div class="tier">
           <p class="tier__amount">$50<span style="font-size:1rem;font-weight:400">/mo</span></p>
           <p class="tier__buys">Founding circle</p>
-          <p>Underwrites a meaningful share of a year's Narcan supply and graduation costs.</p>
+          <p>$600 over a year — roughly what one of our electric scooters costs, or half a year
+          of graduations.</p>
           <a class="btn btn--outline" href="#donate" data-donate data-amount="50" data-monthly="true">Join the Founding Circle</a>
         </div>
       </div>
 
-      <div class="placeholder mt-6 narrow">
-        <p class="mb-0"><strong>[CLIENT TO CONFIRM]</strong> The $10 Club 100 tier is real and
-        carried over from your existing materials. The $25 and $50 descriptions are structural
-        placeholders — tell us what those amounts actually cover and we will make the wording
-        literal instead of approximate.</p>
+      <div class="callout mt-6 narrow">
+        <p class="mb-0">
+          A monthly gift renews on its own, and you can change or stop it whenever you like. If
+          you would rather send $120 once a year than $10 a month, that is worth exactly the same
+          to us — several of our Club 100 members do it that way.
+        </p>
       </div>
     </div>
   </section>
@@ -128,17 +136,17 @@
         </div>
         <div class="tier">
           <p class="tier__amount">$3,000</p>
-          <p class="tier__buys">A ride to treatment</p>
-          <p>Electric scooters, gas money, and help with car repairs — whatever gets someone to
-          treatment and court appearances.</p>
+          <p class="tier__buys">A year of rides to treatment</p>
+          <p>Electric scooters, gas money, and car parts — $2,500 to $3,000 in a typical year, and
+          whatever it takes to get someone to treatment and court.</p>
           <a class="btn btn--outline" href="#donate" data-donate data-amount="3000">Give this</a>
         </div>
         <div class="tier">
-          <p class="tier__amount">$3,000</p>
-          <p class="tier__buys">A graduation</p>
+          <p class="tier__amount">$1,200</p>
+          <p class="tier__buys">A year of graduations</p>
           <p>Graduation is what makes finishing feel like an achievement. The Foundation holds
-          three a year, at about $3,000 each.</p>
-          <a class="btn btn--outline" href="#donate" data-donate data-amount="3000">Give this</a>
+          three a year, and together they cost about $1,200.</p>
+          <a class="btn btn--outline" href="#donate" data-donate data-amount="1200">Give this</a>
         </div>
       </div>
 
@@ -151,8 +159,21 @@
       <div class="grid grid--3">
         <div class="tier">
           <p class="tier__buys">Rent help &amp; security deposits</p>
-          <p>Security deposits and short-term rent, so somewhere stable to live is not what costs
-          a person their place in the program.</p>
+          <p>A one-bedroom here is $1,500 to $2,000 and a background check usually doubles the
+          deposit. We help with deposits, short-term rent, and a few nights somewhere approved
+          when a person is between places.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">Getting a license back</p>
+          <p>Reinstating a suspended driver’s license runs $200 to $300. We help with that so
+          somebody can drive themselves — we do not pay anyone’s fines.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">A GED</p>
+          <p>A participant without a high school diploma has to finish a GED to complete the
+          program here. If they need it, we pay for it.</p>
           <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
         </div>
         <div class="tier">
@@ -162,17 +183,26 @@
           <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
         </div>
         <div class="tier">
-          <p class="tier__buys">Skills training</p>
-          <p>Training and certifications that turn finishing the program into work someone can
-          build a life on.</p>
+          <p class="tier__buys">Life skills &amp; training</p>
+          <p>Budgeting and life skills programming, plus the training and certifications that turn
+          finishing the program into work someone can build a life on.</p>
+          <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">Training our volunteers</p>
+          <p>The national drug court conference costs about $500 a head in registration alone.
+          Volunteers who know what they are doing are worth paying to keep sharp.</p>
           <a class="btn btn--outline" href="#donate" data-donate>Give what you can</a>
         </div>
       </div>
 
-      <div class="placeholder mt-6 narrow">
-        <p class="mb-0"><strong>[CLIENT — ONE COST STILL OPEN]</strong> The three priced tiers
-        are real. The only number still missing is the <strong>cost of one drug test</strong>.
-        Amounts are set in <code>ways-to-give.html</code> and <code>index.html</code>.</p>
+      <div class="callout mt-6 narrow">
+        <h3>What we do not pay for</h3>
+        <p class="mb-0">
+          <strong>Drug testing</strong> is funded by the drug court program itself, not by us.
+          And we do not pay anyone’s <strong>court fines</strong> — meeting that obligation is
+          part of the program, and part of what a person learns by finishing it.
+        </p>
       </div>
     </div>
   </section>
@@ -185,10 +215,23 @@
           <p class="eyebrow">Local businesses</p>
           <h2>Sponsor the Foundation.</h2>
           <p>
-            Business sponsors are listed on this site, recognised at the annual Ride for
+            Business sponsors are listed on this site, recognized at the annual Ride for
             Recovery, and thanked in our community materials. For a local business, this is
             visible support for a program that reduces crime and returns employable neighbors
             to the workforce.
+          </p>
+          <p>
+            <strong>Every event sponsor gets a free 15-minute episode of our podcast</strong>,
+            <em>The Road to Recovery</em> — your business, in your own words, on the channel most
+            people actually pay attention to now. It is included, and most sponsors never claim
+            it. We do not put two competing businesses on the same episode; whoever comes in first
+            has that show to themselves.
+          </p>
+          <p>
+            <strong>In-kind support counts the same as cash to us.</strong> Minuteman Press prints
+            our eighteen hole-sponsor signs for the golf tournament every year as their gift and
+            charges half rate for the rest. That is money we would otherwise have had to spend, so
+            it is worth exactly as much.
           </p>
           <p>
             We are glad to put together a sponsorship letter for your accountant, and we can
@@ -250,22 +293,24 @@
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg>
           </div>
-          <h3>Ride for Recovery</h3>
+          <h3>Ride for Recovery — October 24</h3>
           <p>
-            Our annual fundraiser — a ride open to all vehicles, with a pig roast, raffle,
-            auction, and vendor fair. Riders, vendors and sponsors all welcome.
+            Our biggest fundraiser of the year — a ride open to all vehicles, with a pig roast,
+            raffle, auction, and vendor fair. Riders, vendors and sponsors all welcome. The spring
+            golf tournament is the other one, and between them they bring in most of our income.
           </p>
-          <a class="btn btn--outline" href="contact.html?subject=ride">Ask about the next ride</a>
+          <a class="btn btn--outline" href="contact.html?subject=ride">Ride, vend, or sponsor</a>
         </div>
 
         <div class="card">
           <div class="card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg>
           </div>
-          <h3>Give time</h3>
+          <h3>Give time, or a skill</h3>
           <p>
-            Volunteers staff events, hand out Narcan, and help at the annual ride. If you have
-            a skill and a few hours, we will find a use for both.
+            Volunteers staff events, hand out Narcan, and help at the annual ride. We are also
+            short a bookkeeper, a grant writer and someone who enjoys fundraising — a few hours a
+            month each, and more useful to us than most checks.
           </p>
           <a class="btn btn--outline" href="contact.html?subject=volunteer">Volunteer</a>
         </div>
@@ -274,7 +319,7 @@
       <div class="callout mt-6 narrow">
         <h3>Tax receipts and paperwork</h3>
         <p class="mb-0">
-          The Flagler County Drug Court Foundation is a recognised 501(c)(3) organisation and
+          The Flagler County Drug Court Foundation is a recognized 501(c)(3) organization and
           all financial contributions are tax deductible to the extent allowed by law. Our EIN
           is <strong>27-1349987</strong>. Need a receipt, our determination letter, or a W-9?
           <a href="contact.html">Ask us</a>.

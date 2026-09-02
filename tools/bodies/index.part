@@ -16,19 +16,101 @@
           A Flagler County 501(c)(3) since 2009
         </p>
 
-        <h1>Treatment costs a fraction of a prison cell — and it gives our neighbors their lives back.</h1>
+        <h1>Helping our neighbors recover. Providing hope while they do.</h1>
 
         <p class="hero__lede">
           The Flagler County Drug Court Foundation’s mission is to support and promote the
           Flagler County Drug Court program, helping individuals recover from substance abuse
           and lead productive, healthy lives through community engagement, advocacy, and
-          educational initiatives.
+          educational initiatives. Underneath every bit of it, what we provide is hope.
         </p>
 
         <div class="btn-row">
           <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
-          <a class="btn btn--outline btn--lg" href="drug-court.html">How drug court works</a>
+          <a class="btn btn--outline btn--lg" href="#whatwedo-heading">What we pay for</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ────────────────────────────────────────────── WHAT WE DO -->
+  <section class="section" aria-labelledby="whatwedo-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">What we do</p>
+        <h2 id="whatwedo-heading">We take the pressure off, so recovery is what they can concentrate on.</h2>
+        <p class="lede">
+          The court supplies the judge, the case manager, the treatment plan and the supervision.
+          It cannot supply a car part, a deposit, or a GED. That gap is the whole reason the
+          Foundation exists — and we never bill the court a cent for any of it. Every dollar
+          below comes from fundraising and donations in Flagler County.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <h3>Getting there</h3>
+          <p class="mb-0">
+            Court, probation, drug testing, treatment. Miss those appointments and a person is in
+            trouble. We keep electric scooters on the road, buy the parts for volunteer mechanics
+            to fit, help with gas money, and get free bicycles through our partnership with a
+            local bike nonprofit.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Getting a license back</h3>
+          <p class="mb-0">
+            Reinstating a suspended driver’s license runs $200 to $300 on top of whatever the
+            court has ordered. We cover the reinstatement so someone can drive themselves.
+            <strong>We do not pay anyone’s fines</strong> — that part is theirs, and paying it is
+            part of the work.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Finishing school</h3>
+          <p class="mb-0">
+            In Flagler County, a participant without a high school diploma has to complete a GED
+            to finish the program. If they need one, we pay for it.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Life skills</h3>
+          <p class="mb-0">
+            Budgeting, planning, the practical things nobody ever sat them down and taught. We run
+            life skills programming, and we place participants in the community service the
+            program requires of them.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Somewhere to live</h3>
+          <p class="mb-0">
+            A one-bedroom here is now $1,500 to $2,000, a room in someone’s house is $600 to
+            $1,000, and a background check usually doubles the security deposit. We help with
+            deposits, short-term rent, and a few nights in an approved motel when someone is
+            between places.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Treatment the program doesn’t cover</h3>
+          <p class="mb-0">
+            Some people need specialized care the court’s provider does not offer. When we can, we
+            pay for it, so the treatment plan fits the person rather than the other way around.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout--gold mt-6 narrow">
+        <p class="mb-0">
+          This is why our judges refer people to us. They can see what would help, and it sits
+          outside what the court is allowed to do. Flagler County is one of the only drug courts
+          in the state with a foundation behind it like this — and the judges say they would not
+          want to work without one.
+        </p>
       </div>
     </div>
   </section>
@@ -40,8 +122,8 @@
         <p class="eyebrow">Give to something specific</p>
         <h2 id="tiers-heading">Your gift buys a thing, not an abstraction.</h2>
         <p class="lede">
-          The court supplies the judge, the case manager and the supervision. We supply the
-          rest — and the rest is usually what decides whether someone can keep showing up.
+          Some of what we buy has a price tag on it. Here is what those dollars actually turn
+          into.
         </p>
       </div>
 
@@ -58,23 +140,23 @@
 
         <div class="tier">
           <p class="tier__amount">$3,000</p>
-          <p class="tier__buys">A ride to treatment</p>
+          <p class="tier__buys">A year of rides to treatment</p>
           <p>
             Missing appointments is one of the most common reasons a person is discharged from
-            the program. We pay for electric scooters, gas money, and help with car repairs —
-            whatever it takes to get someone there.
+            the program. Scooters, gas money and car parts run us $2,500 to $3,000 in a typical
+            year — whatever it takes to get someone there.
           </p>
           <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="3000">Give this</a>
         </div>
 
         <div class="tier">
-          <p class="tier__amount">$3,000</p>
-          <p class="tier__buys">A graduation</p>
+          <p class="tier__amount">$1,200</p>
+          <p class="tier__buys">A year of graduations</p>
           <p>
             Graduation is what makes finishing feel like something. The Foundation puts on three
-            a year, and one costs about $3,000 to hold.
+            a year, and together they cost us about $1,200 to hold.
           </p>
-          <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="3000">Give this</a>
+          <a class="btn btn--outline" href="ways-to-give.html" data-donate data-amount="1200">Give this</a>
         </div>
       </div>
 
@@ -118,10 +200,12 @@
       </div>
 
       <div class="placeholder mt-6">
-        <p class="mb-0"><strong>[CLIENT — ONE COST STILL OPEN]</strong> The three priced tiers
-        carry the real figures you supplied. The only number still missing is the <strong>cost of
-        one drug test</strong> — send it and testing goes in as its own priced tier. Amounts are
-        set in one place, <code>index.html</code> (<code>data-amount</code>).</p>
+        <p class="mb-0"><strong>[CLIENT — CONFIRM ONE FIGURE]</strong> Drug testing has been
+        removed from the site entirely: it is paid for by the drug court program, not the
+        Foundation. Please confirm the <strong>$1,200 graduations</strong> figure — the meeting
+        recording is ambiguous about whether that is the total for all three graduations in a
+        year or the cost of each one. Amounts live in one place per page
+        (<code>data-amount</code>).</p>
       </div>
     </div>
   </section>
@@ -133,7 +217,10 @@
         <p class="eyebrow">What the program produces</p>
         <h2 id="outcomes-heading">The Flagler County Drug Court Foundation, by the numbers.</h2>
         <p class="lede">
-          We publish our own results rather than borrowing national averages.
+          We publish our own results rather than borrowing national averages. Over the three-year
+          window the court actually measures, our participants’ non-re-arrest rate runs between
+          the high 60s and the low 80s in percentage terms — which for this kind of program is
+          very good indeed.
         </p>
       </div>
 
@@ -154,9 +241,10 @@
 
       <div class="placeholder mt-6">
         <p class="mb-0"><strong>[PLACEHOLDER — DO NOT PUBLISH UNTIL VERIFIED]</strong> These three
-        figures are blank on purpose. Nobody invented them. Source them from the Seventh Judicial
-        Circuit drug court coordinator or the Office of the State Courts Administrator, and note
-        the date range they cover so we can label the numbers accurately on the page.</p>
+        figures are blank on purpose. Nobody invented them. The drug court coordinator has the
+        graduate count and the current re-arrest figures; the comparison rate for similar cases
+        that did not go through drug court still needs a citable source. Note the date range each
+        number covers so we can label it accurately on the page.</p>
       </div>
     </div>
   </section>
@@ -167,11 +255,11 @@
       <div class="hero__grid">
         <div>
           <p class="eyebrow">Club 100 — our monthly circle</p>
-          <h2 id="monthly-heading">$10 a month sustains one person's support for a year.</h2>
+          <h2 id="monthly-heading">$10 a month. A hundred neighbors. Something always in hand.</h2>
           <p>
             A single gift helps once. A monthly gift is what lets us tell a case manager
-            <em>yes</em> in the middle of February, when someone needs a ride, a test, or a
-            kit and there is no grant cycle coming.
+            <em>yes</em> in the middle of February, when someone needs a car part, a deposit or
+            a kit and there is no grant cycle coming.
           </p>
           <p>
             Club 100 is exactly what it sounds like: a hundred neighbors giving $120 a year —
@@ -241,6 +329,63 @@
             <a class="btn btn--outline" href="contact.html?subject=narcan">Ask about a class</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 ─────────────────────────────────────────────── EVENTS -->
+  <section class="section" aria-labelledby="events-heading">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Come out with us</p>
+        <h2 id="events-heading">Upcoming events</h2>
+        <p class="lede">
+          Two big fundraisers a year carry most of what we spend, and a handful of small ones run
+          by local businesses cover the rest. Every one of them is somewhere you can just show up.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="tier">
+          <p class="tier__buys">Ride for Recovery</p>
+          <p class="tier__amount" style="font-size:1.5rem">Saturday, October 24</p>
+          <p>
+            Our biggest day of the year — a ride open to all vehicles, with a pig roast, raffle,
+            auction and vendor fair. Riders, vendors and sponsors all welcome, and this is where
+            our sponsors get thanked in front of everybody.
+          </p>
+          <a class="btn btn--outline" href="contact.html?subject=ride">Ride, vend, or sponsor</a>
+        </div>
+
+        <div class="tier">
+          <p class="tier__buys">Dine to Donate — Texas Roadhouse</p>
+          <p class="tier__amount" style="font-size:1.5rem">Wednesday, September 16</p>
+          <p>
+            Come in for dinner, tell your server you are there for the Foundation, and drop the
+            paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run
+            one of these about once a quarter, and it covers a standing bill for the whole year.
+          </p>
+          <a class="btn btn--outline" href="contact.html?subject=general">Ask about this one</a>
+        </div>
+
+        <div class="tier">
+          <p class="tier__buys">Golf tournament</p>
+          <p class="tier__amount" style="font-size:1.5rem">Spring 2027</p>
+          <p>
+            Our other major fundraiser. A hole sponsorship is the simplest way for a small
+            business to back this work — the signs themselves are printed for us in kind by
+            Minuteman Press.
+          </p>
+          <a class="btn btn--outline" href="contact.html?subject=sponsor">Sponsor a hole</a>
+        </div>
+      </div>
+
+      <div class="placeholder mt-6 narrow">
+        <p class="mb-0"><strong>[CONFIRM BEFORE LAUNCH]</strong> Ride for Recovery is set for
+        <strong>October 24</strong>; we still need the start time, the location and the rider
+        fee. The Texas Roadhouse date is our note from the meeting (“this month, I think the
+        16th”) and needs confirming before this page goes live. The spring golf date is not set
+        yet. Caliber Car Wash is deliberately not listed — that paperwork is not finished.</p>
       </div>
     </div>
   </section>

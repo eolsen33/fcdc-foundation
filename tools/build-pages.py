@@ -99,7 +99,7 @@ def head(page, meta):
 <meta property="og:title" content="{meta.get('og_title', meta['title'])}">
 <meta property="og:description" content="{meta.get('og_description', meta['description'])}">
 <meta property="og:url" content="{SITE}/{'' if page == 'index.html' else page}">
-<meta property="og:image" content="{SITE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Flagler County Drug Court Foundation — treatment costs a fraction of a prison cell">
+<meta property="og:image" content="{SITE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Flagler County Drug Court Foundation — recovery, hope, and second chances">
 <meta property="og:site_name" content="Flagler County Drug Court Foundation">
 <meta name="twitter:card" content="summary_large_image">
 

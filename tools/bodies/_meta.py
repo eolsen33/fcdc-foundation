@@ -2,9 +2,9 @@
 
 META = {
     "index.html": {
-        "title": "Flagler County Drug Court Foundation | Recovery, Not Prison Cells",
-        "description": "The Flagler County Drug Court Foundation supports people in the Flagler County drug court program with treatment support, Narcan training, and community education. A local 501(c)(3). Give monthly and sustain one neighbor's recovery.",
-        "og_description": "Treatment costs a fraction of a prison cell — and it gives Flagler County neighbors their lives back. Support recovery in your own county.",
+        "title": "Flagler County Drug Court Foundation | Recovery, Hope, Second Chances",
+        "description": "The Flagler County Drug Court Foundation helps people in the Flagler County drug court program recover — transportation, housing deposits, GEDs, specialized treatment, free Narcan and training. A local 501(c)(3) since 2009.",
+        "og_description": "We help Flagler County neighbors in the drug court program get through recovery — rides, deposits, GEDs, free Narcan — and we provide hope. Every dollar stays in this county.",
     },
     "about.html": {
         "title": "About Us | Flagler County Drug Court Foundation",

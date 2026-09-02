@@ -28,7 +28,7 @@
         <li>
           <h3>Intensive treatment and support</h3>
           <p class="mb-0">Participants receive the treatment and services they need to reach and
-          sustain recovery — clinical care, counselling, and the practical supports around it.</p>
+          sustain recovery — clinical care, counseling, and the practical supports around it.</p>
         </li>
         <li>
           <h3>Accountability to the judge</h3>
@@ -126,6 +126,51 @@
     </div>
   </section>
 
+  <section class="section section--tint">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">For employers</p>
+          <h2>Hiring someone in the program is a better bet than you think.</h2>
+          <p>
+            Ask yourself how often you drug test the people already on your payroll. For most
+            employers the honest answer is never.
+          </p>
+          <p>
+            A drug court participant is tested <strong>two to three times a week</strong>, at
+            random. On top of that they have a judge, a probation officer, a state attorney and a
+            full treatment team all watching whether they show up and do the work. You will not
+            find a more closely supervised employee anywhere.
+          </p>
+          <p class="mb-0">
+            We work with local employers to place participants and graduates, and we are happy to
+            walk you through how it works before you commit to anything.
+          </p>
+          <div class="btn-row mt-5">
+            <a class="btn btn--primary" href="contact.html?subject=general">Talk to us about hiring</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>What the Foundation adds</h3>
+            <p>
+              The court cannot buy a car part or a bus fare, and it cannot reach outside its own
+              jurisdiction. We can. A judge who can see that somebody needs a scooter to get to
+              treatment can refer that person to us and it gets handled — no budget cycle, no
+              hearing.
+            </p>
+            <p class="mb-0">
+              We charge the court nothing for any of it. It is all fundraising and donations, and
+              it is one of the reasons our judges say they would not want to run this program
+              without a foundation behind it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="section__head">
@@ -164,9 +209,12 @@
           <summary>What does the Foundation pay for?</summary>
           <div class="faq__body">
             <p class="mb-0">
-              We fund the things the court budget does not cover: incentives that recognize
-              progress, transportation to treatment and court, testing costs, graduation, free
-              Narcan, and community training. See <a href="ways-to-give.html">Ways to Give</a>.
+              We fund the things the court budget does not cover: transportation to treatment and
+              court, car repairs, driver’s license reinstatement, GEDs, housing deposits,
+              specialized treatment, life skills programming, graduations, free Narcan, and
+              community training. We do <em>not</em> pay for drug testing — that is part of the
+              court program — and we do not pay anyone’s fines. See
+              <a href="ways-to-give.html">Ways to Give</a>.
             </p>
           </div>
         </details>
@@ -188,7 +236,7 @@
     <div class="container">
       <div class="narrow text-center" style="margin-inline:auto">
         <h2>Help fund the parts the court can't.</h2>
-        <p>A ride, a test, a kit, a graduation. Small things, at the exact moment they matter.</p>
+        <p>A ride, a car part, a kit, a graduation. Small things, at the exact moment they matter.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
           <a class="btn btn--outline" href="ways-to-give.html#monthly">Give monthly</a>

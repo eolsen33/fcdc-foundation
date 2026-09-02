@@ -23,13 +23,31 @@
             no cost to people who need it. We have been handing out kits ever since.
           </p>
 
-          <h3>Who we have trained</h3>
+          <div class="callout callout--gold">
+            <p class="mb-0" style="font-size:1.35rem;font-weight:600;line-height:1.35">
+              “If they’re dead, they can’t recover.”
+            </p>
+            <p class="mb-0 mt-5">
+              That is the whole argument, and it is why this program grew past the drug court.
+              Everything else the Foundation does depends on the person still being here.
+            </p>
+          </div>
+
+          <h3 class="mt-6">Who we have trained and supplied</h3>
           <ul class="list-check">
-            <li>The Flagler County Health Department</li>
-            <li>The Flagler County Tax Collector's office</li>
-            <li>School district staff — the first program of its kind in the state</li>
-            <li>Families, community groups, and anyone who asks</li>
+            <li><strong>Every school in the Flagler County school district</strong> — we provided
+            the Narcan and the training</li>
+            <li><strong>The Flagler County Tax Collector’s office</strong> — over 100,000 people a
+            year come through those doors for taxes and vehicle licensing. They came to us and
+            asked.</li>
+            <li><strong>The Flagler County Health Department</strong> — our team trained theirs</li>
+            <li>Nursing homes, businesses, churches, civic clubs, families, and anyone who asks</li>
           </ul>
+
+          <p>
+            That is the shift this program caused. We started out supporting people inside the
+            drug court program, and we ended up as one of the county’s Narcan educators.
+          </p>
         </div>
 
         <div class="hero__media">
@@ -70,14 +88,57 @@
         <div class="card">
           <h3>Request a training</h3>
           <p>
-            We will come to your workplace, church, civic club, or neighbourhood group and run a
-            session. There is no charge, and participants leave with a kit.
+            If your business, church, civic club, school or neighborhood group would like a
+            presentation and training, we will come to you and run a session. There is no charge,
+            and participants leave with a kit.
           </p>
           <p>
-            Sessions run about twenty minutes for the basics — recognising an overdose,
+            Sessions run about twenty minutes for the basics — recognizing an overdose,
             administering the spray, calling 911, and staying until help arrives.
           </p>
           <a class="btn btn--primary" href="contact.html?subject=narcan">Request a training</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">“I don’t need that”</p>
+        <h2>People tell us that at every event. We are glad they don’t.</h2>
+        <p class="lede">
+          Then we ask the second question: do you know somebody who might? And if you came across
+          a stranger face down on the ground, would you know what to do? Carrying Narcan is like
+          knowing CPR. You are not carrying it for yourself.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <h3>Unintentional overdose is at a record high</h3>
+          <p class="mb-0">
+            Most of it is fentanyl, and most of the people it kills had no idea they had taken
+            any. Somebody picks up a pill that looks like something familiar, and that is the end
+            of it.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Older adults get confused on their medication</h3>
+          <p class="mb-0">
+            A doubled dose of a legitimate prescription can stop someone breathing just as surely
+            as anything bought on a street corner. Narcan does not care how the opioid got there.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>A kit we gave away saved a woman in her eighties</h3>
+          <p class="mb-0">
+            A Flagler County nursing home had one of our kits on the shelf. A resident on a
+            legitimate fentanyl patch overdosed on it — her body simply could not handle the dose.
+            Staff used the kit, she survived, and her medication was adjusted.
+          </p>
         </div>
       </div>
     </div>
@@ -135,8 +196,14 @@
           <p class="eyebrow">Fund the kits</p>
           <h2>Every kit we give away was paid for by someone local.</h2>
           <p>
-            Grants come and go. Community giving is what keeps a supply on the table between
-            grant cycles — which is exactly when people tend to need one.
+            Grants come and go, and we do not have one running right now. Community giving is what
+            keeps a supply on the table between grant cycles — which is exactly when people tend
+            to need one.
+          </p>
+          <p>
+            Over the counter, a two-dose kit costs $45 to $50. When we started this in 2019 it was
+            over $200, before the FDA moved naloxone over the counter. It has never cost the
+            person receiving it anything, and it never will.
           </p>
           <div class="btn-row mt-5">
             <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Fund Narcan kits</a>
@@ -147,7 +214,7 @@
           <div class="stats">
             <div class="stat">
               <p class="stat__figure">$45</p>
-              <p class="stat__label">puts one two-dose Narcan kit in someone's hands</p>
+              <p class="stat__label">puts one two-dose Narcan kit in someone’s hands, free</p>
             </div>
           </div>
         </div>
