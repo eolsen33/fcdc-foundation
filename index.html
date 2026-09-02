@@ -17,7 +17,7 @@
 
 <link rel="icon" href="assets/img/hope-logo.png">
 <link rel="preload" href="assets/fonts/Lexend-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20260901a">
+<link rel="stylesheet" href="css/style.css?v=20260902a">
 
 <script type="application/ld+json">
 {
@@ -67,6 +67,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="drug-court.html">Drug Court</a></li>
         <li><a href="narcan.html">Narcan</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="ways-to-give.html">Ways to Give</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -426,45 +427,39 @@
 
       <div class="grid grid--3">
         <div class="tier">
-          <p class="tier__buys">Ride for Recovery</p>
-          <p class="tier__amount" style="font-size:1.5rem">Saturday, October 24</p>
-          <p>
-            Our biggest day of the year — a ride open to all vehicles, with a pig roast, raffle,
-            auction and vendor fair. Riders, vendors and sponsors all welcome, and this is where
-            our sponsors get thanked in front of everybody.
-          </p>
-          <a class="btn btn--outline" href="contact.html?subject=ride">Ride, vend, or sponsor</a>
-        </div>
-
-        <div class="tier">
           <p class="tier__buys">Dine to Donate — Texas Roadhouse</p>
-          <p class="tier__amount" style="font-size:1.5rem">Wednesday, September 16</p>
-          <p>
-            Come in for dinner, tell your server you are there for the Foundation, and drop the
-            paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run
-            one of these about once a quarter, and it covers a standing bill for the whole year.
-          </p>
+          <p class="tier__amount" style="font-size:1.5rem">September 16</p>
+          <p>Come in for dinner, tell your server you are there for the Foundation, and drop the paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run one of these about once a quarter, and it covers a standing bill for the whole year.</p>
           <a class="btn btn--outline" href="contact.html?subject=general">Ask about this one</a>
         </div>
-
         <div class="tier">
-          <p class="tier__buys">Golf tournament</p>
-          <p class="tier__amount" style="font-size:1.5rem">Spring 2027</p>
-          <p>
-            Our other major fundraiser. A hole sponsorship is the simplest way for a small
-            business to back this work — the signs themselves are printed for us in kind by
-            Minuteman Press.
-          </p>
-          <a class="btn btn--outline" href="contact.html?subject=sponsor">Sponsor a hole</a>
+          <p class="tier__buys">Ride for Recovery</p>
+          <p class="tier__amount" style="font-size:1.5rem">October 24</p>
+          <p>Our biggest day of the year — a ride open to all vehicles, with a pig roast, raffle, auction and vendor fair. Riders, vendors and sponsors all welcome, and this is where our sponsors get thanked in front of everybody.</p>
+          <a class="btn btn--outline" href="contact.html?subject=ride">Ride, vend, or sponsor</a>
+        </div>
+        <div class="tier">
+          <p class="tier__buys">Narcan training and free kits</p>
+          <p class="tier__amount" style="font-size:1.5rem">Next class to be announced</p>
+          <p>About twenty minutes: recognizing an overdose, giving the spray, calling 911, and staying until help arrives. Free, and everyone leaves with a kit. We will also come to your business, church, school or civic club and run a session.</p>
+          <a class="btn btn--outline" href="contact.html?subject=narcan">Request a training</a>
         </div>
       </div>
 
+      <div class="btn-row mt-6">
+        <a class="btn btn--primary" href="events.html">See the full calendar</a>
+      </div>
+
       <div class="placeholder mt-6 narrow">
-        <p class="mb-0"><strong>[CONFIRM BEFORE LAUNCH]</strong> Ride for Recovery is set for
+        <p><strong>[CONFIRM BEFORE LAUNCH]</strong> Ride for Recovery is set for
         <strong>October 24</strong>; we still need the start time, the location and the rider
         fee. The Texas Roadhouse date is our note from the meeting (“this month, I think the
         16th”) and needs confirming before this page goes live. The spring golf date is not set
         yet. Caliber Car Wash is deliberately not listed — that paperwork is not finished.</p>
+        <p class="mb-0">These three cards and the whole calendar page are generated from
+        <code>data/events.json</code>. Edit that one file, run
+        <code>python3 tools/build-pages.py</code>, and every place an event appears updates
+        together. Past events drop off on their own.</p>
       </div>
     </div>
   </section>
@@ -522,6 +517,7 @@
           <li><a href="about.html">About us</a></li>
           <li><a href="drug-court.html">How drug court works</a></li>
           <li><a href="narcan.html">Narcan training</a></li>
+          <li><a href="events.html">Events calendar</a></li>
           <li><a href="ways-to-give.html">Ways to give</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>

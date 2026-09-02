@@ -291,7 +291,7 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
 .site-nav a[aria-current="page"] { color: var(--hope-purple-800); font-weight: 600; }
 
 /* Mobile nav panel */
-@media (max-width: 899px) {
+@media (max-width: 1099px) {
   .site-nav {
     display: none;
     position: absolute; left: 0; right: 0; top: 100%;
@@ -307,11 +307,11 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
   .header-donate { display: none; }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .nav-toggle { display: none; }
   .site-nav { display: block; }
   .site-nav ul { display: flex; align-items: center; gap: var(--sp-2); }
-  .site-nav a { padding: var(--sp-2) var(--sp-3); font-size: var(--fs-sm); }
+  .site-nav a { padding: var(--sp-2) var(--sp-3); font-size: var(--fs-sm); white-space: nowrap; }
   .site-nav a[aria-current="page"] { background: var(--color-bg-tint); }
   .header-donate { margin-left: var(--sp-3); }
 }
@@ -327,9 +327,9 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
   box-shadow: 0 -4px 16px rgba(27,22,48,.10);
   backdrop-filter: blur(8px);
 }
-@media (min-width: 900px) { .mobile-donate { display: none; } }
+@media (min-width: 1100px) { .mobile-donate { display: none; } }
 body.has-mobile-donate { padding-bottom: 88px; }
-@media (min-width: 900px) { body.has-mobile-donate { padding-bottom: 0; } }
+@media (min-width: 1100px) { body.has-mobile-donate { padding-bottom: 0; } }
 
 /* ==========================================================================
    Hero
@@ -876,6 +876,128 @@ body.has-mobile-donate { padding-bottom: 88px; }
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 500ms var(--ease), transform 500ms var(--ease); }
   .js .reveal.is-visible { opacity: 1; transform: none; }
+}
+
+/* ==========================================================================
+   Events calendar  (events.html)
+   The month grid is progressive enhancement — the full event list underneath is
+   plain HTML and works with JavaScript off.
+   ========================================================================== */
+.cal-layout { display: grid; gap: var(--sp-7); align-items: start; }
+@media (min-width: 900px) {
+  .cal-layout { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: var(--sp-8); }
+  .cal-wrap { position: sticky; top: var(--sp-6); }
+}
+
+.cal__bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-3); margin-bottom: var(--sp-4);
+}
+.cal__month {
+  font-family: var(--font-head); font-weight: 600; font-size: var(--fs-xl);
+  color: var(--hope-purple-800); margin: 0;
+}
+.cal__nav { display: flex; gap: var(--sp-2); }
+.cal__nav button {
+  width: 2.75rem; height: 2.75rem; display: grid; place-items: center;
+  background: var(--color-surface); color: var(--hope-purple-700);
+  border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm);
+  cursor: pointer; transition: background var(--dur) var(--ease);
+}
+.cal__nav button:hover { background: var(--color-bg-tint); }
+.cal__nav svg { width: 1.25rem; height: 1.25rem; }
+
+table.cal__grid {
+  width: 100%; border-collapse: collapse; table-layout: fixed;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); overflow: hidden;
+}
+table.cal__grid th {
+  font-family: var(--font-head); font-size: var(--fs-sm); font-weight: 600;
+  color: var(--color-text-muted); text-transform: uppercase; letter-spacing: .06em;
+  padding: var(--sp-3) 0; background: var(--color-bg-tint);
+  border-bottom: 1px solid var(--color-border);
+}
+table.cal__grid td {
+  border: 1px solid var(--color-border); vertical-align: top;
+  padding: var(--sp-2) var(--sp-2) var(--sp-3); height: 4.25rem;
+}
+table.cal__grid td.is-blank { background: var(--color-bg-tint); }
+.cal__num { display: block; font-size: var(--fs-sm); color: var(--color-text-muted); }
+td[aria-current="date"] .cal__num {
+  font-weight: 700; color: var(--color-on-primary); background: var(--hope-purple-700);
+  width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center;
+}
+td.has-events { background: #FCFBFF; }
+
+/* A dot, not a title: seven columns in a 380px rail cannot hold readable text,
+   and the full detail sits in the list alongside. The accessible name is intact. */
+.cal__evt {
+  display: inline-block; width: .6rem; height: .6rem; border-radius: 50%;
+  margin: 5px 2px 0; vertical-align: top; text-decoration: none;
+}
+.cal__evt:hover { transform: scale(1.35); }
+.cal__evt:focus-visible { outline: 2px solid var(--color-ring); outline-offset: 3px; }
+
+.cal-legend {
+  list-style: none; margin: var(--sp-4) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: var(--sp-4);
+  font-size: var(--fs-sm); color: var(--color-text-muted);
+}
+.cal-legend li { display: flex; align-items: center; gap: var(--sp-2); }
+.cal-legend span { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; }
+/* Solid, not the pale chip tints — these are 10px dots on white and have to carry. */
+.cal__evt--fundraiser { background: var(--hope-gold-600); }
+.cal__evt--training   { background: var(--hope-purple-700); }
+.cal__evt--community  { background: var(--hope-crimson); }
+
+@media (max-width: 560px) {
+  table.cal__grid td { height: 3.25rem; padding: var(--sp-2) 4px; }
+}
+
+/* ---- Event list ---- */
+.evt-list { list-style: none; margin: var(--sp-5) 0 0; padding: 0; display: grid; gap: var(--sp-5); }
+.evt {
+  display: grid; gap: var(--sp-4); align-items: start;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: var(--sp-5); box-shadow: var(--shadow-sm);
+}
+@media (min-width: 560px) { .evt { grid-template-columns: 4.5rem minmax(0, 1fr); } }
+.evt:target { border-color: var(--hope-purple); box-shadow: 0 0 0 3px rgba(115, 89, 222, .25); }
+.evt__date {
+  background: var(--hope-purple-900); color: var(--color-text-invert);
+  border-radius: var(--radius-sm); padding: var(--sp-2) 0; text-align: center;
+  width: 4.5rem;
+}
+.evt__mon {
+  display: block; font-family: var(--font-head); font-size: var(--fs-sm);
+  font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--color-text-invert-mut);
+}
+.evt__day { display: block; font-family: var(--font-head); font-size: var(--fs-2xl); font-weight: 700; line-height: 1.1; }
+.evt__body > h3 { margin: var(--sp-2) 0 var(--sp-1); }
+.evt__when { font-weight: 600; color: var(--color-text); margin: 0; }
+.evt__where { color: var(--color-text-muted); margin: 0 0 var(--sp-3); }
+.evt__actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin: var(--sp-4) 0 0; }
+.evt__actions .btn { margin: 0; }
+.evt-confirm {
+  background: var(--color-note-bg); border-left: 4px solid var(--color-note-border);
+  padding: var(--sp-3) var(--sp-4); margin: var(--sp-3) 0; border-radius: var(--radius-sm);
+}
+.evt--empty { display: block; }
+
+.evt-kind {
+  display: inline-block; font-family: var(--font-head); font-size: var(--fs-xs);
+  font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+  padding: 3px 10px; border-radius: var(--radius-pill);
+}
+.evt-kind--fundraiser { background: #FFF1D6; color: #6E4600; }
+.evt-kind--training   { background: #EDE8FB; color: var(--hope-purple-800); }
+.evt-kind--community  { background: #FAE7EC; color: var(--hope-crimson); }
+
+@media print {
+  .cal-wrap, .evt__actions { display: none !important; }
+  .evt { break-inside: avoid; box-shadow: none; }
 }
 
 @media print {

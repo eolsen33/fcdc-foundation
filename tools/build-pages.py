@@ -15,8 +15,11 @@ Usage:  python3 tools/build-pages.py
 
 import pathlib
 import re
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import events_render  # noqa: E402  (needs ROOT/tools on the path first)
 
 # The host the site is actually served from. Canonical, og:url and og:image
 # must all point at it or link previews break: a scraper that follows og:image
@@ -27,13 +30,14 @@ SITE = "https://fcdc.ericolsen.studio"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20260901a"
+ASSET_V = "20260902a"
 
 NAV = [
     ("index.html", "Home"),
     ("about.html", "About"),
     ("drug-court.html", "Drug Court"),
     ("narcan.html", "Narcan"),
+    ("events.html", "Events"),
     ("ways-to-give.html", "Ways to Give"),
     ("contact.html", "Contact"),
 ]
@@ -43,6 +47,7 @@ FOOTER_NAV_LABELS = {
     "about.html": "About us",
     "drug-court.html": "How drug court works",
     "narcan.html": "Narcan training",
+    "events.html": "Events calendar",
     "ways-to-give.html": "Ways to give",
     "contact.html": "Contact",
 }
@@ -139,6 +144,9 @@ def head(page, meta):
 
 
 def foot(page):
+    # Only the events page needs the calendar script.
+    cal = ('\n<script src="js/calendar.js?v=%s" defer></script>' % ASSET_V
+           if page == "events.html" else "")
     footer_nav = "\n".join(
         '          <li><a href="{h}">{l}</a></li>'.format(h=h, l=FOOTER_NAV_LABELS[h])
         for h, _ in NAV
@@ -226,7 +234,7 @@ def foot(page):
 </footer>
 
 <script src="js/donate-config.js"></script>
-<script src="js/main.js" defer></script>
+<script src="js/main.js" defer></script>{cal}
 </body>
 </html>
 """
@@ -238,8 +246,14 @@ def build():
     exec((bodies / "_meta.py").read_text(), meta_all)
     META = meta_all["META"]
 
+    tokens = events_render.tokens(ROOT, SITE)
+
     for page, meta in META.items():
         body = (bodies / (page.replace(".html", ".part"))).read_text()
+        for key, value in tokens.items():
+            body = body.replace("{{%s}}" % key, value)
+        left = re.findall(r"\{\{[A-Z_]+\}\}", body)
+        assert not left, "%s has unresolved tokens: %s" % (page, left)
         (ROOT / page).write_text(head(page, meta) + body + foot(page))
         print("wrote", page)
 

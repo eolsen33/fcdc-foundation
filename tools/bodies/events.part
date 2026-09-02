@@ -1,0 +1,78 @@
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Calendar</p>
+      <h1>What is coming up.</h1>
+      <p>Fundraisers, Narcan trainings, and the community events where you will find our table.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cal-layout">
+
+        <div class="cal-wrap">
+          <h2 id="cal-heading">Month by month</h2>
+          <div id="calendar" class="cal" data-calendar aria-labelledby="cal-heading">
+            <noscript>
+              <p class="field__help mb-0">The month grid needs JavaScript. Every event is
+              listed in full alongside it — nothing is hidden from you.</p>
+            </noscript>
+          </div>
+
+          <ul class="cal-legend">
+            <li><span class="cal__evt--fundraiser"></span> Fundraiser</li>
+            <li><span class="cal__evt--training"></span> Training</li>
+            <li><span class="cal__evt--community"></span> Community</li>
+          </ul>
+
+          <div class="callout mt-5">
+            <h3>Bring us to you</h3>
+            <p class="mb-0">
+              We will run a free Narcan presentation and training for any business, church,
+              school, civic club or neighborhood group in Flagler County, on a date that suits
+              you. Everyone leaves with a kit.
+            </p>
+            <p class="mt-5 mb-0">
+              <a class="btn btn--primary" href="contact.html?subject=narcan">Request a training</a>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2 id="whats-on">Every event, in full</h2>
+{{EVENTS_LIST}}
+
+          <div class="callout callout--gold mt-6">
+            <h3>Running a fundraiser for us?</h3>
+            <p class="mb-0">
+              A restaurant night, a car wash, a raffle at your shop — small local fundraisers are
+              a real part of how this gets paid for, and they take the pressure off a very small
+              team. Tell us what you have in mind and we will help you set it up and turn people
+              out for it.
+            </p>
+            <p class="mt-5 mb-0">
+              <a class="btn btn--outline" href="contact.html?subject=general">Talk to us about it</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div class="narrow text-center" style="margin-inline:auto">
+        <h2>Can’t make it? You can still help.</h2>
+        <p>Two big events a year carry most of what we spend. Steady monthly giving carries the rest.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
+          <a class="btn btn--outline" href="ways-to-give.html#monthly">Give monthly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{EVENTS_DATA}}
+{{EVENTS_JSONLD}}

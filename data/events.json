@@ -1,0 +1,63 @@
+{
+  "_howToEdit": [
+    "This is the ONLY file to edit when events change. Everything else is generated.",
+    "After editing, run:  python3 tools/build-pages.py   (rebuilds the calendar, the",
+    "events page, the three cards on the home page, and the search-engine markup).",
+    "",
+    "FIELDS — only 'title' and 'summary' are required.",
+    "  start   'YYYY-MM-DD', or null when the date is not set yet. Undated events are",
+    "          listed under 'Dates still to come' instead of appearing on the grid.",
+    "  end     'YYYY-MM-DD' for a multi-day event. Leave out for a single day.",
+    "  time    Free text shown next to the date, e.g. '4:00–8:00 pm'. Optional.",
+    "  whenText  Overrides the printed date, e.g. 'Spring 2027'. Use with start: null.",
+    "  location  Venue and town. Optional but worth filling in.",
+    "  kind    'fundraiser' | 'training' | 'community'  (controls the coloured tag)",
+    "  link / linkText   Where the button goes. Optional; omit both for no button.",
+    "  needsConfirming   true prints an amber 'date to be confirmed' note. Remove the",
+    "                    field once the Foundation has confirmed it.",
+    "",
+    "Past events drop off the site on their own — no need to delete them, though you",
+    "can once they are well past."
+  ],
+
+  "events": [
+    {
+      "title": "Dine to Donate — Texas Roadhouse",
+      "start": "2026-09-16",
+      "location": "Texas Roadhouse, Palm Coast",
+      "kind": "fundraiser",
+      "summary": "Come in for dinner, tell your server you are there for the Foundation, and drop the paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run one of these about once a quarter, and it covers a standing bill for the whole year.",
+      "link": "contact.html?subject=general",
+      "linkText": "Ask about this one",
+      "needsConfirming": true
+    },
+    {
+      "title": "Ride for Recovery",
+      "start": "2026-10-24",
+      "time": "Time to be confirmed",
+      "location": "Flagler County",
+      "kind": "fundraiser",
+      "summary": "Our biggest day of the year — a ride open to all vehicles, with a pig roast, raffle, auction and vendor fair. Riders, vendors and sponsors all welcome, and this is where our sponsors get thanked in front of everybody.",
+      "link": "contact.html?subject=ride",
+      "linkText": "Ride, vend, or sponsor"
+    },
+    {
+      "title": "Narcan training and free kits",
+      "start": null,
+      "whenText": "Next class to be announced",
+      "kind": "training",
+      "summary": "About twenty minutes: recognizing an overdose, giving the spray, calling 911, and staying until help arrives. Free, and everyone leaves with a kit. We will also come to your business, church, school or civic club and run a session.",
+      "link": "contact.html?subject=narcan",
+      "linkText": "Request a training"
+    },
+    {
+      "title": "Golf tournament",
+      "start": null,
+      "whenText": "Spring 2027",
+      "kind": "fundraiser",
+      "summary": "Our other major fundraiser. A hole sponsorship is the simplest way for a small business to back this work — the signs themselves are printed for us in kind by Minuteman Press.",
+      "link": "contact.html?subject=sponsor",
+      "linkText": "Sponsor a hole"
+    }
+  ]
+}

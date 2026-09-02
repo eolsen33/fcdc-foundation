@@ -13,11 +13,13 @@ Vanilla HTML, CSS and JS. **No framework, no build step, no dependencies.**
 Upload the files and it runs.
 
 ```
-index.html  about.html  drug-court.html  narcan.html  ways-to-give.html  contact.html
-404.html  robots.txt  sitemap.xml
+index.html  about.html  drug-court.html  narcan.html  events.html
+ways-to-give.html  contact.html  404.html  robots.txt  sitemap.xml
+data/events.json           ← the only file you edit to add or change an event
 css/style.css              one stylesheet, palette as CSS custom properties
 js/donate-config.js        ← the only file you edit to connect the donation form
 js/main.js                 nav, form validation, donate links (progressive enhancement)
+js/calendar.js             the month grid on events.html (enhancement only)
 assets/fonts/              self-hosted Lexend + Source Sans 3 (88 KB, no Google request)
 assets/img/                WebP with JPEG/PNG fallbacks
 brand/                     brand kit — colours, type, voice rules (noindex)
@@ -35,7 +37,8 @@ Serve the repo root as the document root. Nothing to compile.
 
 ```bash
 rsync -avz --delete \
-  --exclude '.git' --exclude 'tools' --exclude 'README.md' --exclude 'HANDOFF.md' \
+  --exclude '.git' --exclude 'tools' --exclude 'data' \
+  --exclude 'README.md' --exclude 'HANDOFF.md' \
   ./ user@vps:/var/www/fcdcfoundation/
 ```
 
@@ -94,6 +97,44 @@ python3 tools/build-pages.py
 
 The generator is a convenience, not a dependency. The committed `.html` files are the
 real site.
+
+---
+
+## Adding or changing an event
+
+**Events are the one thing you must NOT hand-edit in the HTML.** They are generated
+from a single file, `data/events.json`, into four places at once: the month grid on
+`events.html`, the full list beside it, the three cards on the home page, and the
+schema.org markup that puts them in Google.
+
+```bash
+# 1. edit the events in
+open data/events.json
+
+# 2. regenerate
+python3 tools/build-pages.py
+
+# 3. commit and deploy as usual
+```
+
+`data/events.json` documents its own fields at the top. The short version:
+
+| field | notes |
+|---|---|
+| `title`, `summary` | the only required fields |
+| `start`, `end` | `"YYYY-MM-DD"`. `start: null` puts it under "Dates still to come" instead of on the grid |
+| `whenText` | overrides the printed date, e.g. `"Spring 2027"` — pair it with `start: null` |
+| `time`, `location` | free text, both optional |
+| `kind` | `fundraiser` \| `training` \| `community` — sets the dot colour and the tag |
+| `link`, `linkText` | the button. Omit both for no button |
+| `needsConfirming` | `true` prints an amber "date to be confirmed" note |
+
+**Past events disappear on their own.** They are hidden at build time and hidden again
+in the browser, so an event that passes between deploys still drops off the live site.
+There is no need to delete anything, though you can once it is well past.
+
+`data/` is excluded from the deploy because every event is already baked into the HTML —
+the calendar reads an inlined copy, so the page needs no fetch and no server.
 
 ---
 

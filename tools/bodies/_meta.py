@@ -18,6 +18,11 @@ META = {
         "title": "Free Narcan & Overdose Response Training | Flagler County",
         "description": "Free naloxone (Narcan) kits and overdose response training in Flagler County. The first local nonprofit to secure a Florida DCF grant to distribute Narcan at no cost, since 2019.",
     },
+    "events.html": {
+        "title": "Events Calendar | Flagler County Drug Court Foundation",
+        "description": "Upcoming Flagler County Drug Court Foundation events — the Ride for Recovery, the spring golf tournament, Dine to Donate nights, and free Narcan training classes.",
+        "og_description": "Ride for Recovery, the spring golf tournament, restaurant fundraiser nights, and free Narcan training. Come out with us in Flagler County.",
+    },
     "ways-to-give.html": {
         "title": "Ways to Give | Flagler County Drug Court Foundation",
         "description": "Give monthly through Club 100, make a one-time gift, sponsor as a local business, or give by mail. Every dollar stays in Flagler County. EIN 27-1349987.",
