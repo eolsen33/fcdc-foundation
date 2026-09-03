@@ -334,6 +334,33 @@
   </section>
 
   <!-- 7 ─────────────────────────────────────────────── EVENTS -->
+  <!-- Podcast -->
+  <section class="section section--warm" aria-labelledby="podcast-heading">
+    <div class="container">
+      <div class="podcast-teaser podcast-teaser--lg">
+        <a class="podcast-teaser__art" href="podcast.html" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source srcset="assets/img/podcast-cover.webp" type="image/webp">
+            <img src="assets/img/podcast-cover.jpg" alt="" loading="lazy" width="480" height="480">
+          </picture>
+        </a>
+        <div class="podcast-teaser__body">
+          <p class="eyebrow">The Road to Recovery</p>
+          <h2 id="podcast-heading">You can argue with a statistic. It is harder to argue with a neighbor.</h2>
+          <p class="lede">
+            Our podcast is where people who have been through the drug court program say what
+            happened to them, in their own words — along with the families, counselors and
+            local businesses who stood next to them.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="podcast.html">Listen to the theme</a>
+            <a class="btn btn--outline" href="ways-to-give.html#business">Sponsors get an episode</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="events-heading">
     <div class="container">
       <div class="section__head">

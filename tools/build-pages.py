@@ -30,13 +30,14 @@ SITE = "https://fcdc.ericolsen.studio"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20260902a"
+ASSET_V = "20260903a"
 
 NAV = [
     ("index.html", "Home"),
     ("about.html", "About"),
     ("drug-court.html", "Drug Court"),
     ("narcan.html", "Narcan"),
+    ("podcast.html", "Podcast"),
     ("events.html", "Events"),
     ("ways-to-give.html", "Ways to Give"),
     ("contact.html", "Contact"),
@@ -47,6 +48,7 @@ FOOTER_NAV_LABELS = {
     "about.html": "About us",
     "drug-court.html": "How drug court works",
     "narcan.html": "Narcan training",
+    "podcast.html": "The Road to Recovery podcast",
     "events.html": "Events calendar",
     "ways-to-give.html": "Ways to give",
     "contact.html": "Contact",

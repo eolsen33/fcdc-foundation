@@ -1,4 +1,7 @@
-/* Self-hosted variable fonts — no third-party requests. Latin subset. */
-@font-face{font-family:'Lexend';font-style:normal;font-weight:400 700;font-display:swap;src:url('../assets/fonts/Lexend-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url('../assets/fonts/SourceSans3-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'Source Sans 3';font-style:italic;font-weight:400 600;font-display:swap;src:url('../assets/fonts/SourceSans3-var-italic.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+/* Self-hosted variable fonts — no third-party requests. Latin subset.
+   src: paths are relative to THIS file, not to css/style.css that imports it.
+   '../assets/fonts/X' resolved to /assets/assets/fonts/X and 404'd, which is
+   silent — every page just fell back to system-ui. Keep these bare filenames. */
+@font-face{font-family:'Lexend';font-style:normal;font-weight:400 700;font-display:swap;src:url('Lexend-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url('SourceSans3-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Source Sans 3';font-style:italic;font-weight:400 600;font-display:swap;src:url('SourceSans3-var-italic.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}

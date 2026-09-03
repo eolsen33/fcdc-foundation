@@ -222,10 +222,22 @@
           members, counselors, law enforcement, and community partners.
         </p>
       </div>
-      <div class="placeholder narrow">
-        <p class="mb-0"><strong>[PODCAST LINKS — CLIENT TO SUPPLY]</strong> Send the Spotify /
-        Apple Podcasts / YouTube URLs for “The Road to Recovery” and we will link them here and
-        in the footer.</p>
+      <div class="podcast-teaser">
+        <a class="podcast-teaser__art" href="podcast.html" aria-hidden="true" tabindex="-1">
+          <picture>
+            <source srcset="assets/img/podcast-cover.webp" type="image/webp">
+            <img src="assets/img/podcast-cover.jpg" alt="" loading="lazy" width="480" height="480">
+          </picture>
+        </a>
+        <div class="podcast-teaser__body">
+          <p>
+            Hear the theme song, read what the show is for, and find out how a local business
+            sponsorship comes with an episode of its own.
+          </p>
+          <p class="mb-0">
+            <a class="btn btn--outline" href="podcast.html">Go to the podcast</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>

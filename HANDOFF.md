@@ -43,10 +43,11 @@ the State Courts Administrator.
 | # | What | Why |
 |---|------|-----|
 | 10 | **A Flagler County cost-per-participant figure** | The site currently uses Florida's statewide average from a 2014 state report, with the date caveat stated plainly on the page. A current local number would be far more persuasive to county commissioners and local donors. |
-| 11 | **Podcast links** — "The Road to Recovery" on Spotify / Apple / YouTube | `about.html` has a spot reserved. |
+| 11 | **Podcast links** — "The Road to Recovery" on Spotify / Apple / YouTube | `podcast.html` is now a real page in the nav, with the theme song playing on it and a teaser on the home page and `about.html`. Send the platform URLs — or just the RSS feed URL, which is enough for us to pull the episode list automatically — and the listen buttons go live under "Episodes". |
 | 12 | **Drug court eligibility + referral route** | Two FAQ answers on `drug-court.html` are held blank. A wrong answer could stop someone from applying, so we would rather publish nothing until the court confirms. |
 | 13 | **Sponsorship levels** | If you have set tiers with prices and benefits, we will publish a proper sponsorship table. |
 | 14 | **Vector logo (AI/EPS/SVG)** | The only logo available was a raster image recovered from the old site. If no vector exists, a one-time redraw would sharpen print, signage, banners and the site at once. |
+| 15a | **Check the theme song captions** | The captions on `podcast.html` (`assets/video/road-to-recovery-theme.vtt`) were transcribed from the audio by ear. The words also appear on the page under "The words". If any line is wrong, tell us the correct lyric and we will fix both. |
 | 15 | **Better event photography** | The current gallery uses what we recovered from the old site. Real, recent, well-lit photos of volunteers and events would lift the whole site. |
 
 ---

@@ -879,6 +879,68 @@ body.has-mobile-donate { padding-bottom: 88px; }
 }
 
 /* ==========================================================================
+   Podcast  (podcast.html, plus teasers on index.html and about.html)
+   ========================================================================== */
+.podcast-layout { display: grid; gap: var(--sp-7); align-items: start; }
+@media (min-width: 900px) {
+  .podcast-layout { grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: var(--sp-8); }
+  .podcast-player { position: sticky; top: var(--sp-6); }
+}
+
+/* The clip is square cover art. Locking the box to 1:1 stops the poster from
+   letterboxing inside a 16:9 default and keeps the layout from jumping when
+   the video element finally loads its own metadata. */
+.podcast-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  background: var(--hope-purple-900);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.podcast-caption {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin: var(--sp-4) 0 0;
+}
+
+.lyrics {
+  margin: 0;
+  padding: var(--sp-6);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--hope-purple);
+  border-radius: var(--radius);
+  font-size: var(--fs-lg);
+  line-height: 1.8;
+}
+.lyrics p { max-width: none; }
+
+/* Teaser card — cover art beside a short pitch */
+.podcast-teaser {
+  display: grid;
+  gap: var(--sp-5);
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .podcast-teaser { grid-template-columns: 180px minmax(0, 1fr); gap: var(--sp-6); }
+  .podcast-teaser--lg { grid-template-columns: 300px minmax(0, 1fr); gap: var(--sp-8); }
+}
+.podcast-teaser__art {
+  display: block;
+  max-width: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  line-height: 0;
+}
+.podcast-teaser__art img { width: 100%; height: auto; }
+.podcast-teaser__body > :last-child { margin-bottom: 0; }
+/* Inside .section--dark the body copy inherits the light text it needs; the
+   art is decorative and carries no colour of its own. */
+
+/* ==========================================================================
    Events calendar  (events.html)
    The month grid is progressive enhancement — the full event list underneath is
    plain HTML and works with JavaScript off.

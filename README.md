@@ -13,8 +13,8 @@ Vanilla HTML, CSS and JS. **No framework, no build step, no dependencies.**
 Upload the files and it runs.
 
 ```
-index.html  about.html  drug-court.html  narcan.html  events.html
-ways-to-give.html  contact.html  404.html  robots.txt  sitemap.xml
+index.html  about.html  drug-court.html  narcan.html  podcast.html
+events.html  ways-to-give.html  contact.html  404.html  robots.txt  sitemap.xml
 data/events.json           ← the only file you edit to add or change an event
 css/style.css              one stylesheet, palette as CSS custom properties
 js/donate-config.js        ← the only file you edit to connect the donation form
@@ -22,6 +22,7 @@ js/main.js                 nav, form validation, donate links (progressive enhan
 js/calendar.js             the month grid on events.html (enhancement only)
 assets/fonts/              self-hosted Lexend + Source Sans 3 (88 KB, no Google request)
 assets/img/                WebP with JPEG/PNG fallbacks
+assets/video/              podcast theme (MP4 + WebM) and its .vtt caption track
 brand/                     brand kit — colours, type, voice rules (noindex)
 tools/                     OPTIONAL page generator; delete it and nothing breaks
 ```
@@ -215,11 +216,20 @@ The old site scored **F** on accessibility. This one targets WCAG 2.2 AA, AAA on
 - Skip link, landmarks, one `<h1>` per page, no heading-level skips
 - Cost bars carry text labels — never colour alone
 - `prefers-reduced-motion` respected
+- The podcast video never autoplays, carries an English caption track, and the whole
+  lyric is also on the page as text
 
-Verified: no horizontal overflow at 375px on any page; all internal links resolve.
+Verified: no horizontal overflow at 360/390/768px on any page; all internal links resolve.
+
+⚠️ `assets/fonts/fonts.css` `src:` paths are relative to **that file**, not to
+`css/style.css` which imports it. They were written as `../assets/fonts/X.woff2`, which
+resolved to `/assets/assets/fonts/X.woff2` and 404'd silently — every page rendered in
+system-ui instead of Lexend/Source Sans. Fixed 2026-09-03; keep the filenames bare.
 
 ## Performance
 
 The old site shipped a 1.6 MB homepage graphic. The equivalent here is **20 KB**.
-Whole site is ~2.5 MB including every image and font. Fonts are self-hosted (88 KB) so
-there are zero third-party requests on load.
+Whole site is ~5.7 MB including every image and font, of which 2.2 MB is the podcast
+theme (MP4 + WebM). That clip is `preload="none"` — no bytes leave the server until a
+visitor presses play, so it costs nothing on any other page load. Fonts are self-hosted
+(88 KB) so there are zero third-party requests on load.

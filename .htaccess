@@ -7,3 +7,12 @@
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
+
+# Caption tracks. Apache does not ship a mapping for .vtt, and a track served as
+# text/plain is silently ignored by the browser — the captions button just never
+# appears on the podcast video.
+<IfModule mod_mime.c>
+  AddType text/vtt .vtt
+  AddType video/mp4 .mp4
+  AddType video/webm .webm
+</IfModule>
