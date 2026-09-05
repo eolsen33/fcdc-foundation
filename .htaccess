@@ -16,3 +16,11 @@
   AddType video/mp4 .mp4
   AddType video/webm .webm
 </IfModule>
+
+# seo-kit: crawler files must never sit in a CDN edge — they change with every deploy
+<IfModule mod_headers.c>
+  <FilesMatch "^(robots\.txt|sitemap\.xml|llms\.txt)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+# /seo-kit
