@@ -199,6 +199,7 @@
       var desc = ev.summary || '';
       if (ev.time) desc = ev.time + '. ' + desc;
       if (ev.needsConfirming) desc = 'DATE TO BE CONFIRMED. ' + desc;
+      if (ev.mapUrl) desc += ' Map: ' + ev.mapUrl;
 
       var lines = [
         'BEGIN:VCALENDAR',

@@ -15,12 +15,30 @@
     "  link / linkText   Where the button goes. Optional; omit both for no button.",
     "  needsConfirming   true prints an amber 'date to be confirmed' note. Remove the",
     "                    field once the Foundation has confirmed it.",
+    "  confirmText   Replaces the amber note's wording, e.g. 'Happens only if we get",
+    "                enough volunteers'. Needs needsConfirming: true.",
+    "  mapUrl  A Google Maps link for the venue. Adds a 'Map & directions' button and",
+    "          goes into the calendar file. Leave out when there is no venue yet.",
+    "",
+    "Monthly board meetings are on Zoom and are deliberately NOT listed here — the",
+    "events page has a standing note pointing people to ask for an invite.",
     "",
     "Past events drop off the site on their own — no need to delete them, though you",
     "can once they are well past."
   ],
-
   "events": [
+    {
+      "title": "Dine to Donate warm-up — Texas Roadhouse",
+      "start": "2026-09-09",
+      "location": "Texas Roadhouse, Palm Coast",
+      "kind": "fundraiser",
+      "summary": "A warm-up night ahead of the main Dine to Donate on the 16th. Come in for dinner, tell your server you are there for the Foundation, and drop your receipt in our box on the way out.",
+      "link": "contact.html?subject=general",
+      "linkText": "Ask about this one",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+Palm+Coast+FL",
+      "needsConfirming": true,
+      "confirmText": "Details for this night are still being settled — check with us before you make plans around it."
+    },
     {
       "title": "Dine to Donate — Texas Roadhouse",
       "start": "2026-09-16",
@@ -29,7 +47,7 @@
       "summary": "Come in for dinner, tell your server you are there for the Foundation, and drop the paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run one of these about once a quarter, and it covers a standing bill for the whole year.",
       "link": "contact.html?subject=general",
       "linkText": "Ask about this one",
-      "needsConfirming": true
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+Palm+Coast+FL"
     },
     {
       "title": "Ride for Recovery",
@@ -39,7 +57,9 @@
       "kind": "fundraiser",
       "summary": "Our biggest day of the year — a ride open to all vehicles, with a pig roast, raffle, auction and vendor fair. Riders, vendors and sponsors all welcome, and this is where our sponsors get thanked in front of everybody.",
       "link": "contact.html?subject=ride",
-      "linkText": "Ride, vend, or sponsor"
+      "linkText": "Ride, vend, sponsor, or help run it",
+      "needsConfirming": true,
+      "confirmText": "This ride only happens if enough people step up to help run it. If you can organize, sponsor, or work the day, tell us now — if we are to continue, we need your help."
     },
     {
       "title": "Narcan training and free kits",

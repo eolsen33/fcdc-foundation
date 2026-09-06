@@ -65,6 +65,8 @@ def load(root):
             "link": ev.get("link"),
             "linkText": ev.get("linkText"),
             "needsConfirming": bool(ev.get("needsConfirming")),
+            "confirmText": ev.get("confirmText"),
+            "mapUrl": ev.get("mapUrl"),
             "id": "event-" + slugify(ev["title"]),
         })
     out.sort(key=lambda e: (e["start"] is None, e["start"] or datetime.date.max))
@@ -107,8 +109,18 @@ def _kind_tag(ev):
 def _confirm_note(ev):
     if not ev["needsConfirming"]:
         return ""
+    if ev["confirmText"]:
+        return f'<p class="evt-confirm">{_t(ev["confirmText"])}</p>'
     return ('<p class="evt-confirm"><strong>Date to be confirmed</strong> — '
             'check with us before you make plans around it.</p>')
+
+
+def _map_link(ev, cls="btn btn--outline"):
+    """A Google Maps link for the venue. Opens in a new tab so the page is not lost."""
+    if not ev["mapUrl"]:
+        return ""
+    return (f'<a class="{cls}" href="{_e(ev["mapUrl"])}" target="_blank" rel="noopener">'
+            'Map &amp; directions</a>')
 
 
 def home_cards(events, today, limit=3):
@@ -127,6 +139,8 @@ def home_cards(events, today, limit=3):
         href = ev["link"] or f'events.html#{ev["id"]}'
         text = ev["linkText"] or "Details"
         out.append(f'          <a class="btn btn--outline" href="{_e(href)}">{_t(text)}</a>')
+        if ev["mapUrl"]:
+            out.append("          " + _map_link(ev))
         out.append('        </div>')
     out.append('      </div>')
     return "\n".join(out)
@@ -167,6 +181,8 @@ def event_list(events, today):
         if ev["link"]:
             out.append(f'              <a class="btn btn--outline" href="{_e(ev["link"])}">'
                        f'{_t(ev["linkText"] or "Details")}</a>')
+        if ev["mapUrl"]:
+            out.append("              " + _map_link(ev))
         out.append(f'              <button class="btn btn--outline" type="button" data-ics="{_e(ev["id"])}">'
                    'Add to my calendar</button>')
         out.append('            </p>')
@@ -202,6 +218,7 @@ def data_script(events):
         "end": (e["end"] or e["start"]).isoformat() if e["start"] else None,
         "time": e["time"], "when": when_text(e), "location": e["location"],
         "kind": e["kind"], "needsConfirming": e["needsConfirming"],
+        "mapUrl": e["mapUrl"],
     } for e in events]
     body = json.dumps(payload, indent=2).replace("</", "<\\/")
     return ('  <script type="application/json" id="fcdc-events-data">\n'
@@ -239,6 +256,8 @@ def jsonld(events, today, site):
             "address": {"@type": "PostalAddress", "addressLocality": "Palm Coast",
                         "addressRegion": "FL", "addressCountry": "US"},
         }
+        if ev["mapUrl"]:
+            item["location"]["hasMap"] = ev["mapUrl"]
         items.append(item)
     if not items:
         return ""
