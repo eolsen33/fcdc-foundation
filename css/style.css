@@ -246,10 +246,14 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
   min-height: 68px;
   padding-block: var(--sp-2);
 }
-.brand { display: flex; align-items: center; gap: var(--sp-3); text-decoration: none; margin-right: auto; }
-.brand img { height: 44px; width: auto; }
+.brand { display: flex; align-items: center; gap: var(--sp-3); text-decoration: none; margin-right: auto; flex-shrink: 0; }
+.brand img { display: block; height: 44px; width: auto; }
 .brand__text { display: none; }
-@media (min-width: 480px) {
+/* Wordmark text only while the nav is collapsed (480–1099px). On desktop the
+   eight nav items + Donate need the whole 1120px container, and the logo
+   already carries the full name — the text was wrapping to four lines and
+   colliding with "Home". */
+@media (min-width: 480px) and (max-width: 1099.98px) {
   .brand__text {
     display: block;
     font-family: var(--font-head);
@@ -309,7 +313,8 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
 
 @media (min-width: 1100px) {
   .nav-toggle { display: none; }
-  .site-nav { display: block; }
+  .brand img { height: 52px; }
+  .site-nav { display: block; flex-shrink: 0; }
   .site-nav ul { display: flex; align-items: center; gap: var(--sp-2); }
   .site-nav a { padding: var(--sp-2) var(--sp-3); font-size: var(--fs-sm); white-space: nowrap; }
   .site-nav a[aria-current="page"] { background: var(--color-bg-tint); }
