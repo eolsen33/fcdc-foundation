@@ -95,7 +95,7 @@
           <p class="tier__amount">$25<span style="font-size:1rem;font-weight:400">/mo</span></p>
           <p class="tier__buys">Sustaining supporter</p>
           <p>$300 over a year — a driver’s license reinstated, or six Narcan kits, or a set of
-          car parts with a volunteer mechanic to fit them.</p>
+          car parts with a volunteer mechanic to fix them.</p>
           <a class="btn btn--primary" href="#donate" data-donate data-amount="25" data-monthly="true">Join the Sustaining Supporters</a>
         </div>
 
