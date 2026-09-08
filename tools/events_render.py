@@ -67,6 +67,7 @@ def load(root):
             "needsConfirming": bool(ev.get("needsConfirming")),
             "confirmText": ev.get("confirmText"),
             "mapUrl": ev.get("mapUrl"),
+            "featured": bool(ev.get("featured")),
             "id": "event-" + slugify(ev["title"]),
         })
     out.sort(key=lambda e: (e["start"] is None, e["start"] or datetime.date.max))
@@ -124,8 +125,22 @@ def _map_link(ev, cls="btn btn--outline"):
 
 
 def home_cards(events, today, limit=3):
-    """The three next events, as tier cards, for the home page."""
-    live = [e for e in events if not is_past(e, today)][:limit]
+    """The three next events, as tier cards, for the home page.
+
+    An event marked ``featured: true`` keeps a slot even when more than
+    ``limit`` events come before it — the latest non-featured pick is dropped
+    to make room. Cards stay in date order either way."""
+    upcoming = [e for e in events if not is_past(e, today)]
+    live = upcoming[:limit]
+    for ev in upcoming[limit:]:
+        if not ev["featured"]:
+            continue
+        drop = [i for i, e in enumerate(live) if not e["featured"]]
+        if not drop:
+            break
+        live.pop(drop[-1])
+        live.append(ev)
+    live.sort(key=upcoming.index)
     if not live:
         return ('      <p class="lede">Nothing on the calendar just now. '
                 '<a href="events.html">Check the calendar</a> — we add events as they are set.</p>')

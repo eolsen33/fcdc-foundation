@@ -19,6 +19,8 @@
     "                enough volunteers'. Needs needsConfirming: true.",
     "  mapUrl  A Google Maps link for the venue. Adds a 'Map & directions' button and",
     "          goes into the calendar file. Leave out when there is no venue yet.",
+    "  featured  true keeps the event in the three home-page cards even when more than",
+    "          three events come before it. Use for the big fundraisers only.",
     "",
     "Monthly board meetings are on Zoom and are deliberately NOT listed here — the",
     "events page has a standing note pointing people to ask for an invite.",
@@ -50,6 +52,16 @@
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+Palm+Coast+FL"
     },
     {
+      "title": "Fall Outreach with the City of Palm Coast",
+      "start": "2026-10-23",
+      "time": "Noon–3:00 pm",
+      "location": "Palm Coast",
+      "kind": "community",
+      "summary": "We will be out with the City of Palm Coast for its Fall Outreach. Stop by our table, say hello, and find out what the Foundation does and how you can help.",
+      "link": "contact.html?subject=general",
+      "linkText": "Ask about this one"
+    },
+    {
       "title": "Ride for Recovery",
       "start": "2026-10-24",
       "time": "Time to be confirmed",
@@ -59,7 +71,8 @@
       "link": "contact.html?subject=ride",
       "linkText": "Ride, vend, sponsor, or help run it",
       "needsConfirming": true,
-      "confirmText": "This ride only happens if enough people step up to help run it. If you can organize, sponsor, or work the day, tell us now — if we are to continue, we need your help."
+      "confirmText": "This ride only happens if enough people step up to help run it. If you can organize, sponsor, or work the day, tell us now — if we are to continue, we need your help.",
+      "featured": true
     },
     {
       "title": "Narcan training and free kits",
