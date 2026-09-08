@@ -17,7 +17,7 @@
 
 <link rel="icon" href="assets/img/hope-logo.png">
 <link rel="preload" href="assets/fonts/Lexend-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20260908a">
+<link rel="stylesheet" href="css/style.css?v=20260908b">
 </head>
 <body>
 
@@ -62,6 +62,8 @@
       <p>Fundraisers, Narcan trainings, and the community events where you will find our table.</p>
     </div>
   </section>
+
+  <div class="spacer-bar" aria-hidden="true"></div>
 
   <section class="section">
     <div class="container">
@@ -109,7 +111,8 @@
 
         <div>
           <h2 id="whats-on">Every event, in full</h2>
-      <ul class="evt-list" id="event-list">
+      <div class="evt-slider" data-evt-slider>
+      <ul class="evt-list" id="event-list" aria-label="Upcoming events">
         <li class="evt" id="event-dine-to-donate-warm-up-texas-roadhouse" data-start="2026-09-09" data-end="2026-09-09">
           <div class="evt__date" aria-hidden="true">
             <span class="evt__mon">Sep</span>
@@ -183,6 +186,7 @@
           </div>
         </li>
       </ul>
+      </div>
 
       <h3 class="mt-7">Dates still to come</h3>
       <div class="grid grid--2">
@@ -219,6 +223,8 @@
       </div>
     </div>
   </section>
+
+  <div class="spacer-bar" aria-hidden="true"></div>
 
   <section class="section section--dark">
     <div class="container">
@@ -516,6 +522,6 @@
 
 <script src="js/donate-config.js"></script>
 <script src="js/main.js" defer></script>
-<script src="js/calendar.js?v=20260908a" defer></script>
+<script src="js/calendar.js?v=20260908b" defer></script>
 </body>
 </html>

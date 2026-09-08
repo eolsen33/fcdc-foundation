@@ -167,7 +167,11 @@ def event_list(events, today):
     undated = [e for e in events if not e["start"]]
     out = []
 
-    out.append('      <ul class="evt-list" id="event-list">')
+    # The list is a horizontal slideshow: CSS scroll-snap does the sliding, so it
+    # works with JavaScript off (a plain sideways scroll); calendar.js adds the
+    # arrows, dots and "1 of 4" count.
+    out.append('      <div class="evt-slider" data-evt-slider>')
+    out.append('      <ul class="evt-list" id="event-list" aria-label="Upcoming events">')
     if not dated:
         out.append('        <li class="evt evt--empty"><p class="mb-0">No dates are on the '
                    'calendar right now.</p></li>')
@@ -204,6 +208,7 @@ def event_list(events, today):
         out.append('          </div>')
         out.append('        </li>')
     out.append('      </ul>')
+    out.append('      </div>')
 
     if undated:
         out.append('')

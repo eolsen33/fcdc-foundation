@@ -188,6 +188,136 @@
     return out.join('\r\n');
   }
 
+  /* ---- Event slideshow ---------------------------------------------------
+     The list is a scroll-snap track already; this adds the arrows, the dots,
+     the "1 of 4" count, keyboard arrows, and slides to a #hash from the grid. */
+  (function () {
+    var shell = document.querySelector('[data-evt-slider]');
+    var track = shell && shell.querySelector('.evt-list');
+    if (!track) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var slides = [];      // visible .evt slides, in order
+    var current = 0;
+    var bar, count, prevBtn, nextBtn, dots;
+
+    function collect() {
+      slides = Array.prototype.filter.call(track.children, function (li) {
+        return li.classList.contains('evt') && !li.hidden;
+      });
+    }
+
+    function goTo(i, instant) {
+      if (!slides.length) return;
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: slides[i].offsetLeft - track.clientLeft,
+                       behavior: (instant || reduce) ? 'auto' : 'smooth' });
+      setCurrent(i);
+    }
+
+    function setCurrent(i) {
+      current = i;
+      if (count) count.innerHTML = '<b>' + (i + 1) + '</b> of ' + slides.length;
+      if (prevBtn) prevBtn.disabled = i === 0;
+      if (nextBtn) nextBtn.disabled = i >= slides.length - 1;
+      if (dots) Array.prototype.forEach.call(dots.children, function (li, k) {
+        var b = li.firstChild;
+        if (k === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+      });
+      slides.forEach(function (li, k) {
+        li.setAttribute('aria-label', 'Event ' + (k + 1) + ' of ' + slides.length);
+      });
+    }
+
+    function nearest() {
+      var x = track.scrollLeft, best = 0, d = Infinity;
+      slides.forEach(function (li, k) {
+        var dd = Math.abs(li.offsetLeft - x);
+        if (dd < d) { d = dd; best = k; }
+      });
+      return best;
+    }
+
+    function arrow(dir, title, path) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', title);
+      b.title = title;
+      b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="' + path + '"/></svg>';
+      b.addEventListener('click', function () { goTo(current + dir); });
+      return b;
+    }
+
+    function build() {
+      collect();
+      if (slides.length < 2) return;   // one event (or none): nothing to slide
+
+      bar = document.createElement('div');
+      bar.className = 'evt-slider__bar';
+      count = document.createElement('p');
+      count.className = 'evt-slider__count';
+      count.setAttribute('aria-live', 'polite');
+      var nav = document.createElement('div');
+      nav.className = 'cal__nav evt-slider__nav';
+      prevBtn = arrow(-1, 'Previous event', 'M15 18l-6-6 6-6');
+      nextBtn = arrow(1, 'Next event', 'M9 18l6-6-6-6');
+      nav.appendChild(prevBtn);
+      nav.appendChild(nextBtn);
+      bar.appendChild(count);
+      bar.appendChild(nav);
+      shell.insertBefore(bar, track);
+
+      dots = document.createElement('ul');
+      dots.className = 'evt-slider__dots';
+      slides.forEach(function (li, k) {
+        var item = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button';
+        var name = li.querySelector('h3');
+        b.setAttribute('aria-label', 'Go to event ' + (k + 1) + (name ? ': ' + name.textContent : ''));
+        b.addEventListener('click', function () { goTo(k); });
+        item.appendChild(b);
+        dots.appendChild(item);
+      });
+      shell.appendChild(dots);
+
+      track.setAttribute('role', 'group');
+      track.setAttribute('aria-roledescription', 'slideshow');
+      slides.forEach(function (li) { li.setAttribute('role', 'group'); li.setAttribute('aria-roledescription', 'slide'); });
+      shell.classList.add('is-ready');
+
+      // Keep the count/dots in step with finger swipes and trackpad scrolls.
+      var raf = 0;
+      track.addEventListener('scroll', function () {
+        if (raf) return;
+        raf = requestAnimationFrame(function () { raf = 0; setCurrent(nearest()); });
+      }, { passive: true });
+
+      track.setAttribute('tabindex', '0');
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); }
+      });
+
+      window.addEventListener('resize', function () { goTo(current, true); });
+
+      setCurrent(0);
+      jumpToHash(true);
+    }
+
+    // A dot on the month grid links to #event-id: slide it into view.
+    function jumpToHash(instant) {
+      var id = location.hash.slice(1);
+      if (!id) return;
+      var k = slides.map(function (li) { return li.id; }).indexOf(id);
+      if (k >= 0) goTo(k, instant);
+    }
+    window.addEventListener('hashchange', function () { jumpToHash(false); });
+
+    build();
+  })();
+
   document.querySelectorAll('[data-ics]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var ev = events.filter(function (e) { return e.id === btn.getAttribute('data-ics'); })[0];

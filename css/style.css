@@ -950,7 +950,8 @@ body.has-mobile-donate { padding-bottom: 88px; }
    The month grid is progressive enhancement — the full event list underneath is
    plain HTML and works with JavaScript off.
    ========================================================================== */
-.cal-layout { display: grid; gap: var(--sp-7); align-items: start; }
+.cal-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-7); align-items: start; }
+.cal-layout > * { min-width: 0; } /* the event slideshow's flex row must not widen the page */
 @media (min-width: 900px) {
   .cal-layout { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: var(--sp-8); }
   .cal-wrap { position: sticky; top: var(--sp-6); }
@@ -1022,14 +1023,65 @@ td.has-events { background: #FCFBFF; }
   table.cal__grid td { height: 3.25rem; padding: var(--sp-2) 4px; }
 }
 
-/* ---- Event list ---- */
-.evt-list { list-style: none; margin: var(--sp-5) 0 0; padding: 0; display: grid; gap: var(--sp-5); }
+/* ---- Event list: a horizontal slideshow ----
+   Scroll-snap does the sliding, so with JavaScript off it is still a sideways
+   scroll with a visible scrollbar. calendar.js adds arrows, dots and the count
+   (and only then hides the scrollbar). One event fills the width at a time. */
+.evt-slider { margin-top: var(--sp-5); }
+.evt-list {
+  list-style: none; margin: 0; padding: 4px; /* room for the card shadow */
+  display: flex; gap: var(--sp-5);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.evt-list > .evt { flex: 0 0 100%; scroll-snap-align: start; scroll-snap-stop: always; }
+.evt-slider.is-ready .evt-list { scrollbar-width: none; }
+.evt-slider.is-ready .evt-list::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { .evt-list { scroll-behavior: auto; } }
+
+.evt-slider__bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-3); margin-bottom: var(--sp-3);
+}
+.evt-slider__count {
+  margin: 0; font-family: var(--font-head); font-weight: 600;
+  font-size: var(--fs-sm); color: var(--color-text-muted);
+}
+.evt-slider__count b { color: var(--hope-purple-800); font-weight: 700; }
+.evt-slider__nav button:disabled { opacity: .35; cursor: default; }
+.evt-slider__nav button:disabled:hover { background: var(--color-surface); }
+.evt-slider__dots {
+  display: flex; justify-content: center; gap: var(--sp-2);
+  margin: var(--sp-4) 0 0; padding: 0; list-style: none;
+}
+.evt-slider__dots button {
+  width: 2rem; height: 1.5rem; display: grid; place-items: center;
+  background: none; border: 0; padding: 0; cursor: pointer;
+}
+.evt-slider__dots button::before {
+  content: ""; width: .625rem; height: .625rem; border-radius: 50%;
+  background: var(--color-border-strong);
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.evt-slider__dots button:hover::before { background: #B7A6F2; }
+.evt-slider__dots button[aria-current="true"]::before { background: var(--hope-purple); transform: scale(1.3); }
+.evt-slider__dots button:focus-visible { outline: 2px solid var(--color-ring); outline-offset: 2px; border-radius: var(--radius-sm); }
+
+/* Spacer bars: a three-colour brand band (the legend colours) between sections */
+.spacer-bar {
+  height: 10px;
+  background: linear-gradient(90deg,
+    var(--hope-purple) 0 62%, var(--hope-crimson) 62% 84%, var(--hope-gold) 84% 100%);
+}
 .evt {
   display: grid; gap: var(--sp-4); align-items: start;
   background: var(--color-surface); border: 1px solid var(--color-border);
   border-radius: var(--radius); padding: var(--sp-5); box-shadow: var(--shadow-sm);
 }
 @media (min-width: 560px) { .evt { grid-template-columns: 4.5rem minmax(0, 1fr); } }
+.evt { scroll-margin-top: 6rem; } /* clear the sticky header on #hash jumps */
 .evt:target { border-color: var(--hope-purple); box-shadow: 0 0 0 3px rgba(115, 89, 222, .25); }
 .evt__date {
   background: var(--hope-purple-900); color: var(--color-text-invert);
@@ -1063,7 +1115,8 @@ td.has-events { background: #FCFBFF; }
 .evt-kind--community  { background: #FAE7EC; color: var(--hope-crimson); }
 
 @media print {
-  .cal-wrap, .evt__actions { display: none !important; }
+  .cal-wrap, .evt__actions, .evt-slider__bar, .evt-slider__dots, .spacer-bar { display: none !important; }
+  .evt-list { display: grid; overflow: visible; }
   .evt { break-inside: avoid; box-shadow: none; }
 }
 
