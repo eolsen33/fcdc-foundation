@@ -85,6 +85,14 @@
     ? new Date(upcoming[0]._start.getFullYear(), upcoming[0]._start.getMonth(), 1)
     : new Date(today.getFullYear(), today.getMonth(), 1);
 
+  /* The grid and the slideshow alongside it track each other: the event on
+     show is outlined on the grid, and paging the month shows that month's first
+     event. The slideshow registers itself here once it is built. */
+  var activeId = null;
+  var onMonthChange = null;
+  var byId = {};
+  events.forEach(function (ev) { byId[ev.id] = ev; });
+
   var bar = document.createElement('div');
   bar.className = 'cal__bar';
   var label = document.createElement('p');
@@ -104,6 +112,7 @@
     b.addEventListener('click', function () {
       view = new Date(view.getFullYear(), view.getMonth() + dir, 1);
       render();
+      if (onMonthChange) onMonthChange(view);
     });
     return b;
   }
@@ -146,7 +155,9 @@
 
         var date = new Date(year, month, day);
         var todays = byDay[key(date)] || [];
-        var attrs = todays.length ? ' class="has-events"' : '';
+        var cls = todays.length ? 'has-events' : '';
+        if (activeId && todays.some(function (ev) { return ev.id === activeId; })) cls += ' is-active';
+        var attrs = cls ? ' class="' + cls.trim() + '"' : '';
         if (date.getTime() === today.getTime()) attrs += ' aria-current="date"';
 
         html += '<td' + attrs + '><span class="cal__num">' + day + '</span>';
@@ -214,8 +225,19 @@
       setCurrent(i);
     }
 
+    function showOnGrid(li) {
+      var ev = byId[li.id];
+      if (!ev || !ev._start) return;
+      var m = new Date(ev._start.getFullYear(), ev._start.getMonth(), 1);
+      if (ev.id === activeId && m.getTime() === view.getTime()) return; // nothing changed
+      activeId = ev.id;
+      view = m;
+      render();
+    }
+
     function setCurrent(i) {
       current = i;
+      if (slides[i]) showOnGrid(slides[i]);
       if (count) count.innerHTML = '<b>' + (i + 1) + '</b> of ' + slides.length;
       if (prevBtn) prevBtn.disabled = i === 0;
       if (nextBtn) nextBtn.disabled = i >= slides.length - 1;
@@ -301,6 +323,17 @@
       });
 
       window.addEventListener('resize', function () { goTo(current, true); });
+
+      onMonthChange = function (month) {
+        var k = -1;
+        slides.some(function (li, idx) {
+          var ev = byId[li.id];
+          if (ev && ev._start && ev._start.getFullYear() === month.getFullYear() &&
+              ev._start.getMonth() === month.getMonth()) { k = idx; return true; }
+          return false;
+        });
+        if (k >= 0 && k !== current) goTo(k);
+      };
 
       setCurrent(0);
       jumpToHash(true);

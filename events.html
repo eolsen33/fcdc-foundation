@@ -17,7 +17,7 @@
 
 <link rel="icon" href="assets/img/hope-logo.png">
 <link rel="preload" href="assets/fonts/Lexend-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20260908b">
+<link rel="stylesheet" href="css/style.css?v=20260908c">
 </head>
 <body>
 
@@ -65,7 +65,7 @@
 
   <div class="spacer-bar" aria-hidden="true"></div>
 
-  <section class="section">
+  <section class="section" aria-labelledby="cal-heading">
     <div class="container">
       <div class="cal-layout">
 
@@ -83,30 +83,6 @@
             <li><span class="cal__evt--training"></span> Training</li>
             <li><span class="cal__evt--community"></span> Community</li>
           </ul>
-
-          <div class="callout mt-5">
-            <h3>Our monthly meeting</h3>
-            <p class="mb-0">
-              The Foundation meets once a month, on a Tuesday evening at 6:30, on Zoom. It is
-              not on the calendar above because it is a video call, not a place — but anyone
-              who wants to get involved is welcome. Ask us and we will send you the invite.
-            </p>
-            <p class="mt-5 mb-0">
-              <a class="btn btn--outline" href="contact.html?subject=volunteer">Ask for a Zoom invite</a>
-            </p>
-          </div>
-
-          <div class="callout mt-5">
-            <h3>Bring us to you</h3>
-            <p class="mb-0">
-              We will run a free Narcan presentation and training for any business, church,
-              school, civic club or neighborhood group in Flagler County, on a date that suits
-              you. Everyone leaves with a kit.
-            </p>
-            <p class="mt-5 mb-0">
-              <a class="btn btn--primary" href="contact.html?subject=narcan">Request a training</a>
-            </p>
-          </div>
         </div>
 
         <div>
@@ -187,8 +163,17 @@
         </li>
       </ul>
       </div>
+        </div>
 
-      <h3 class="mt-7">Dates still to come</h3>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer-bar" aria-hidden="true"></div>
+
+  <section class="section">
+    <div class="container">
+      <h2 id="undated-heading">Dates still to come</h2>
       <div class="grid grid--2">
         <div class="card" id="event-narcan-training-and-free-kits">
           <span class="evt-kind evt-kind--training">Training</span>
@@ -206,25 +191,46 @@
         </div>
       </div>
 
-          <div class="callout callout--gold mt-6">
-            <h3>Interested in running a fundraiser?</h3>
-            <p class="mb-0">
-              A restaurant night, a car wash, a raffle at your shop — small local fundraisers are
-              a real part of how this gets paid for, and they take the pressure off a very small
-              team. Tell us what you have in mind and we will help you set it up and turn people
-              out for it.
-            </p>
-            <p class="mt-5 mb-0">
-              <a class="btn btn--outline" href="contact.html?subject=general">Talk to us about it</a>
-            </p>
-          </div>
+      <div class="grid grid--3 mt-7">
+        <div class="callout">
+          <h3>Our monthly meeting</h3>
+          <p class="mb-0">
+            The Foundation meets once a month, on a Tuesday evening at 6:30, on Zoom. It is
+            not on the calendar above because it is a video call, not a place — but anyone
+            who wants to get involved is welcome. Ask us and we will send you the invite.
+          </p>
+          <p class="mt-5 mb-0">
+            <a class="btn btn--outline" href="contact.html?subject=volunteer">Ask for a Zoom invite</a>
+          </p>
         </div>
 
+        <div class="callout">
+          <h3>Bring us to you</h3>
+          <p class="mb-0">
+            We will run a free Narcan presentation and training for any business, church,
+            school, civic club or neighborhood group in Flagler County, on a date that suits
+            you. Everyone leaves with a kit.
+          </p>
+          <p class="mt-5 mb-0">
+            <a class="btn btn--primary" href="contact.html?subject=narcan">Request a training</a>
+          </p>
+        </div>
+
+        <div class="callout callout--gold">
+          <h3>Interested in running a fundraiser?</h3>
+          <p class="mb-0">
+            A restaurant night, a car wash, a raffle at your shop — small local fundraisers are
+            a real part of how this gets paid for, and they take the pressure off a very small
+            team. Tell us what you have in mind and we will help you set it up and turn people
+            out for it.
+          </p>
+          <p class="mt-5 mb-0">
+            <a class="btn btn--outline" href="contact.html?subject=general">Talk to us about it</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
-
-  <div class="spacer-bar" aria-hidden="true"></div>
 
   <section class="section section--dark">
     <div class="container">
@@ -522,6 +528,6 @@
 
 <script src="js/donate-config.js"></script>
 <script src="js/main.js" defer></script>
-<script src="js/calendar.js?v=20260908b" defer></script>
+<script src="js/calendar.js?v=20260908c" defer></script>
 </body>
 </html>

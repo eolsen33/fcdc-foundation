@@ -209,10 +209,15 @@ def event_list(events, today):
         out.append('        </li>')
     out.append('      </ul>')
     out.append('      </div>')
+    return "\n".join(out)
 
+
+def undated_cards(events):
+    """The 'Dates still to come' cards — events with start: null. Empty string if none."""
+    undated = [e for e in events if not e["start"]]
+    out = []
     if undated:
-        out.append('')
-        out.append('      <h3 class="mt-7">Dates still to come</h3>')
+        out.append('      <h2 id="undated-heading">Dates still to come</h2>')
         out.append('      <div class="grid grid--2">')
         for ev in undated:
             out.append(f'        <div class="card" id="{_e(ev["id"])}">')
@@ -291,6 +296,7 @@ def tokens(root, site, today=None):
     return {
         "EVENTS_HOME_CARDS": home_cards(events, today),
         "EVENTS_LIST":       event_list(events, today),
+        "EVENTS_UNDATED":    undated_cards(events),
         "EVENTS_DATA":       data_script(events),
         "EVENTS_JSONLD":     jsonld(events, today, site),
     }

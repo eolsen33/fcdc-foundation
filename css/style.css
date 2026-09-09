@@ -954,7 +954,6 @@ body.has-mobile-donate { padding-bottom: 88px; }
 .cal-layout > * { min-width: 0; } /* the event slideshow's flex row must not widen the page */
 @media (min-width: 900px) {
   .cal-layout { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: var(--sp-8); }
-  .cal-wrap { position: sticky; top: var(--sp-6); }
 }
 
 .cal__bar {
@@ -997,6 +996,10 @@ td[aria-current="date"] .cal__num {
   width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center;
 }
 td.has-events { background: #FCFBFF; }
+/* The day of the event showing in the slideshow alongside */
+td.is-active { background: #EDE8FB; box-shadow: inset 0 0 0 2px var(--hope-purple); }
+td.is-active .cal__num { color: var(--hope-purple-800); font-weight: 700; }
+td[aria-current="date"].is-active .cal__num { color: var(--color-on-primary); }
 
 /* A dot, not a title: seven columns in a 380px rail cannot hold readable text,
    and the full detail sits in the list alongside. The accessible name is intact. */
@@ -1116,6 +1119,7 @@ td.has-events { background: #FCFBFF; }
 
 @media print {
   .cal-wrap, .evt__actions, .evt-slider__bar, .evt-slider__dots, .spacer-bar { display: none !important; }
+  .cal-layout { grid-template-columns: minmax(0, 1fr); }
   .evt-list { display: grid; overflow: visible; }
   .evt { break-inside: avoid; box-shadow: none; }
 }
