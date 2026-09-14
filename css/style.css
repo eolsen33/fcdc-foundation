@@ -152,7 +152,7 @@ hr { border: 0; border-top: 1px solid var(--color-border); margin: var(--sp-6) 0
 }
 .section--dark h1, .section--dark h2, .section--dark h3 { color: #fff; }
 .section--dark p { color: var(--color-text-invert-mut); }
-.section--dark a { color: #CDBEFF; }
+.section--dark a:not(.btn) { color: #CDBEFF; }
 
 .section__head { max-width: var(--measure); margin-bottom: var(--sp-6); }
 .eyebrow {
