@@ -222,7 +222,7 @@ def undated_cards(events):
         for ev in undated:
             out.append(f'        <div class="card" id="{_e(ev["id"])}">')
             out.append(f'          {_kind_tag(ev)}')
-            out.append(f'          <h4>{_t(ev["title"])}</h4>')
+            out.append(f'          <h3>{_t(ev["title"])}</h3>')
             out.append(f'          <p class="evt__when">{_t(when_text(ev))}</p>')
             if ev["summary"]:
                 out.append(f'          <p>{_t(ev["summary"])}</p>')

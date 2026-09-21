@@ -8,6 +8,15 @@
   </FilesMatch>
 </IfModule>
 
+# Baseline security headers (added by the 2026-09-21 weekly site check)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
 # Caption tracks. Apache does not ship a mapping for .vtt, and a track served as
 # text/plain is silently ignored by the browser — the captions button just never
 # appears on the podcast video.
