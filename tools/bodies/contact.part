@@ -24,6 +24,10 @@
             one-time confirmation link to that address; THE FORM DOES NOT DELIVER UNTIL IT IS
             CLICKED. After confirming, swap the address for the hashed endpoint Formsubmit
             gives you so the address is not exposed in the page source.
+
+            Delivery is driven by the FORM constant at the top of js/main.js — Formsubmit's
+            AJAX endpoint today, Web3Forms as soon as the client's access key is pasted in.
+            The action= below is the no-JavaScript fallback.
           -->
           <form class="form" id="contact-form"
                 action="https://formsubmit.co/fcdcfoundation01@gmail.com"
@@ -35,6 +39,8 @@
             <input type="hidden" name="_next" value="https://fcdc.ericolsen.studio/contact.html?sent=1">
             <!-- Formsubmit's own honeypot -->
             <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <!-- Web3Forms' honeypot: a checkbox named botcheck -->
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="field">
               <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -56,7 +62,7 @@
 
             <div class="field">
               <label for="subject">What is this about?</label>
-              <select id="subject" name="subject">
+              <select id="subject" name="topic">
                 <option value="general">General question</option>
                 <option value="narcan">Narcan training or a free kit</option>
                 <option value="volunteer">Volunteering</option>

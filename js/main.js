@@ -3,6 +3,41 @@
 (function () {
   'use strict';
 
+  // Form delivery — Formsubmit today, Web3Forms once the client's key arrives.
+  const FORM = { endpoint: "https://formsubmit.co/ajax/fcdcfoundation01@gmail.com", web3formsKey: "" }; // when the Web3Forms key arrives: set web3formsKey and the endpoint switches automatically
+
+  // POSTs a form as JSON. Resolves only on a confirmed delivery — Formsubmit
+  // answers 200 even when it drops a message, so the body is what counts.
+  function sendForm(form) {
+    var data = {};
+    new FormData(form).forEach(function (value, key) {
+      data[key] = key in data ? data[key] + ', ' + value : value;
+    });
+    if (data._subject) data.subject = data._subject;
+    var url = FORM.endpoint;
+    if (FORM.web3formsKey) {
+      url = 'https://api.web3forms.com/submit';
+      data.access_key = FORM.web3formsKey;
+      Object.keys(data).forEach(function (key) { if (key.charAt(0) === '_') delete data[key]; });
+    }
+    var httpOk = false;
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (res) {
+        httpOk = res.ok;
+        return res.json().catch(function () { return {}; });
+      })
+      .then(function (out) {
+        if (!httpOk || !(out.success === true || out.success === 'true')) {
+          throw new Error(out.message || 'Form submission failed');
+        }
+        return out;
+      });
+  }
+
   document.documentElement.classList.add('js');
 
   /* ---------------------------------------------------------------- nav */
@@ -156,12 +191,30 @@
         return;
       }
 
+      // Send it ourselves so delivery is confirmed — the plain POST redirects
+      // even when Formsubmit drops the message. With JS off it still posts.
+      e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
       if (btn) {
         btn.disabled = true;
         btn.textContent = 'Sending…';
       }
       if (status) status.textContent = 'Sending your message…';
+
+      sendForm(form)
+        .then(function () {
+          form.reset();
+          if (status) status.textContent = 'Thank you — your message is on its way. We will reply within a couple of days.';
+        })
+        .catch(function () {
+          if (status) status.textContent = 'Something went wrong. Please email fcdcfoundation01@gmail.com or call (401) 864-6997.';
+        })
+        .then(function () {
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = 'Send message';
+          }
+        });
     });
   }
 

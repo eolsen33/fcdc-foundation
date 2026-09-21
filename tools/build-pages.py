@@ -30,7 +30,7 @@ SITE = "https://fcdc.ericolsen.studio"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20260914"
+ASSET_V = "20260921"
 
 NAV = [
     ("index.html", "Home"),
@@ -236,7 +236,7 @@ def foot(page):
 </footer>
 
 <script src="js/donate-config.js"></script>
-<script src="js/main.js" defer></script>{cal}
+<script src="js/main.js?v={ASSET_V}" defer></script>{cal}
 </body>
 </html>
 """

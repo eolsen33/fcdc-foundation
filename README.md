@@ -173,6 +173,9 @@ so the site can take money from day one.
 ## Connecting the contact form
 
 `contact.html` posts to [Formsubmit.co](https://formsubmit.co) — free, no server code.
+Delivery is driven by the `FORM` constant at the top of `js/main.js`: Formsubmit's AJAX
+endpoint today; paste the client's Web3Forms access key into `web3formsKey` and it switches
+to Web3Forms (the form's `action=` stays as the no-JS fallback).
 
 1. Replace `YOUR-EMAIL@EXAMPLE.COM` in the form `action` with the Foundation's inbox.
 2. Submit the form once. Formsubmit emails a one-time activation link; **the form does
