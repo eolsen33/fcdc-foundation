@@ -20,33 +20,12 @@
           </p>
 
           <div class="callout callout--gold">
-            <h3>Why our donation form has no platform fee</h3>
+            <h3>Giving monthly</h3>
             <p class="mb-0">
-              We use <strong>Zeffy</strong>, which charges nonprofits nothing — no platform fee
-              and no card processing fee. Zeffy funds itself with an optional tip that donors can
-              adjust or decline at checkout. If you would rather all of your gift reach the
-              Foundation, set the tip to zero; nothing is deducted from your donation either way.
+              On the PayPal page, enter your amount and tick <strong>Make this a monthly
+              donation</strong>. You do not need a PayPal account — you can give with a debit or
+              credit card — and you can change or stop a monthly gift whenever you like.
             </p>
-          </div>
-
-          <div data-donate-setup>
-            <div class="placeholder mt-5">
-              <p><strong>[SETUP — FOUNDATION ACTION REQUIRED]</strong> The donation form is not
-              connected yet. To switch it on:</p>
-              <ol>
-                <li>Create the account at <a href="https://www.zeffy.com" rel="noopener">zeffy.com</a> using EIN 27-1349987.</li>
-                <li>Build one donation form and enable the monthly option.</li>
-                <li>Copy the form's share URL and paste the slug into <code>js/donate-config.js</code>.</li>
-              </ol>
-              <p>The form embeds itself here automatically once that slug is set. Until then,
-              the PayPal button and the mail-in option below both work.</p>
-              <p class="mb-0"><strong>Open decision from the 2 Sept meeting:</strong> the
-              Foundation offered its PayPal login so the monthly tiers can be wired up as
-              one-click subscriptions. PayPal can do that with no backend, but it charges card
-              fees that Zeffy does not — so this is Zeffy <em>or</em> PayPal subscriptions, not
-              both. Every tier button on the site routes through
-              <code>js/donate-config.js</code>, so whichever way it goes is a one-file change.</p>
-            </div>
           </div>
         </div>
 
@@ -54,13 +33,13 @@
           <div class="donate-embed" id="donate-embed">
             <div style="padding:2rem">
               <h3>Give today</h3>
-              <p>Our no-fee donation form appears here once it is connected.</p>
-              <p><strong>In the meantime, both of these work right now:</strong></p>
+              <p>Choose your amount on the PayPal page. For Club 100 or any monthly gift, tick
+              “Make this a monthly donation.”</p>
               <p>
                 <a class="btn btn--donate btn--block btn--lg" href="https://www.paypal.com/donate?hosted_button_id=Z4S96Q5ZEGJE4" rel="noopener">Donate with PayPal</a>
               </p>
-              <p class="field__help">Or mail a check — details below. PayPal deducts a
-              processing fee; mailing a check and the Zeffy form do not.</p>
+              <p class="field__help mb-0">Or mail a check — details below. PayPal deducts a small
+              processing fee; a mailed check does not.</p>
             </div>
           </div>
         </div>

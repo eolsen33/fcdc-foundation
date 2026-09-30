@@ -2,35 +2,15 @@
    DONATION CONFIG — the only file you edit to switch/point the donation form.
    ==========================================================================
 
-   PLATFORM CHOICE: Zeffy.
-   Why: Zeffy charges the nonprofit $0 in platform fees and $0 in card fees
-   (it runs on optional tips from donors). At FCDC's revenue level that is
-   the difference between keeping ~97% and ~100% of every gift. Givebutter
-   (~1-3% + card) and Donorbox (~1.75% + card) both skim more.
+   PLATFORM CHOICE: PayPal (decided 2026-09-30).
+   Every [data-donate] link keeps its authored href (ways-to-give.html, or
+   #donate on that page), where the Foundation's hosted PayPal button lives.
+   That button has "Make this a monthly donation" enabled, so the Club 100
+   tiers work through it, and it accepts cards without a PayPal account.
 
-   ---------------------------------------------------------------------------
-   SETUP — 3 steps, ~15 minutes, done once by the Foundation:
-   ---------------------------------------------------------------------------
-   1. Create the org account at https://www.zeffy.com  (needs EIN 27-1349987).
-   2. Build ONE donation form. Turn ON the recurring/monthly option.
-   3. Open the form's "Share" tab, copy the URL, and paste the slug below.
-
-   ---------------------------------------------------------------------------
-   !! VERIFY BEFORE LAUNCH — amount pre-fill !!
-   ---------------------------------------------------------------------------
-   Zeffy does not publicly document its query-string parameters for
-   pre-selecting a gift amount or frequency, so the names below are NOT
-   confirmed. Do not assume they work.
-
-   To confirm: open your live Zeffy form, click a suggested amount and the
-   monthly toggle, and watch the address bar / "Share" link for the parameter
-   names Zeffy actually uses. Then correct AMOUNT_PARAM and FREQUENCY_PARAM
-   here — every tier button on the site routes through this one file, so
-   nothing else needs to change.
-
-   If Zeffy turns out not to support pre-fill at all, set
-   PREFILL_SUPPORTED = false. Tier buttons then deep-link to the form and the
-   amount is shown as guidance text instead — no broken or ignored URLs.
+   The Zeffy code path below is dormant: ZEFFY_SLUG is empty, so
+   fcdcDonateUrl() returns '' and nothing is rewritten. Leave it empty
+   unless the Foundation ever moves to Zeffy.
    ========================================================================== */
 
 window.FCDC_DONATE = {
@@ -48,7 +28,7 @@ window.FCDC_DONATE = {
   FREQUENCY_PARAM: 'frequency',
   MONTHLY_VALUE:   'monthly',
 
-  /* ---- Fallback while Zeffy is being set up ----
+  /* ---- The live donation route ----
      This is the Foundation's REAL existing PayPal hosted button, carried over
      from the old site. It keeps the site able to take money from day one. */
   PAYPAL_BUTTON_ID: 'Z4S96Q5ZEGJE4',

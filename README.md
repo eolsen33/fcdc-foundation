@@ -139,34 +139,16 @@ the calendar reads an inlined copy, so the page needs no fetch and no server.
 
 ---
 
-## Connecting the donation form
+## Donations
 
-Open `js/donate-config.js`. It is heavily commented and it is the only file to touch.
+**Platform: PayPal** (decided 2026-09-30). The Foundation's hosted PayPal button
+(`Z4S96Q5ZEGJE4`, carried over from the old site) is the live route, plus a mailed check.
+The button has "Make this a monthly donation" enabled and accepts cards without a PayPal
+account, so the Club 100 monthly tiers work through it.
 
-**Platform: Zeffy** — chosen because it charges nonprofits **$0** in platform and card
-fees (it runs on an optional donor tip). At this revenue level that is the difference
-between keeping ~97% and 100% of every gift. Givebutter and Donorbox both take a cut.
-
-1. Create the org account at [zeffy.com](https://www.zeffy.com) using EIN 27-1349987.
-2. Build one donation form; enable the recurring/monthly option.
-3. Copy the slug from the form's share URL into `ZEFFY_SLUG`.
-
-The form then embeds itself on `ways-to-give.html` automatically, and every
-`Donate` button across the site starts pointing at it.
-
-### ⚠️ Verify amount pre-fill before launch
-
-Zeffy does not publicly document its query-string parameters, so `AMOUNT_PARAM` and
-`FREQUENCY_PARAM` in the config are **unverified guesses and must be checked**. Open the
-live form, click a suggested amount and the monthly toggle, and read the parameter names
-out of the address bar. Correct them in that one file.
-
-If Zeffy turns out not to support pre-fill, set `PREFILL_SUPPORTED = false`. Tier buttons
-then deep-link to the form without a bogus query string.
-
-Until Zeffy is connected, the Foundation's **real existing PayPal button**
-(`Z4S96Q5ZEGJE4`, carried over from the old site) and the mail-in address are both live,
-so the site can take money from day one.
+Every `Donate` / tier button keeps its authored href (`ways-to-give.html` or `#donate`),
+which lands on that PayPal button. `js/donate-config.js` still contains a dormant Zeffy
+path; `ZEFFY_SLUG` is empty, so it rewrites nothing.
 
 ---
 
