@@ -25,7 +25,7 @@ import events_render  # noqa: E402  (needs ROOT/tools on the path first)
 # must all point at it or link previews break: a scraper that follows og:image
 # to another domain gets a 404 and renders a card with no image. Change this
 # one line when the site moves to https://www.fcdcfoundation.org.
-SITE = "https://fcdc.ericolsen.studio"
+SITE = "https://fcdcfoundation.org"
 
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
