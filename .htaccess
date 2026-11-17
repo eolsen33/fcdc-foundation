@@ -1,3 +1,13 @@
+# One address (2026-11-17 weekly site check): www. and the old staging host both
+# answered 200 with the same pages. Send them to fcdcfoundation.org. The
+# /.well-known/ path stays reachable on every host for certificate renewals.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(www\.fcdcfoundation\.org|fcdc\.ericolsen\.studio)$ [NC]
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^ https://fcdcfoundation.org%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 # Hostinger defaults every file to Cache-Control: public, max-age=604800 (7 days),
 # so deploys never reach a browser that visited in the past week. Markup, styles
 # and scripts must revalidate on each load; images and fonts stay long-cached and
