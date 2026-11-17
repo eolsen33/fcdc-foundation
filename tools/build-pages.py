@@ -217,7 +217,6 @@ def foot(page):
         <span>EIN 27-1349987</span>
         <span>501(c)(3) nonprofit</span>
         <span>Established 2009</span>
-        <span>Florida registration <strong>[CH##### — CLIENT TO SUPPLY]</strong></span>
       </div>
 
       <p class="footer__disclosure">

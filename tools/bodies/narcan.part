@@ -71,7 +71,9 @@
 
       <div class="grid grid--2">
         <div class="callout callout--gold">
-          <h3>[NEXT CLASS DATE]</h3>
+          <h3>Date to be announced</h3>
+          <p class="mb-0">We are scheduling the next class. <a href="contact.html?subject=narcan">Ask us</a> and we will tell you as soon as the date is set.</p>
+<!-- CLIENT NOTE, hidden from the public 2026-11-17 (Eric). Restore or replace when the Foundation answers.
           <div class="placeholder">
             <p><strong>[CLIENT MUST SUPPLY]</strong> We need:</p>
             <ul>
@@ -83,6 +85,7 @@
             <p class="mb-0">If classes run on a regular schedule (say, first Friday monthly),
             tell us that instead and we will publish the pattern so this never goes stale.</p>
           </div>
+-->
         </div>
 
         <div class="card">

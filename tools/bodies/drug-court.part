@@ -182,6 +182,7 @@
         <h2>Common questions</h2>
       </div>
       <div class="faq">
+<!-- CLIENT NOTE, hidden from the public 2026-11-17 (Eric). Restore or replace when the Foundation answers.
         <details>
           <summary>Who is eligible for drug court in Flagler County?</summary>
           <div class="faq__body">
@@ -193,6 +194,8 @@
             </div>
           </div>
         </details>
+-->
+<!-- CLIENT NOTE, hidden from the public 2026-11-17 (Eric). Restore or replace when the Foundation answers.
         <details>
           <summary>How does someone get referred?</summary>
           <div class="faq__body">
@@ -203,6 +206,7 @@
             </div>
           </div>
         </details>
+-->
         <details>
           <summary>How long does the program take?</summary>
           <div class="faq__body">

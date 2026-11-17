@@ -181,7 +181,8 @@
     </div>
   </section>
 
-  <section class="section section--warm">
+  <!-- CLIENT NOTE, hidden from the public 2026-11-17 (Eric). Restore or replace when the Foundation answers.
+<section class="section section- -warm">
     <div class="container">
       <div class="section__head">
         <p class="eyebrow">In their own words</p>
@@ -211,6 +212,7 @@
       </div>
     </div>
   </section>
+-->
 
   <section class="section section--dark">
     <div class="container">
