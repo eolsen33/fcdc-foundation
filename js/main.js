@@ -218,6 +218,60 @@
     });
   }
 
+  /* ---------------------------------------------------- Facebook feed */
+  // Facebook's Page Plugin, as a plain iframe (no SDK). Nothing is requested
+  // from Facebook until the section is close to the viewport. The plugin is a
+  // fixed width (180–500px) chosen at load, so it is re-requested if the
+  // column changes width. The link inside the box stays as the fallback.
+  var fbBox = document.querySelector('[data-fb-page]');
+  if (fbBox) {
+    var FB_HEIGHT = 640;
+    var fbFrame = null;
+    var fbWidth = 0;
+    fbBox.classList.add('fb-feed--live');
+
+    var fbRender = function () {
+      var width = Math.max(180, Math.min(500, Math.floor(fbBox.clientWidth)));
+      if (width === fbWidth) return;
+      fbWidth = width;
+      if (!fbFrame) {
+        fbFrame = document.createElement('iframe');
+        fbFrame.title = 'Latest posts from the Flagler County Drug Court Foundation Facebook page';
+        fbFrame.setAttribute('scrolling', 'no');
+        fbFrame.setAttribute('allow', 'encrypted-media; picture-in-picture; web-share');
+        fbBox.textContent = '';
+        fbBox.appendChild(fbFrame);
+      }
+      fbFrame.width = String(width);
+      fbFrame.height = String(FB_HEIGHT);
+      fbFrame.src = 'https://www.facebook.com/plugins/page.php?href=' +
+        encodeURIComponent(fbBox.getAttribute('data-fb-page')) +
+        '&tabs=timeline&width=' + width + '&height=' + FB_HEIGHT +
+        '&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false';
+    };
+
+    var fbStart = function () {
+      fbRender();
+      var timer;
+      window.addEventListener('resize', function () {
+        clearTimeout(timer);
+        timer = setTimeout(fbRender, 300);
+      });
+    };
+
+    if ('IntersectionObserver' in window) {
+      var fbObserver = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) {
+          fbObserver.disconnect();
+          fbStart();
+        }
+      }, { rootMargin: '400px 0px' });
+      fbObserver.observe(fbBox);
+    } else {
+      fbStart();
+    }
+  }
+
   /* ------------------------------------------------------ current year */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());

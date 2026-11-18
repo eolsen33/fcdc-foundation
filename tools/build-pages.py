@@ -30,7 +30,7 @@ SITE = "https://fcdcfoundation.org"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20260921"
+ASSET_V = "20261118"
 
 NAV = [
     ("index.html", "Home"),
@@ -61,6 +61,7 @@ ORG_JSONLD = """{
   "alternateName": "FCDC HOPE Foundation",
   "url": "__SITE__/",
   "logo": "__SITE__/assets/img/hope-logo.png",
+  "sameAs": ["https://www.facebook.com/fcdcfinc/"],
   "foundingDate": "2009",
   "taxID": "27-1349987",
   "nonprofitStatus": "Nonprofit501c3",
@@ -208,6 +209,7 @@ def foot(page):
           <li>The Flagler County Drug Court Foundation<br>55 Black Alder Dr<br>Palm Coast, FL 32137</li>
           <li><strong><a href="tel:+14018646997">(401) 864-6997</a></strong></li>
           <li><strong><a href="mailto:fcdcfoundation01@gmail.com">fcdcfoundation01@gmail.com</a></strong></li>
+          <li><a href="https://www.facebook.com/fcdcfinc/" rel="noopener">Find us on Facebook</a></li>
         </ul>
       </div>
     </div>

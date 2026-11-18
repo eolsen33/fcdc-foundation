@@ -28,7 +28,7 @@ Grouped by how much it blocks launch.
 | 6 | **Cost of one drug test** — the last open per-item figure. (Rent help, specialized treatment and skills training are presented without amounts, under "Some things you can't put a dollar amount on.") *(Supplied and already live: Narcan kit $45; transportation $3,000; graduation $3,000, held three times a year.)* | home + `ways-to-give.html` giving tiers |
 | 7 | **Program outcomes** — graduates since 2009, completion rate, re-arrest rate for graduates vs. comparable non-participants, and the date range each covers | home, "By the numbers" |
 | 8 | **Next Narcan class** — date, time, venue, whether registration is required. If classes run on a fixed schedule, tell us the pattern and we will publish that so it never goes stale | home + `narcan.html` |
-| 9 | **Facebook page URL** | footer |
+| 9 | ~~Facebook page URL~~ — supplied 2026-11-18 (facebook.com/fcdcfinc); in the footer, on Contact, and as a live feed on the home page | footer |
 
 Items 6 and 7 are the two that most change how well this site raises money. A tier that
 says "$45 puts a Narcan kit in someone's hands" converts; a tier that says "$ —" does not.

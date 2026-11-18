@@ -33,6 +33,33 @@
     </div>
   </section>
 
+  <!-- Facebook feed: js/main.js swaps the link for Facebook's Page Plugin when the section nears the viewport -->
+  <section class="section section--tint" aria-labelledby="facebook-heading">
+    <div class="container">
+      <div class="fb-layout">
+        <div>
+          <p class="eyebrow">Follow along</p>
+          <h2 id="facebook-heading">The latest from our Facebook page</h2>
+          <p class="lede">
+            Event dates, photos and news go up on Facebook first. Whatever we post there shows up
+            here on its own.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--outline" href="https://www.facebook.com/fcdcfinc/" rel="noopener">Follow us on Facebook</a>
+          </div>
+          <p class="fb-feed__note">
+            The posts are loaded from Facebook when you reach this part of the page. If they do
+            not appear, your browser may be blocking them — the button above takes you straight
+            to the page.
+          </p>
+        </div>
+        <div class="fb-feed" data-fb-page="https://www.facebook.com/fcdcfinc/">
+          <a href="https://www.facebook.com/fcdcfinc/" rel="noopener">See our latest posts on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 2 ────────────────────────────────────────────── WHAT WE DO -->
   <section class="section" aria-labelledby="whatwedo-heading">
     <div class="container">

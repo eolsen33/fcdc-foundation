@@ -1124,7 +1124,27 @@ td[aria-current="date"].is-active .cal__num { color: var(--color-on-primary); }
   .evt { break-inside: avoid; box-shadow: none; }
 }
 
+/* ==========================================================================
+   Facebook feed (home). The frame is Facebook's Page Plugin: 180–500px wide,
+   sized by js/main.js. Without JS the box is just the link.
+   ========================================================================== */
+.fb-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-6); align-items: start; }
+.fb-layout > * { min-width: 0; }
+@media (min-width: 900px) { .fb-layout { grid-template-columns: minmax(0, 1fr) 500px; gap: var(--sp-8, 4rem); } }
+.fb-feed { width: 100%; max-width: 500px; margin-inline: auto; }
+.fb-feed--live {
+  min-height: 640px;
+  background: var(--color-bg-tint);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.fb-feed iframe { display: block; border: 0; width: 100%; height: 640px; background: #fff; }
+.fb-feed__note { font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--sp-5); max-width: var(--measure); }
+
 @media print {
-  .site-header, .mobile-donate, .help-now, .btn { display: none !important; }
+  .site-header, .mobile-donate, .help-now, .btn, .fb-feed { display: none !important; }
   body { font-size: 11pt; }
 }

@@ -127,15 +127,14 @@
                   Established 2009
                 </span>
               </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <span>
+                  <span class="detail-list__label">Facebook</span>
+                  <strong><a href="https://www.facebook.com/fcdcfinc/" rel="noopener">facebook.com/fcdcfinc</a></strong>
+                </span>
+              </li>
             </ul>
-
-<!-- CLIENT NOTE, hidden from the public 2026-11-17 (Eric). Restore or replace when the Foundation answers.
-            <div class="placeholder">
-              <p class="mb-0"><strong>[CLIENT TO SUPPLY]</strong> Your Facebook page URL —
-              Facebook is where most of your traffic comes from, so we want that link in the
-              footer.</p>
-            </div>
--->
           </div>
 
           <div class="card mt-5">

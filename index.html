@@ -17,7 +17,7 @@
 
 <link rel="icon" href="assets/img/hope-logo.png">
 <link rel="preload" href="assets/fonts/Lexend-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=20260921">
+<link rel="stylesheet" href="css/style.css?v=20261118">
 
 <script type="application/ld+json">
 {
@@ -27,6 +27,7 @@
   "alternateName": "FCDC HOPE Foundation",
   "url": "https://fcdcfoundation.org/",
   "logo": "https://fcdcfoundation.org/assets/img/hope-logo.png",
+  "sameAs": ["https://www.facebook.com/fcdcfinc/"],
   "foundingDate": "2009",
   "taxID": "27-1349987",
   "nonprofitStatus": "Nonprofit501c3",
@@ -109,6 +110,33 @@
         <div class="btn-row">
           <a class="btn btn--donate btn--lg" href="ways-to-give.html" data-donate>Donate</a>
           <a class="btn btn--outline btn--lg" href="#whatwedo-heading">What we pay for</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facebook feed: js/main.js swaps the link for Facebook's Page Plugin when the section nears the viewport -->
+  <section class="section section--tint" aria-labelledby="facebook-heading">
+    <div class="container">
+      <div class="fb-layout">
+        <div>
+          <p class="eyebrow">Follow along</p>
+          <h2 id="facebook-heading">The latest from our Facebook page</h2>
+          <p class="lede">
+            Event dates, photos and news go up on Facebook first. Whatever we post there shows up
+            here on its own.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--outline" href="https://www.facebook.com/fcdcfinc/" rel="noopener">Follow us on Facebook</a>
+          </div>
+          <p class="fb-feed__note">
+            The posts are loaded from Facebook when you reach this part of the page. If they do
+            not appear, your browser may be blocking them — the button above takes you straight
+            to the page.
+          </p>
+        </div>
+        <div class="fb-feed" data-fb-page="https://www.facebook.com/fcdcfinc/">
+          <a href="https://www.facebook.com/fcdcfinc/" rel="noopener">See our latest posts on Facebook</a>
         </div>
       </div>
     </div>
@@ -559,6 +587,7 @@
           <li>The Flagler County Drug Court Foundation<br>55 Black Alder Dr<br>Palm Coast, FL 32137</li>
           <li><strong><a href="tel:+14018646997">(401) 864-6997</a></strong></li>
           <li><strong><a href="mailto:fcdcfoundation01@gmail.com">fcdcfoundation01@gmail.com</a></strong></li>
+          <li><a href="https://www.facebook.com/fcdcfinc/" rel="noopener">Find us on Facebook</a></li>
         </ul>
       </div>
     </div>
@@ -586,6 +615,6 @@
 </footer>
 
 <script src="js/donate-config.js"></script>
-<script src="js/main.js?v=20260921" defer></script>
+<script src="js/main.js?v=20261118" defer></script>
 </body>
 </html>
