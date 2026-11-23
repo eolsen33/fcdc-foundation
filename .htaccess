@@ -47,5 +47,5 @@
 # Keep repo docs and tooling off the web (Hostinger deploys the whole repo).
 # Added by the 2026-09-14 weekly site check: /README.md was publicly served.
 RedirectMatch 404 ^/[^/]*\.md$
-RedirectMatch 404 ^/(_build|_private|_pocketbase|tools|\.impeccable|\.git|\.github)(/|$)
+RedirectMatch 404 ^/(_build|_private|_pocketbase|tools|brand|\.impeccable|\.git|\.github)(/|$)
 RedirectMatch 404 ^/\.(gitignore|env|DS_Store)

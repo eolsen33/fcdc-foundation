@@ -144,6 +144,15 @@
   if (form) {
     var status = form.querySelector('.form__status');
 
+    // Links such as contact.html?subject=narcan choose the matching topic.
+    var topic = form.querySelector('#subject');
+    var wanted = new URLSearchParams(window.location.search).get('subject');
+    if (topic && wanted) {
+      for (var oi = 0; oi < topic.options.length; oi++) {
+        if (topic.options[oi].value === wanted) { topic.value = wanted; break; }
+      }
+    }
+
     var setError = function (field, message) {
       var wrap = field.closest('.field');
       wrap.classList.add('has-error');
