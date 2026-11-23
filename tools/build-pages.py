@@ -30,7 +30,7 @@ SITE = "https://fcdcfoundation.org"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20261123"
+ASSET_V = "20261123b"
 
 NAV = [
     ("index.html", "Home"),

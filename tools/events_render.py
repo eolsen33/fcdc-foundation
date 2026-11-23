@@ -46,11 +46,30 @@ def _parse(d):
     return datetime.date.fromisoformat(d) if d else None
 
 
+def _expand(ev):
+    """One entry per occurrence. ``repeat: "first-friday"`` becomes the first Friday
+    of every month from ``start`` through ``until``, minus any dates in ``skip``."""
+    if not ev.get("repeat"):
+        return [ev]
+    assert ev["repeat"] == "first-friday", "unknown repeat: %r" % ev["repeat"]
+    start, until = _parse(ev["start"]), _parse(ev["until"])
+    skip = set(ev.get("skip") or [])
+    out, y, m = [], start.year, start.month
+    while datetime.date(y, m, 1) <= until:
+        first = datetime.date(y, m, 1)
+        day = first + datetime.timedelta(days=(4 - first.weekday()) % 7)
+        if start <= day <= until and day.isoformat() not in skip:
+            out.append(dict(ev, start=day.isoformat(), _series=slugify(ev["title"])))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return out
+
+
 def load(root):
     """Read data/events.json and return events sorted: dated ascending, undated last."""
     raw = json.loads((root / "data" / "events.json").read_text())["events"]
     out = []
-    for ev in raw:
+    for src in raw:
+      for ev in _expand(src):
         start = _parse(ev.get("start"))
         end = _parse(ev.get("end")) or start
         out.append({
@@ -73,7 +92,8 @@ def load(root):
             "popup": bool(ev.get("popup")),
             "popupText": ev.get("popupText"),
             "popupUntil": ev.get("popupUntil"),
-            "id": "event-" + slugify(ev["title"]),
+            "series": ev.get("_series"),
+            "id": "event-" + slugify(ev["title"]) + (("-" + ev["start"]) if ev.get("_series") else ""),
         })
     out.sort(key=lambda e: (e["start"] is None, e["start"] or datetime.date.max))
     return out
@@ -135,7 +155,12 @@ def home_cards(events, today, limit=3):
     An event marked ``featured: true`` keeps a slot even when more than
     ``limit`` events come before it — the latest non-featured pick is dropped
     to make room. Cards stay in date order either way."""
-    upcoming = [e for e in events if not is_past(e, today)]
+    upcoming, seen = [], set()
+    for e in events:
+        if is_past(e, today) or (e["series"] and e["series"] in seen):
+            continue          # a repeating event gets one card: its next date
+        seen.add(e["series"])
+        upcoming.append(e)
     live = upcoming[:limit]
     for ev in upcoming[limit:]:
         if not ev["featured"]:

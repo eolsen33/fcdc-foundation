@@ -290,6 +290,9 @@
       bar.appendChild(nav);
       shell.insertBefore(bar, track);
 
+      // A dot per event stops being useful past a handful (a monthly event adds
+      // dozens); the count, the arrows and the month grid still get you there.
+      if (slides.length <= 8) {
       dots = document.createElement('ul');
       dots.className = 'evt-slider__dots';
       slides.forEach(function (li, k) {
@@ -303,6 +306,7 @@
         dots.appendChild(item);
       });
       shell.appendChild(dots);
+      }
 
       track.setAttribute('role', 'group');
       track.setAttribute('aria-roledescription', 'slideshow');

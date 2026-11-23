@@ -29,6 +29,10 @@
     "          popupText is its short blurb (the summary is used when left out).",
     "          popupUntil 'YYYY-MM-DDTHH:MM' (Florida time) stops it at that moment;",
     "          left out, it stops at the end of the event's last day.",
+    "  repeat  'first-friday' repeats the event on the first Friday of every month,",
+    "          from 'start' through 'until' ('YYYY-MM-DD'). To drop one month, add its",
+    "          date to 'skip', e.g. \"skip\": [\"2027-01-01\"]. The home page shows only",
+    "          the next date of a repeating event.",
     "",
     "Monthly board meetings are on Zoom and are deliberately NOT listed here — the",
     "events page has a standing note pointing people to ask for an invite.",
@@ -37,6 +41,18 @@
     "can once they are well past."
   ],
   "events": [
+    {
+      "title": "First Friday in Flagler Beach",
+      "start": "2026-12-04",
+      "repeat": "first-friday",
+      "until": "2029-11-30",
+      "location": "Veterans Park, Flagler Beach",
+      "kind": "community",
+      "summary": "We have a table at First Friday in Flagler Beach every month. Stop by, say hello, and find out what the Foundation does and how you can help. It is an outdoor event, so bad weather can cancel it.",
+      "link": "contact.html?subject=general",
+      "linkText": "Ask about this one",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Veterans+Park+Flagler+Beach+FL"
+    },
     {
       "title": "Dine to Donate — Texas Roadhouse",
       "start": "2026-12-16",
