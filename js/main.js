@@ -238,6 +238,7 @@
         fbFrame = document.createElement('iframe');
         fbFrame.title = 'Latest posts from the Flagler County Drug Court Foundation Facebook page';
         fbFrame.setAttribute('scrolling', 'no');
+        fbFrame.setAttribute('referrerpolicy', 'no-referrer');
         fbFrame.setAttribute('allow', 'encrypted-media; picture-in-picture; web-share');
         fbBox.textContent = '';
         fbBox.appendChild(fbFrame);
@@ -265,7 +266,7 @@
           fbObserver.disconnect();
           fbStart();
         }
-      }, { rootMargin: '400px 0px' });
+      }, { rootMargin: '0px' });   // only once the section itself is on screen: nothing goes to Facebook before that
       fbObserver.observe(fbBox);
     } else {
       fbStart();

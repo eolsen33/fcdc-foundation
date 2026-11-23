@@ -30,7 +30,7 @@ SITE = "https://fcdcfoundation.org"
 # Bumped whenever css/style.css changes. Hostinger serves assets with a long
 # max-age, so without a fresh URL a deploy reaches returning visitors as new
 # markup against a week-old stylesheet — which renders as an unstyled page.
-ASSET_V = "20261123b"
+ASSET_V = "20261123c"
 
 NAV = [
     ("index.html", "Home"),
@@ -243,6 +243,9 @@ def foot(page):
 """
 
 
+CLIENT_NOTE = re.compile(r"[ \t]*<!--(?:(?!-->).)*?(?:CLIENT NOTE|\[[A-Z][A-Z /#\u2014-]{5,})(?:(?!-->).)*?-->\n?", re.S)
+
+
 def build():
     bodies = ROOT / "tools" / "bodies"
     meta_all = {}
@@ -257,6 +260,9 @@ def build():
             body = body.replace("{{%s}}" % key, value)
         left = re.findall(r"\{\{[A-Z_]+\}\}", body)
         assert not left, "%s has unresolved tokens: %s" % (page, left)
+        # Notes to the client stay in tools/bodies/*.part (not served) and are never published:
+        # anyone can read an HTML comment with View Source. Section-label comments are kept.
+        body = CLIENT_NOTE.sub("", body)
         (ROOT / page).write_text(head(page, meta) + body + foot(page))
         print("wrote", page)
 
