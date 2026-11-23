@@ -21,6 +21,14 @@
     "          goes into the calendar file. Leave out when there is no venue yet.",
     "  featured  true keeps the event in the three home-page cards even when more than",
     "          three events come before it. Use for the big fundraisers only.",
+    "  flyer   File name (no size, no extension) of the event's flyer in assets/img/,",
+    "          saved as NAME-560.webp and NAME-1120.webp. Adds a 'See the flyer' button.",
+    "          flyerSize is the big one's [width, height] in pixels.",
+    "  popup   true shows the flyer in a pop-up on the home page, once per visit, until",
+    "          the event is over. Needs flyer. Only the first upcoming one is shown.",
+    "          popupText is its short blurb (the summary is used when left out).",
+    "          popupUntil 'YYYY-MM-DDTHH:MM' (Florida time) stops it at that moment;",
+    "          left out, it stops at the end of the event's last day.",
     "",
     "Monthly board meetings are on Zoom and are deliberately NOT listed here — the",
     "events page has a standing note pointing people to ask for an invite.",
@@ -30,26 +38,23 @@
   ],
   "events": [
     {
-      "title": "Dine to Donate warm-up — Texas Roadhouse",
-      "start": "2026-09-09",
-      "location": "Texas Roadhouse, Palm Coast",
-      "kind": "fundraiser",
-      "summary": "A warm-up night ahead of the main Dine to Donate on the 16th. Come in for dinner, tell your server you are there for the Foundation, and drop your receipt in our box on the way out.",
-      "link": "contact.html?subject=general",
-      "linkText": "Ask about this one",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+Palm+Coast+FL",
-      "needsConfirming": true,
-      "confirmText": "Details for this night are still being settled — check with us before you make plans around it."
-    },
-    {
       "title": "Dine to Donate — Texas Roadhouse",
-      "start": "2026-09-16",
-      "location": "Texas Roadhouse, Palm Coast",
+      "start": "2026-12-16",
+      "time": "2:00–8:00 pm",
+      "location": "Texas Roadhouse, 1298 Palm Coast Pkwy SW, Palm Coast",
       "kind": "fundraiser",
-      "summary": "Come in for dinner, tell your server you are there for the Foundation, and drop the paper receipt in our box on the way out. Texas Roadhouse sends us 10% of it. We run one of these about once a quarter, and it covers a standing bill for the whole year.",
+      "summary": "Eat at Texas Roadhouse in Palm Coast any time between 2 and 8 pm, dine in or to go, and drop your receipt in our donation box. Texas Roadhouse donates 10% of your food purchase to the Foundation (alcohol and discounts are not counted). For to-go orders, call (386) 302-4983.",
       "link": "contact.html?subject=general",
       "linkText": "Ask about this one",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+Palm+Coast+FL"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Texas+Roadhouse+1298+Palm+Coast+Pkwy+SW+Palm+Coast+FL",
+      "flyer": "flyer-texas-roadhouse-2026-12-16",
+      "flyerSize": [
+        1120,
+        1449
+      ],
+      "popup": true,
+      "popupUntil": "2026-12-16T20:00",
+      "popupText": "Have lunch or dinner at Texas Roadhouse in Palm Coast, dine in or to go, and drop your receipt in our donation box. They give 10% of your food purchase to the Foundation."
     },
     {
       "title": "Fall Outreach with the City of Palm Coast",

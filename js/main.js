@@ -272,6 +272,29 @@
     }
   }
 
+  /* ------------------------------------------------------ event pop-up */
+  // Home page only. Shown once per visit (browser session) and never after the
+  // moment in data-until, so it retires itself. ?popup=1 always shows it.
+  var pop = document.querySelector('dialog[data-popup]');
+  if (pop && pop.showModal) {
+    var popKey = 'fcdc_pop_' + pop.getAttribute('data-popup');
+    var popSeen = false;
+    try { popSeen = sessionStorage.getItem(popKey) === '1'; } catch (e) {}
+    var popForce = /[?&]popup=1/.test(location.search);
+    // "2026-12-16T20:00" with no zone reads as the visitor's local time.
+    var popUntil = new Date(pop.getAttribute('data-until')).getTime();
+    if (popForce || (!popSeen && Date.now() < popUntil)) {
+      setTimeout(function () {
+        if (nav && nav.classList.contains('is-open')) return;
+        pop.showModal();
+        try { sessionStorage.setItem(popKey, '1'); } catch (e) {}
+      }, 700);
+    }
+    pop.querySelector('.pop__x').addEventListener('click', function () { pop.close(); });
+    // A click on the dimmed page behind it closes it too.
+    pop.addEventListener('click', function (e) { if (e.target === pop) pop.close(); });
+  }
+
   /* ------------------------------------------------------ current year */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());

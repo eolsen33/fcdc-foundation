@@ -68,6 +68,11 @@ def load(root):
             "confirmText": ev.get("confirmText"),
             "mapUrl": ev.get("mapUrl"),
             "featured": bool(ev.get("featured")),
+            "flyer": ev.get("flyer"),
+            "flyerSize": ev.get("flyerSize") or [1120, 1449],
+            "popup": bool(ev.get("popup")),
+            "popupText": ev.get("popupText"),
+            "popupUntil": ev.get("popupUntil"),
             "id": "event-" + slugify(ev["title"]),
         })
     out.sort(key=lambda e: (e["start"] is None, e["start"] or datetime.date.max))
@@ -202,6 +207,9 @@ def event_list(events, today):
                        f'{_t(ev["linkText"] or "Details")}</a>')
         if ev["mapUrl"]:
             out.append("              " + _map_link(ev))
+        if ev["flyer"]:
+            out.append(f'              <a class="btn btn--outline" href="assets/img/{_e(ev["flyer"])}-1120.webp" '
+                       'target="_blank" rel="noopener">See the flyer</a>')
         out.append(f'              <button class="btn btn--outline" type="button" data-ics="{_e(ev["id"])}">'
                    'Add to my calendar</button>')
         out.append('            </p>')
@@ -232,6 +240,51 @@ def undated_cards(events):
             out.append('        </div>')
         out.append('      </div>')
 
+    return "\n".join(out)
+
+
+def popup(events, today):
+    """The home-page pop-up: the flyer of the first upcoming event marked ``popup``,
+    a short blurb and two buttons. js/main.js opens it once per visit and stops on
+    its own when the event is over, so a stale deploy never advertises a past date."""
+    ev = next((e for e in events if e["popup"] and e["flyer"] and e["start"]
+               and not is_past(e, today)), None)
+    if not ev:
+        return ""
+    w, h = ev["flyerSize"]
+    until = ev["popupUntil"] or (ev["end"] or ev["start"]).isoformat() + "T23:59"
+    img = "assets/img/" + ev["flyer"]
+    when = when_text(ev) + (f' &middot; {_t(ev["time"])}' if ev["time"] else "")
+    alt = f'Flyer: {ev["title"]}, {when_text(ev)}' + (f', {ev["time"]}' if ev["time"] else "") \
+        + (f', {ev["location"]}' if ev["location"] else "") + "."
+    out = [
+        "",
+        "  <!-- Event pop-up: generated from data/events.json (popup: true) -->",
+        f'  <dialog class="pop" data-popup="{_e(ev["id"])}-{ev["start"].isoformat()}" data-until="{_e(until)}" aria-labelledby="pop-heading">',
+        '    <button class="pop__x" type="button" aria-label="Close">',
+        '      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+        '    </button>',
+        '    <div class="pop__in">',
+        '      <figure class="pop__flyer">',
+        f'        <img src="{_e(img)}-560.webp" srcset="{_e(img)}-560.webp 560w, {_e(img)}-1120.webp 1120w"',
+        f'          sizes="(min-width: 760px) 440px, 70vw" width="{w}" height="{h}" alt="{_e(alt)}">',
+        '      </figure>',
+        '      <div class="pop__copy">',
+        f'        {_kind_tag(ev)}',
+        f'        <h2 id="pop-heading">{_t(ev["title"])}</h2>',
+        f'        <p class="pop__when">{when}</p>',
+    ]
+    if ev["location"]:
+        out.append(f'        <p class="pop__where">{_t(ev["location"])}</p>')
+    out.append(f'        <p>{_t(ev["popupText"] or ev["summary"])}</p>')
+    out.append('        <p class="pop__act">')
+    out.append(f'          <a class="btn btn--primary" href="events.html#{_e(ev["id"])}">Event details</a>')
+    if ev["mapUrl"]:
+        out.append("          " + _map_link(ev))
+    out.append('        </p>')
+    out.append('      </div>')
+    out.append('    </div>')
+    out.append('  </dialog>')
     return "\n".join(out)
 
 
@@ -299,4 +352,5 @@ def tokens(root, site, today=None):
         "EVENTS_UNDATED":    undated_cards(events),
         "EVENTS_DATA":       data_script(events),
         "EVENTS_JSONLD":     jsonld(events, today, site),
+        "EVENTS_POPUP":      popup(events, today),
     }

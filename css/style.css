@@ -1144,7 +1144,73 @@ td[aria-current="date"].is-active .cal__num { color: var(--color-on-primary); }
 .fb-feed iframe { display: block; border: 0; width: 100%; height: 640px; background: #fff; }
 .fb-feed__note { font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--sp-5); max-width: var(--measure); }
 
+/* ==========================================================================
+   Event pop-up (home): the flyer, a blurb, two buttons. Generated from
+   data/events.json; opened by js/main.js. A closed <dialog> gets no display
+   rule here, because one would show it.
+   ========================================================================== */
+.pop {
+  padding: 0; border: 0; color: var(--color-text); background: var(--color-surface);
+  width: min(900px, calc(100vw - 24px)); max-width: none;
+  max-height: calc(100dvh - 24px);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.pop[open] { display: flex; flex-direction: column; }
+.pop::backdrop { background: rgba(27, 22, 48, .72); }
+.pop__in {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  min-height: 0; overflow: auto; overscroll-behavior: contain;
+}
+.pop__flyer { margin: 0; background: #1F2D4D; display: flex; justify-content: center; }
+.pop__flyer img {
+  display: block; width: auto; max-width: 100%;
+  height: min(620px, calc(100dvh - 24px)); aspect-ratio: 1120 / 1449; object-fit: contain;
+}
+.pop__copy {
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  padding: var(--sp-7) var(--sp-6) var(--sp-6);
+  border-top: 6px solid var(--hope-purple);
+}
+.pop__copy h2 { font-size: var(--fs-2xl); line-height: 1.15; margin: var(--sp-3) 0 var(--sp-3); text-wrap: balance; }
+.pop__copy p { margin: 0 0 var(--sp-4); }
+.pop__copy .pop__when { font-family: var(--font-head); font-weight: 600; color: var(--hope-purple-800); margin-bottom: var(--sp-1); }
+.pop__copy .pop__where { color: var(--color-text-muted); }
+.pop__copy .pop__act { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin: var(--sp-2) 0 0; width: 100%; }
+.pop__act .btn { flex: 1 1 180px; }
+.pop__x {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0;
+  border: 1px solid var(--color-border-strong); border-radius: 50%;
+  background: #fff; color: var(--hope-purple-800); cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+.pop__x:hover { background: var(--hope-purple-700); border-color: var(--hope-purple-700); color: #fff; }
+.pop__x svg { width: 20px; height: 20px; }
+@media (max-width: 759px) {
+  .pop { width: min(440px, calc(100vw - 20px)); max-height: calc(100dvh - 20px); }
+  .pop__in { grid-template-columns: minmax(0, 1fr); }
+  .pop__flyer img { height: auto; max-height: 46dvh; }
+  .pop__copy { padding: var(--sp-5) var(--sp-5) 0; justify-content: flex-start; border-top-width: 4px; }
+  .pop__copy h2 { font-size: var(--fs-xl); margin-top: var(--sp-2); }
+  /* The buttons stay in view on a short phone while the blurb scrolls under them. */
+  .pop__copy .pop__act {
+    position: sticky; bottom: 0; margin: 0 calc(var(--sp-5) * -1); width: auto; align-self: stretch;
+    padding: var(--sp-3) var(--sp-5) var(--sp-4);
+    background: linear-gradient(rgba(255,255,255,0), #fff 10px);
+    flex-wrap: nowrap; gap: var(--sp-2);
+  }
+  .pop__act .btn { flex: 1 1 0; padding-inline: var(--sp-3); font-size: var(--fs-sm); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pop[open] { animation: pop-in .4s var(--ease); }
+  .pop[open]::backdrop { animation: pop-fade .3s ease-out; }
+  @keyframes pop-in { from { opacity: 0; transform: translateY(14px); } }
+  @keyframes pop-fade { from { opacity: 0; } }
+}
+
 @media print {
-  .site-header, .mobile-donate, .help-now, .btn, .fb-feed { display: none !important; }
+  .site-header, .mobile-donate, .help-now, .btn, .fb-feed, .pop { display: none !important; }
   body { font-size: 11pt; }
 }
